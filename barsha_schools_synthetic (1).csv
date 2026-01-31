@@ -1,0 +1,21 @@
+school_id,school_name,latitude,longitude,cluster_zone,student_count_est
+1,Kings' School Al Barsha,25.0934,55.2341,Al Barsha South,2100
+2,GEMS Founders School,25.0886,55.2392,Al Barsha South,4200
+3,Repton School Al Barsha,25.0851,55.2423,Al Barsha South,1500
+4,Safa Community School,25.0905,55.2378,Al Barsha South,1800
+5,Dubai Heights Academy,25.0823,55.2456,Al Barsha South,1100
+6,Nord Anglia International School,25.0872,55.2411,Al Barsha South,1600
+7,Bloom World Academy,25.0844,55.2435,Al Barsha South,900
+8,GEMS World Academy,25.1012,55.2289,Al Barsha South,2000
+9,Dubai American Academy,25.1134,55.2056,Al Barsha 1,2700
+10,American School of Dubai,25.1156,55.2089,Al Barsha 1,1900
+11,Dubai International Academy Al Barsha,25.1098,55.2023,Al Barsha 1,1300
+12,Al Mawakeb School Al Barsha,25.1123,55.2078,Al Barsha 2,2400
+13,Dubai National School Al Barsha,25.1145,55.2045,Al Barsha 2,1500
+14,Smart Vision School,25.0912,55.2356,Al Barsha South,800
+15,Next Generation School,25.1089,55.2012,Al Barsha 3,1200
+16,GEMS Al Barsha National School,25.0867,55.2401,Al Barsha South,1400
+17,Brighton College Dubai,25.0839,55.2442,Al Barsha South,1000
+18,Dwight School Dubai,25.0841,55.2445,Al Barsha South,950
+19,International School of Creative Science,25.0899,55.2385,Al Barsha South,1700
+20,Swiss International Scientific School,25.0921,55.2334,Al Barsha South,2200

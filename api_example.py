@@ -24,7 +24,7 @@ class BusClusteringAPI:
             'max_schools_per_zone': 3,
             'home_weight': 0.6,
             'school_weight': 0.4,
-            'max_walking_distance': 2.0,
+            'max_walking_distance': 0.5,
             'use_pytorch_optimization': True,
             'optimization_epochs': 100
         }

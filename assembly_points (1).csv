@@ -1,0 +1,26 @@
+stop_id,stop_name,lat,lon,type,assigned_students
+1,Circle Mall (JVC Entrance),25.057,55.2,Landmark (Safe Zone),79
+2,Residential Point #2,25.121075783821382,55.19447978408364,Residential Cluster,49
+3,Residential Point #3,25.06021302847532,55.232214364327035,Residential Cluster,38
+4,Barsha Heights Community Park,25.0987,55.1798,Landmark (Safe Zone),54
+5,Residential Point #5,25.109129207109763,55.236808293365044,Residential Cluster,20
+6,Residential Point #6,25.090389641143325,55.21661432213003,Residential Cluster,28
+7,Barsha Community Center,25.1123,55.2089,Landmark (Safe Zone),31
+8,Residential Point #8,25.058974860039598,55.24749539442484,Residential Cluster,42
+9,Hessa Street Public Parking,25.1156,55.2005,Landmark (Safe Zone),79
+10,Residential Point #10,25.054584520379176,55.23868267702545,Residential Cluster,67
+11,Residential Point #11,25.094098825168345,55.252784160126446,Residential Cluster,7
+12,Residential Point #12,25.12295322349726,55.20373041065281,Residential Cluster,52
+13,Residential Point #13,25.109520401299662,55.22154902157201,Residential Cluster,29
+14,Residential Point #14,25.086418217040215,55.231666355944384,Residential Cluster,26
+15,Residential Point #15,25.06983642751287,55.20853867642836,Residential Cluster,14
+16,Residential Point #16,25.102703575087858,55.17718544121304,Residential Cluster,31
+17,Al Barsha South Park,25.0589,55.2389,Landmark (Safe Zone),74
+18,Residential Point #18,25.05202406759206,55.201204751715096,Residential Cluster,71
+19,Residential Point #19,25.089225330149976,55.177636752360605,Residential Cluster,35
+20,Residential Point #20,25.09641972155483,55.17265391354226,Residential Cluster,47
+21,Residential Point #21,25.05783863563394,55.19337516886926,Residential Cluster,54
+22,Residential Point #22,25.09601357177099,55.20299584547367,Residential Cluster,14
+23,Residential Point #23,25.111226811891065,55.192417207913444,Residential Cluster,24
+24,Residential Point #24,25.06851839635968,55.24144100104258,Residential Cluster,31
+25,Residential Point #25,25.14266311957129,55.22462446508546,Residential Cluster,2

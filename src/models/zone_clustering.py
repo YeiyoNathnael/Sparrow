@@ -76,6 +76,9 @@ class ZoneClustering:
         # Validate and adjust for constraints
         zones = self._enforce_constraints(zones)
         
+        # HARD ENFORCE capacity constraints by splitting overcapacity zones
+        zones = self._split_overcapacity_zones(zones, assembly_clusters)
+        
         return zones
     
     def _extract_features(self, assembly_clusters: List[AssemblyPointCluster]) -> torch.Tensor:
@@ -344,3 +347,79 @@ class ZoneClustering:
             'max_schools_per_zone': schools_per_zone.max().item(),
             'avg_assemblies_per_zone': assemblies_per_zone.mean().item(),
         }
+    
+    def _split_overcapacity_zones(self, zones: List[BusZone], 
+                                  assembly_clusters: List[AssemblyPointCluster]) -> List[BusZone]:
+        """
+        Post-processing step to hard enforce capacity constraints.
+        Splits overcapacity zones by reassigning assembly points.
+        
+        Args:
+            zones: Initial zones (may be overcapacity)
+            assembly_clusters: Original assembly point clusters
+        
+        Returns:
+            List of zones with capacity enforced
+        """
+        final_zones = []
+        zone_id_counter = 0
+        
+        for zone in zones:
+            if zone.total_students <= self.bus_capacity:
+                # Zone is within capacity, keep as is
+                zone.zone_id = zone_id_counter
+                final_zones.append(zone)
+                zone_id_counter += 1
+            else:
+                # Zone is overcapacity, split it
+                print(f"\n  ⚠️  Zone {zone.zone_id} has {zone.total_students} students (capacity: {self.bus_capacity})")
+                print(f"      Splitting into multiple buses...")
+                
+                # Sort assembly clusters by student count (largest first for better packing)
+                zone_assemblies = sorted(zone.assembly_clusters, 
+                                       key=lambda x: x.student_count, 
+                                       reverse=True)
+                
+                # Greedy bin packing: create new zones
+                current_zone_load = 0
+                current_zone_clusters = []
+                split_count = 0
+                
+                for assembly_cluster in zone_assemblies:
+                    student_count = assembly_cluster.student_count
+                    
+                    if current_zone_load + student_count <= self.bus_capacity:
+                        # Add to current zone
+                        current_zone_clusters.append(assembly_cluster)
+                        current_zone_load += student_count
+                    else:
+                        # Create new zone with current clusters
+                        if current_zone_clusters:
+                            new_zone = BusZone(
+                                zone_id=zone_id_counter,
+                                assembly_clusters=current_zone_clusters,
+                                capacity=self.bus_capacity
+                            )
+                            final_zones.append(new_zone)
+                            zone_id_counter += 1
+                            split_count += 1
+                        
+                        # Start new zone with this assembly
+                        current_zone_clusters = [assembly_cluster]
+                        current_zone_load = student_count
+                
+                # Add remaining clusters as final zone
+                if current_zone_clusters:
+                    new_zone = BusZone(
+                        zone_id=zone_id_counter,
+                        assembly_clusters=current_zone_clusters,
+                        capacity=self.bus_capacity
+                    )
+                    final_zones.append(new_zone)
+                    zone_id_counter += 1
+                    split_count += 1
+                
+                print(f"      ✓ Split into {split_count} buses")
+        
+        print(f"\n✓ Final result: {len(final_zones)} zones (all within capacity)")
+        return final_zones
