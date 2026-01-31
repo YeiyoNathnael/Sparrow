@@ -12,6 +12,9 @@ import {
   Zap
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useState, useEffect } from "react";
+
+const API_URL = "http://localhost:8000/api";
 
 const metrics = [
   { 
@@ -56,6 +59,109 @@ const notifications = [
 ];
 
 export default function Dashboard() {
+  const [metrics, setMetrics] = useState([
+    { 
+      label: "Total Zones", 
+      value: "24", 
+      change: "+3 this week",
+      trend: "up",
+      icon: MapPin,
+      color: "accent"
+    },
+    { 
+      label: "Buses Optimized", 
+      value: "156", 
+      change: "98.2% fleet",
+      trend: "up",
+      icon: Bus,
+      color: "primary"
+    },
+    { 
+      label: "CO₂ Reduction", 
+      value: "12.4t", 
+      change: "+8.3% vs last month",
+      trend: "up",
+      icon: Leaf,
+      color: "success"
+    },
+    { 
+      label: "Avg Capacity", 
+      value: "78%", 
+      change: "Optimal range",
+      trend: "stable",
+      icon: Users,
+      color: "info"
+    },
+  ]);
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchDashboardData = async () => {
+      try {
+        setLoading(true);
+        // Fetch schools and students from API
+        const [schoolsRes, studentsRes] = await Promise.all([
+          fetch(`${API_URL}/schools`),
+          fetch(`${API_URL}/students`),
+        ]);
+
+        if (!schoolsRes.ok || !studentsRes.ok) throw new Error("Failed to fetch data");
+
+        const schools = await schoolsRes.json();
+        const students = await studentsRes.json();
+
+        // Calculate metrics from real data
+        const uniqueZones = new Set(schools.map((s: any) => s.cluster_zone || "Unknown")).size;
+        const totalStudents = students.length;
+        const avgCapacity = schools.length > 0 
+          ? Math.round((totalStudents / (schools.length * 50)) * 100) 
+          : 0;
+
+        setMetrics([
+          { 
+            label: "Total Zones", 
+            value: String(uniqueZones), 
+            change: "Active zones",
+            trend: "up",
+            icon: MapPin,
+            color: "accent"
+          },
+          { 
+            label: "Buses Optimized", 
+            value: String(schools.length), 
+            change: "School routes",
+            trend: "up",
+            icon: Bus,
+            color: "primary"
+          },
+          { 
+            label: "Total Students", 
+            value: String(totalStudents), 
+            change: "Registered",
+            trend: "up",
+            icon: Users,
+            color: "success"
+          },
+          { 
+            label: "Avg Capacity", 
+            value: `${avgCapacity}%`, 
+            change: "Optimal range",
+            trend: "stable",
+            icon: Leaf,
+            color: "info"
+          },
+        ]);
+      } catch (error) {
+        console.error("Failed to fetch dashboard data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchDashboardData();
+  }, []);
+
   return (
     <div className="space-y-6 animate-fade-in">
       {/* Page Header */}

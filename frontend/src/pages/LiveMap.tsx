@@ -1,25 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { 
   Navigation, 
-  User, 
   Clock, 
   MapPin, 
   Bus,
   Phone,
-  ChevronRight,
-  Layers,
-  ZoomIn,
-  ZoomOut,
-  Locate,
-  Users
+  Zap
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap } from "react-leaflet";
+import { Badge } from "@/components/ui/badge";
+import { MapContainer, TileLayer, Marker, Popup, Polyline } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
-// Fix for default marker icons in Leaflet with webpack/vite
+// Fix leaflet default icon
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+
+L.Icon.Default.mergeOptions({
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+});
+
+const API_URL = "http://localhost:8000/api";
+const DUBAI_CENTER: [number, number] = [25.2048, 55.2708];
+
+// Custom marker icons
 const createCustomIcon = (color: string) => L.divIcon({
   className: 'custom-marker',
   html: `<div style="
@@ -45,300 +52,306 @@ const createCustomIcon = (color: string) => L.divIcon({
 });
 
 const busIcon = createCustomIcon('#d22030');
-const stopIcon = L.divIcon({
-  className: 'custom-stop',
-  html: `<div style="
-    background: #00d4ff;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    border: 3px solid white;
-    box-shadow: 0 0 10px rgba(0,212,255,0.6);
-  "></div>`,
-  iconSize: [14, 14],
-  iconAnchor: [7, 7],
-});
-
-// Dubai coordinates and routes
-const DUBAI_CENTER: [number, number] = [25.2048, 55.2708];
-
-const activeRoutes = [
-  { 
-    id: "101", 
-    driver: "Ahmed Al-Hassan", 
-    stops: 4, 
-    eta: "45 mins", 
-    status: "on-time", 
-    students: 32,
-    busPosition: [25.1123, 55.1855] as [number, number], // Al Barsha
-    route: [
-      [25.1123, 55.1855],
-      [25.1250, 55.2020],
-      [25.1380, 55.2150],
-      [25.1520, 55.2280],
-      [25.1850, 55.2600],
-    ] as [number, number][],
-    color: "#00d4ff"
-  },
-  { 
-    id: "102", 
-    driver: "Mohammed Rashid", 
-    stops: 6, 
-    eta: "52 mins", 
-    status: "on-time", 
-    students: 28,
-    busPosition: [25.0762, 55.1339] as [number, number], // Dubai Marina
-    route: [
-      [25.0762, 55.1339],
-      [25.0900, 55.1500],
-      [25.1100, 55.1700],
-      [25.1350, 55.2000],
-      [25.1600, 55.2350],
-      [25.1850, 55.2600],
-    ] as [number, number][],
-    color: "#10b981"
-  },
-  { 
-    id: "103", 
-    driver: "Fatima Al-Sayed", 
-    stops: 5, 
-    eta: "38 mins", 
-    status: "delayed", 
-    students: 35,
-    busPosition: [25.2100, 55.2700] as [number, number], // Downtown
-    route: [
-      [25.2100, 55.2700],
-      [25.2000, 55.2550],
-      [25.1900, 55.2400],
-      [25.1750, 55.2300],
-      [25.1850, 55.2600],
-    ] as [number, number][],
-    color: "#d22030"
-  },
-];
-
-// Map controls component
-function MapControls() {
-  const map = useMap();
-  
-  return (
-    <div className="absolute top-4 left-4 z-[1000] flex flex-col gap-2">
-      <Button 
-        size="icon" 
-        variant="secondary" 
-        className="glass h-10 w-10"
-        onClick={() => map.zoomIn()}
-      >
-        <ZoomIn className="h-4 w-4" />
-      </Button>
-      <Button 
-        size="icon" 
-        variant="secondary" 
-        className="glass h-10 w-10"
-        onClick={() => map.zoomOut()}
-      >
-        <ZoomOut className="h-4 w-4" />
-      </Button>
-      <Button 
-        size="icon" 
-        variant="secondary" 
-        className="glass h-10 w-10"
-        onClick={() => map.setView(DUBAI_CENTER, 12)}
-      >
-        <Locate className="h-4 w-4" />
-      </Button>
-      <Button 
-        size="icon" 
-        variant="secondary" 
-        className="glass h-10 w-10"
-      >
-        <Layers className="h-4 w-4" />
-      </Button>
-    </div>
-  );
-}
 
 export default function LiveMap() {
-  const [selectedRoute, setSelectedRoute] = useState<string | null>(null);
+  const [routes, setRoutes] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [peakHours, setPeakHours] = useState(true);
+  const [selectedRoute, setSelectedRoute] = useState<any>(null);
+
+  useEffect(() => {
+    const fetchOptimizedRoutes = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch(`${API_URL}/routes?peak_hours=${peakHours}`);
+        if (!response.ok) throw new Error("Failed to fetch routes");
+        const data = await response.json();
+        
+        if (data.routes && data.routes.length > 0) {
+          setRoutes(data.routes);
+        } else {
+          // Fallback to demo routes if no data returned
+          setRoutes(getDemoRoutes());
+        }
+      } catch (error) {
+        console.error("Failed to fetch optimized routes:", error);
+        // Use demo data on error
+        setRoutes(getDemoRoutes());
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchOptimizedRoutes();
+  }, [peakHours]);
+
+  const getDemoRoutes = () => {
+    return [
+      {
+        id: "route_demo_1",
+        route_number: 1,
+        school_name: "Kings' School Al Barsha",
+        student_count: 48,
+        distance_km: 12.5,
+        duration_minutes: 22.3,
+        polyline: [
+          [25.0934, 55.2341],
+          [25.1000, 55.2350],
+          [25.1100, 55.2400],
+          [25.1200, 55.2450]
+        ],
+        optimization_score: 87.3,
+        route_type: "peak_express",
+        start_time: "06:30",
+        status: "scheduled"
+      },
+      {
+        id: "route_demo_2",
+        route_number: 2,
+        school_name: "Al Manara School",
+        student_count: 42,
+        distance_km: 10.8,
+        duration_minutes: 19.5,
+        polyline: [
+          [25.1100, 55.2100],
+          [25.1150, 55.2150],
+          [25.1200, 55.2200],
+          [25.1250, 55.2250]
+        ],
+        optimization_score: 92.1,
+        route_type: "peak_express",
+        start_time: "06:30",
+        status: "scheduled"
+      },
+      {
+        id: "route_demo_3",
+        route_number: 3,
+        school_name: "Dubai British School",
+        student_count: 35,
+        distance_km: 15.2,
+        duration_minutes: 27.8,
+        polyline: [
+          [25.1200, 55.2500],
+          [25.1300, 55.2550],
+          [25.1400, 55.2600],
+          [25.1500, 55.2700]
+        ],
+        optimization_score: 79.5,
+        route_type: "standard",
+        start_time: "07:30",
+        status: "scheduled"
+      }
+    ];
+  };
+
+  const getRouteColor = (index: number) => {
+    const colors = ["#d22030", "#00d4ff", "#10b981", "#fbbf24", "#a78bfa", "#f97316"];
+    return colors[index % colors.length];
+  };
+
+  if (loading) {
+    return (
+      <div className="relative h-full w-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+          <p className="text-foreground">Generating optimized routes with road snapping...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="relative h-[calc(100vh-8rem)] animate-fade-in rounded-xl overflow-hidden">
-      {/* Leaflet Map */}
-      <MapContainer
-        center={DUBAI_CENTER}
-        zoom={12}
-        className="h-full w-full"
-        zoomControl={false}
-        style={{ background: '#0a0f1a' }}
-      >
-        {/* Dark map tiles */}
-        <TileLayer
-          attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>'
-          url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
-        />
-
-        <MapControls />
-
-        {/* Route polylines */}
-        {activeRoutes.map((route) => (
-          <Polyline
-            key={route.id}
-            positions={route.route}
-            pathOptions={{
-              color: route.color,
-              weight: 4,
-              opacity: selectedRoute === route.id ? 1 : 0.6,
-              dashArray: route.status === 'delayed' ? '10, 10' : undefined,
-            }}
-            eventHandlers={{
-              click: () => setSelectedRoute(route.id),
-            }}
-          />
-        ))}
-
-        {/* Bus stops */}
-        {activeRoutes.map((route) => 
-          route.route.slice(1).map((stop, idx) => (
-            <Marker 
-              key={`${route.id}-stop-${idx}`} 
-              position={stop}
-              icon={stopIcon}
-            >
-              <Popup className="custom-popup">
-                <div className="text-sm">
-                  <p className="font-semibold">Stop {idx + 1}</p>
-                  <p className="text-muted-foreground">Route #{route.id}</p>
-                </div>
-              </Popup>
-            </Marker>
-          ))
-        )}
-
-        {/* Bus markers */}
-        {activeRoutes.map((route) => (
-          <Marker 
-            key={route.id} 
-            position={route.busPosition}
-            icon={busIcon}
-            eventHandlers={{
-              click: () => setSelectedRoute(route.id),
-            }}
+    <div className="space-y-4 h-full flex flex-col">
+      {/* Header with Peak Hours Toggle */}
+      <div className="flex items-center justify-between">
+        <div>
+          <h2 className="text-xl font-bold text-foreground">Live Route Map</h2>
+          <p className="text-sm text-muted-foreground">
+            {routes.length} optimized routes with road-snapped navigation
+          </p>
+        </div>
+        <div className="flex gap-2">
+          <Button 
+            variant={peakHours ? "default" : "outline"}
+            onClick={() => setPeakHours(true)}
+            size="sm"
+            className="gap-2"
           >
-            <Popup>
-              <div className="text-sm p-1">
-                <p className="font-bold text-base">Route #{route.id}</p>
-                <p className="text-muted-foreground">{route.driver}</p>
-                <p className="mt-1">{route.students} students • {route.stops} stops</p>
-              </div>
-            </Popup>
-          </Marker>
-        ))}
-      </MapContainer>
-
-      {/* Legend */}
-      <div className="absolute bottom-4 left-4 z-[1000] glass rounded-lg p-4">
-        <p className="text-xs font-medium text-foreground mb-3">Active Routes</p>
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <div className="h-0.5 w-6 bg-accent rounded-full" />
-            <span className="text-xs text-muted-foreground">On-time routes</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="h-0.5 w-6 bg-primary rounded-full" style={{ background: 'repeating-linear-gradient(90deg, #d22030, #d22030 4px, transparent 4px, transparent 8px)' }} />
-            <span className="text-xs text-muted-foreground">Delayed routes</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="h-2 w-2 rounded-full bg-accent" style={{ boxShadow: '0 0 8px rgba(0,212,255,0.6)' }} />
-            <span className="text-xs text-muted-foreground">Bus stops</span>
-          </div>
+            <Zap className="h-4 w-4" />
+            Peak Hours (6:30 AM)
+          </Button>
+          <Button 
+            variant={!peakHours ? "default" : "outline"}
+            onClick={() => setPeakHours(false)}
+            size="sm"
+          >
+            Off-Peak (7:30 AM)
+          </Button>
         </div>
       </div>
 
-      {/* Floating Route Detail Card */}
-      <Card className="absolute top-4 right-4 w-80 z-[1000] glass animate-slide-in-right max-h-[calc(100%-2rem)] overflow-auto">
-        <CardHeader className="pb-3">
-          <CardTitle className="flex items-center justify-between text-base">
-            <div className="flex items-center gap-2">
-              <Navigation className="h-4 w-4 text-accent" />
-              Active Routes
-            </div>
-            <span className="text-xs font-normal text-muted-foreground">{activeRoutes.length} active</span>
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-3">
-          {activeRoutes.map((route) => (
-            <div 
-              key={route.id}
-              className={`p-3 rounded-lg transition-colors cursor-pointer group ${
-                selectedRoute === route.id 
-                  ? 'bg-accent/10 border border-accent/30' 
-                  : 'bg-secondary/50 hover:bg-secondary/70'
-              }`}
-              onClick={() => setSelectedRoute(route.id)}
-            >
-              <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center gap-2">
-                  <div className="p-1.5 rounded-lg" style={{ background: `${route.color}20` }}>
-                    <Bus className="h-4 w-4" style={{ color: route.color }} />
-                  </div>
-                  <span className="font-semibold text-foreground">Route #{route.id}</span>
-                </div>
-                <div className={`px-2 py-0.5 rounded-full text-[10px] font-medium ${
-                  route.status === 'on-time' 
-                    ? 'bg-success/10 text-success border border-success/20' 
-                    : 'bg-warning/10 text-warning border border-warning/20'
-                }`}>
-                  {route.status === 'on-time' ? 'On Time' : 'Delayed'}
-                </div>
+      {/* Map Container */}
+      <Card className="flex-1 overflow-hidden border">
+        <div className="w-full h-full">
+          <MapContainer 
+            center={DUBAI_CENTER} 
+            zoom={12} 
+            style={{ width: '100%', height: '100%' }}
+          >
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              maxZoom={19}
+            />
+          
+          {/* Render all routes */}
+          {routes.map((route, idx) => {
+            const color = getRouteColor(idx);
+            
+            return (
+              <div key={route.id}>
+                {/* Road-snapped polyline */}
+                {route.polyline && route.polyline.length > 1 && (
+                  <Polyline
+                    positions={route.polyline}
+                    color={color}
+                    weight={4}
+                    opacity={0.8}
+                    dashArray={route.route_type === "peak_express" ? "0" : "5, 5"}
+                    className="cursor-pointer hover:opacity-100"
+                    eventHandlers={{
+                      click: () => setSelectedRoute(route)
+                    }}
+                  />
+                )}
+                
+                {/* Bus start position marker */}
+                {route.polyline && route.polyline.length > 0 && (
+                  <Marker 
+                    position={route.polyline[0]}
+                    icon={busIcon}
+                    eventHandlers={{
+                      click: () => setSelectedRoute(route)
+                    }}
+                  >
+                    <Popup className="text-xs">
+                      <div>
+                        <p className="font-bold">{route.school_name}</p>
+                        <p>Route #{route.route_number}</p>
+                        <p className="text-xs mt-1">
+                          👥 {route.student_count} students | 
+                          📏 {route.distance_km?.toFixed(1)} km
+                        </p>
+                      </div>
+                    </Popup>
+                  </Marker>
+                )}
               </div>
-              
-              <div className="flex items-center gap-2 mb-2">
-                <User className="h-3 w-3 text-muted-foreground" />
-                <span className="text-sm text-foreground">{route.driver}</span>
-              </div>
-
-              <div className="grid grid-cols-3 gap-2 text-center pt-2 border-t border-border/50">
-                <div>
-                  <MapPin className="h-3 w-3 text-muted-foreground mx-auto mb-1" />
-                  <p className="text-xs text-muted-foreground">Stops</p>
-                  <p className="text-sm font-semibold text-foreground">{route.stops}</p>
-                </div>
-                <div>
-                  <Clock className="h-3 w-3 text-muted-foreground mx-auto mb-1" />
-                  <p className="text-xs text-muted-foreground">ETA</p>
-                  <p className="text-sm font-semibold text-foreground">{route.eta}</p>
-                </div>
-                <div>
-                  <Users className="h-3 w-3 text-muted-foreground mx-auto mb-1" />
-                  <p className="text-xs text-muted-foreground">Students</p>
-                  <p className="text-sm font-semibold text-foreground">{route.students}</p>
-                </div>
-              </div>
-
-              <Button 
-                variant="ghost" 
-                size="sm" 
-                className="w-full mt-3 text-accent hover:text-accent hover:bg-accent/10"
-              >
-                View Details
-                <ChevronRight className="h-4 w-4 ml-1" />
-              </Button>
-            </div>
-          ))}
-        </CardContent>
+            );
+          })}
+            </MapContainer>
+        </div>
       </Card>
 
-      {/* Quick Actions */}
-      <div className="absolute bottom-4 right-4 z-[1000] flex gap-2">
-        <Button className="glass" variant="secondary">
-          <Phone className="h-4 w-4 mr-2" />
-          Contact Driver
-        </Button>
-        <Button className="bg-primary hover:bg-primary/90">
-          <Navigation className="h-4 w-4 mr-2" />
-          Track All
-        </Button>
+      {/* Routes List */}
+      <div className="grid gap-2">
+        <h3 className="font-semibold text-foreground flex items-center gap-2">
+          <Bus className="h-4 w-4" />
+          Route Overview
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 max-h-48 overflow-y-auto">
+          {routes.slice(0, 12).map((route, idx) => (
+            <Card 
+              key={route.id}
+              className={`cursor-pointer transition-all hover:border-primary ${selectedRoute?.id === route.id ? 'ring-2 ring-primary' : ''}`}
+              onClick={() => setSelectedRoute(route)}
+            >
+              <CardContent className="p-3 space-y-2">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <p className="text-xs text-muted-foreground">Route</p>
+                    <p className="font-bold text-sm">{route.school_name}</p>
+                  </div>
+                  <Badge variant={route.status === "scheduled" ? "default" : "secondary"} className="text-xs">
+                    {route.status}
+                  </Badge>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-2 text-xs">
+                  <div className="flex items-center gap-1">
+                    <span className="text-muted-foreground">👥</span>
+                    <span>{route.student_count}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <span className="text-muted-foreground">📏</span>
+                    <span>{route.distance_km?.toFixed(1)} km</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <span className="text-muted-foreground">⏱️</span>
+                    <span>{route.duration_minutes?.toFixed(0)} min</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <span className="text-muted-foreground">⭐</span>
+                    <span className="text-success">{route.optimization_score?.toFixed(0)}%</span>
+                  </div>
+                </div>
+
+                <div className="flex gap-1 pt-1">
+                  <Badge variant="outline" className="text-xs bg-primary/10">
+                    {route.route_type === "peak_express" ? "Express" : "Standard"}
+                  </Badge>
+                  <Badge variant="outline" className="text-xs">
+                    {route.start_time}
+                  </Badge>
+                </div>
+
+                <Button 
+                  size="sm" 
+                  className="w-full mt-2 h-7 text-xs gap-1"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                  }}
+                >
+                  <Phone className="h-3 w-3" />
+                  Contact Driver
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
+
+      {/* Route Details */}
+      {selectedRoute && (
+        <Card className="border-primary bg-primary/5">
+          <CardHeader className="pb-2">
+            <div className="flex items-center justify-between">
+              <CardTitle className="text-sm">{selectedRoute.school_name} - Route #{selectedRoute.route_number}</CardTitle>
+              <Button size="sm" variant="ghost" onClick={() => setSelectedRoute(null)}>✕</Button>
+            </div>
+          </CardHeader>
+          <CardContent className="text-xs space-y-2">
+            <div className="grid grid-cols-3 gap-2">
+              <div className="flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-primary" />
+                <span className="text-muted-foreground">{selectedRoute.distance_km?.toFixed(2)} km</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock className="h-4 w-4 text-primary" />
+                <span className="text-muted-foreground">~{selectedRoute.duration_minutes?.toFixed(0)} mins</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Navigation className="h-4 w-4 text-primary" />
+                <span className="text-muted-foreground">Optimization: {selectedRoute.optimization_score?.toFixed(0)}%</span>
+              </div>
+            </div>
+            <p className="text-muted-foreground">
+              <strong>Route Type:</strong> {selectedRoute.route_type === "peak_express" ? "Peak Express" : "Standard"}
+              <strong className="ml-3">Departure:</strong> {selectedRoute.start_time}
+            </p>
+          </CardContent>
+        </Card>
+      )}
     </div>
   );
 }
