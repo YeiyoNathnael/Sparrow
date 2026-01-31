@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RTA Nexus - Mission Control Design System
+   Dark mode only, glassmorphism, professional futuristic vibe
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Deep Midnight Blue backgrounds */
+    --background: 222 47% 6%;
+    --foreground: 210 40% 96%;
+
+    /* Cards with glassmorphism base */
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 96%;
+
+    --popover: 222 47% 10%;
+    --popover-foreground: 210 40% 96%;
+
+    /* RTA Red - Primary brand */
+    --primary: 355 76% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Slate secondary */
+    --secondary: 222 30% 14%;
+    --secondary-foreground: 210 40% 90%;
+
+    /* Muted for subtle elements */
+    --muted: 222 30% 12%;
+    --muted-foreground: 215 20% 55%;
+
+    /* Neon Cyan accent for routes/highlights */
+    --accent: 185 100% 50%;
+    --accent-foreground: 222 47% 6%;
+
+    /* Alert/destructive states */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders - subtle glow effect */
+    --border: 222 30% 18%;
+    --input: 222 30% 16%;
+    --ring: 185 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Glassmorphism variables */
+    --glass-bg: 222 47% 10% / 0.6;
+    --glass-border: 222 30% 25% / 0.3;
+    --glass-blur: 12px;
+
+    /* Status colors */
+    --success: 142 76% 45%;
+    --warning: 38 92% 50%;
+    --info: 199 89% 48%;
+
+    /* Sidebar */
+    --sidebar-background: 222 47% 5%;
+    --sidebar-foreground: 210 40% 85%;
+    --sidebar-primary: 355 76% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 30% 12%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 222 30% 15%;
+    --sidebar-ring: 185 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Custom scrollbar for dark theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-secondary rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/30;
+  }
+}
+
+@layer components {
+  /* Glassmorphism card effect */
+  .glass {
+    @apply bg-card/60 backdrop-blur-xl border border-white/10 shadow-2xl;
+  }
+
+  .glass-subtle {
+    @apply bg-card/40 backdrop-blur-md border border-white/5;
+  }
+
+  /* Neon glow effects */
+  .glow-cyan {
+    box-shadow: 0 0 20px hsl(185 100% 50% / 0.3), 0 0 40px hsl(185 100% 50% / 0.1);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 20px hsl(355 76% 48% / 0.4), 0 0 40px hsl(355 76% 48% / 0.2);
+  }
+
+  /* Metric card styling */
+  .metric-card {
+    @apply glass rounded-xl p-6 transition-all duration-300 hover:border-accent/30;
+  }
+
+  /* Status indicator pulse */
+  .pulse-live {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 5px hsl(142 76% 45% / 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px hsl(142 76% 45% / 0.8), 0 0 30px hsl(142 76% 45% / 0.4);
+    }
+  }
+
+  /* Map grid overlay effect */
+  .map-grid {
+    background-image: 
+      linear-gradient(hsl(185 100% 50% / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(185 100% 50% / 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Leaflet popup customization */
+  .leaflet-popup-content-wrapper {
+    @apply bg-card border border-border rounded-lg shadow-xl;
+  }
+
+  .leaflet-popup-content {
+    @apply text-foreground m-3;
+  }
+
+  .leaflet-popup-tip {
+    @apply bg-card;
+  }
+
+  .leaflet-container {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Custom marker animations */
+  .custom-marker {
+    animation: marker-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes marker-pulse {
+    0%, 100% {
+      filter: drop-shadow(0 0 4px rgba(210, 32, 48, 0.6));
+    }
+    50% {
+      filter: drop-shadow(0 0 12px rgba(210, 32, 48, 0.9));
+    }
+  }
+}
