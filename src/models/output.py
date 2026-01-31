@@ -3,6 +3,7 @@ Output formatting module for clustering results.
 Provides structured output for downstream route optimization.
 """
 import json
+import numpy as np
 from typing import List, Dict, Any
 from src.utils.data_structures import BusZone, ClusteringOutput
 
@@ -11,6 +12,26 @@ class OutputFormatter:
     """
     Formats clustering results for downstream consumption.
     """
+    
+    @staticmethod
+    def _convert_to_native_types(obj):
+        """
+        Recursively convert numpy/torch types to native Python types for JSON serialization.
+        """
+        if isinstance(obj, dict):
+            return {key: OutputFormatter._convert_to_native_types(value) for key, value in obj.items()}
+        elif isinstance(obj, list):
+            return [OutputFormatter._convert_to_native_types(item) for item in obj]
+        elif isinstance(obj, (np.integer, np.int32, np.int64)):
+            return int(obj)
+        elif isinstance(obj, (np.floating, np.float32, np.float64)):
+            return float(obj)
+        elif isinstance(obj, np.ndarray):
+            return obj.tolist()
+        elif hasattr(obj, 'item'):  # PyTorch tensors
+            return obj.item()
+        else:
+            return obj
     
     @staticmethod
     def format_zones(zones: List[BusZone], metrics: Dict[str, float] = None) -> ClusteringOutput:
@@ -43,6 +64,8 @@ class OutputFormatter:
             JSON string
         """
         output_dict = output.to_dict()
+        # Convert numpy/torch types to native Python types
+        output_dict = OutputFormatter._convert_to_native_types(output_dict)
         json_str = json.dumps(output_dict, indent=indent)
         
         if filepath:
@@ -228,9 +251,12 @@ class OutputFormatter:
             'metadata': output.clustering_metrics
         }
         
+        # Convert to native types for JSON serialization
+        geojson = OutputFormatter._convert_to_native_types(geojson)
+        
         if filepath:
             with open(filepath, 'w') as f:
-                json.dumps(geojson, f, indent=2)
+                json.dump(geojson, f, indent=2)
             print(f"\nVisualization data saved to: {filepath}")
         
         return geojson
