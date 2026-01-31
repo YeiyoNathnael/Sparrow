@@ -1,10 +1,16 @@
-import { Bell, Search, User, Wifi } from "lucide-react";
+import { Bell, Search, Wifi } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { UserProfileMenu, NotificationsPanel } from "@/components/dialogs";
+import { useNotifications } from "@/hooks/useAppState";
+import { useState } from "react";
 
 export function TopNav() {
+  const [showNotifications, setShowNotifications] = useState(false);
+  const { notifications, unreadCount, markAsRead, dismissNotification } = useNotifications();
+
   return (
-    <header className="h-16 bg-card/40 backdrop-blur-xl border-b border-border flex items-center justify-between px-6">
+    <header className="h-16 bg-card/40 backdrop-blur-xl border-b border-border flex items-center justify-between px-6 relative">
       {/* Search */}
       <div className="flex items-center gap-4 flex-1 max-w-md">
         <div className="relative w-full">
@@ -25,23 +31,31 @@ export function TopNav() {
         </div>
 
         {/* Notifications */}
-        <Button variant="ghost" size="icon" className="relative">
-          <Bell className="h-5 w-5 text-muted-foreground" />
-          <span className="absolute -top-0.5 -right-0.5 h-4 w-4 rounded-full bg-primary text-[10px] font-bold text-primary-foreground flex items-center justify-center">
-            3
-          </span>
-        </Button>
+        <div className="relative">
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="relative"
+            onClick={() => setShowNotifications(!showNotifications)}
+          >
+            <Bell className="h-5 w-5 text-muted-foreground" />
+            {unreadCount > 0 && (
+              <span className="absolute -top-0.5 -right-0.5 h-4 w-4 rounded-full bg-primary text-[10px] font-bold text-primary-foreground flex items-center justify-center">
+                {unreadCount}
+              </span>
+            )}
+          </Button>
+          {showNotifications && (
+            <NotificationsPanel
+              notifications={notifications}
+              onMarkAsRead={markAsRead}
+              onDismiss={dismissNotification}
+            />
+          )}
+        </div>
 
         {/* User Profile */}
-        <Button variant="ghost" className="gap-2">
-          <div className="h-8 w-8 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center">
-            <User className="h-4 w-4 text-primary-foreground" />
-          </div>
-          <div className="hidden md:flex flex-col items-start">
-            <span className="text-sm font-medium">Admin</span>
-            <span className="text-[10px] text-muted-foreground">RTA Dubai</span>
-          </div>
-        </Button>
+        <UserProfileMenu />
       </div>
     </header>
   );
