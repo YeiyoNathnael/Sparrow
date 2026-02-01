@@ -23,8 +23,8 @@ active_dataset:
   
   # Map center coordinates (for frontend visualization)
   map_center:
-    latitude: 25.0950
-    longitude: 55.2200
+    latitude: 25.17046
+    longitude: 55.23273
   
   # Region/area name for display
   region: "Al Barsha, Dubai, UAE"
