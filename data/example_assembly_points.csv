@@ -1,0 +1,6 @@
+stop_id,lat,lon,name,capacity
+STOP001,25.0950,55.2200,Al Barsha Mall Entrance,30
+STOP002,25.1000,55.2250,MOE Metro Station,50
+STOP003,25.0900,55.2150,Community Park Gate,25
+STOP004,25.1050,55.2300,School Road Junction,40
+STOP005,25.0850,55.2350,Residential Block A,35

@@ -289,6 +289,7 @@ def optimize_clustering(assembly_clusters: List[AssemblyPointCluster],
                   f"capacity_violation={loss_dict['capacity_loss']:.2f}")
     
     # Convert best assignments to BusZone objects
+    import numpy as np
     optimized_zones = {}
     for cluster, zone_id in zip(assembly_clusters, best_assignments):
         zone_id = zone_id.item()
@@ -301,6 +302,14 @@ def optimize_clustering(assembly_clusters: List[AssemblyPointCluster],
         optimized_zones[zone_id].assembly_clusters.append(cluster)
     
     zones = [optimized_zones[k] for k in sorted(optimized_zones.keys())]
+    
+    # Calculate buses_needed for each zone based on total students vs capacity
+    for zone in zones:
+        total_students = zone.total_students
+        if total_students > bus_capacity:
+            zone.buses_needed = int(np.ceil(total_students / bus_capacity))
+        else:
+            zone.buses_needed = 1
     
     if verbose:
         print(f"  Optimization complete! Final loss: {best_loss:.2f}")

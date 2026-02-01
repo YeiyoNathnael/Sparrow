@@ -1,1432 +1,874 @@
 {
   "routes": [
     {
-      "route_id": 0,
-      "capacity": 50,
-      "total_students": 97,
-      "pickup_nodes": [
-        {
-          "node_id": "stop_20",
-          "type": "pickup",
-          "location": {
-            "lat": 25.09641972155483,
-            "lon": 55.17265391354226
-          },
-          "demand": 42,
-          "students": [
-            "ST_209",
-            "ST_214",
-            "ST_215",
-            "ST_220",
-            "ST_224",
-            "ST_225",
-            "ST_236",
-            "ST_242",
-            "ST_245",
-            "ST_248",
-            "ST_250",
-            "ST_259",
-            "ST_264",
-            "ST_267",
-            "ST_268",
-            "ST_275",
-            "ST_282",
-            "ST_288",
-            "ST_293",
-            "ST_295",
-            "ST_298",
-            "ST_299",
-            "ST_304",
-            "ST_305",
-            "ST_308",
-            "ST_311",
-            "ST_312",
-            "ST_313",
-            "ST_314",
-            "ST_315",
-            "ST_317",
-            "ST_318",
-            "ST_323",
-            "ST_325",
-            "ST_334",
-            "ST_335",
-            "ST_337",
-            "ST_349",
-            "ST_350",
-            "ST_357",
-            "ST_361",
-            "ST_362"
-          ]
-        },
-        {
-          "node_id": "stop_11",
-          "type": "pickup",
-          "location": {
-            "lat": 25.094098825168345,
-            "lon": 55.252784160126446
-          },
-          "demand": 7,
-          "students": [
-            "ST_471",
-            "ST_487",
-            "ST_492",
-            "ST_494",
-            "ST_522",
-            "ST_535",
-            "ST_539"
-          ]
-        },
-        {
-          "node_id": "stop_10",
-          "type": "pickup",
-          "location": {
-            "lat": 25.054584520379176,
-            "lon": 55.23868267702545
-          },
-          "demand": 48,
-          "students": [
-            "ST_548",
-            "ST_551",
-            "ST_554",
-            "ST_560",
-            "ST_563",
-            "ST_564",
-            "ST_566",
-            "ST_573",
-            "ST_579",
-            "ST_592",
-            "ST_599",
-            "ST_600",
-            "ST_609",
-            "ST_615",
-            "ST_623",
-            "ST_624",
-            "ST_629",
-            "ST_630",
-            "ST_644",
-            "ST_646",
-            "ST_654",
-            "ST_659",
-            "ST_661",
-            "ST_664",
-            "ST_666",
-            "ST_669",
-            "ST_670",
-            "ST_677",
-            "ST_682",
-            "ST_694",
-            "ST_695",
-            "ST_696",
-            "ST_697",
-            "ST_698",
-            "ST_704",
-            "ST_716",
-            "ST_718",
-            "ST_720",
-            "ST_734",
-            "ST_740",
-            "ST_742",
-            "ST_744",
-            "ST_753",
-            "ST_758",
-            "ST_760",
-            "ST_775",
-            "ST_781",
-            "ST_782"
-          ]
-        }
-      ],
-      "dropoff_nodes": [
-        {
-          "node_id": "school_17",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0839,
-            "lon": 55.2442
-          },
-          "students_to_drop": [
-            "ST_209",
-            "ST_350",
-            "ST_494"
-          ]
-        },
-        {
-          "node_id": "school_10",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1156,
-            "lon": 55.2089
-          },
-          "students_to_drop": [
-            "ST_214",
-            "ST_264",
-            "ST_282",
-            "ST_298",
-            "ST_334",
-            "ST_335",
-            "ST_592",
-            "ST_629",
-            "ST_697",
-            "ST_742",
-            "ST_758",
-            "ST_775"
-          ]
-        },
-        {
-          "node_id": "school_5",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0823,
-            "lon": 55.2456
-          },
-          "students_to_drop": [
-            "ST_215",
-            "ST_317",
-            "ST_753",
-            "ST_760"
-          ]
-        },
-        {
-          "node_id": "school_1",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0934,
-            "lon": 55.2341
-          },
-          "students_to_drop": [
-            "ST_220",
-            "ST_224",
-            "ST_225",
-            "ST_664"
-          ]
-        },
-        {
-          "node_id": "school_19",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0899,
-            "lon": 55.2385
-          },
-          "students_to_drop": [
-            "ST_236",
-            "ST_308",
-            "ST_471",
-            "ST_694"
-          ]
-        },
-        {
-          "node_id": "school_8",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1012,
-            "lon": 55.2289
-          },
-          "students_to_drop": [
-            "ST_242",
-            "ST_248",
-            "ST_318",
-            "ST_325",
-            "ST_487",
-            "ST_563",
-            "ST_623"
-          ]
-        },
-        {
-          "node_id": "school_2",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0886,
-            "lon": 55.2392
-          },
-          "students_to_drop": [
-            "ST_245",
-            "ST_268",
-            "ST_293",
-            "ST_305",
-            "ST_551",
-            "ST_566",
-            "ST_670",
-            "ST_695",
-            "ST_704",
-            "ST_716",
-            "ST_720",
-            "ST_740"
-          ]
-        },
-        {
-          "node_id": "school_20",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0921,
-            "lon": 55.2334
-          },
-          "students_to_drop": [
-            "ST_250",
-            "ST_314",
-            "ST_666"
-          ]
-        },
-        {
-          "node_id": "school_16",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0867,
-            "lon": 55.2401
-          },
-          "students_to_drop": [
-            "ST_259",
-            "ST_522",
-            "ST_682"
-          ]
-        },
-        {
-          "node_id": "school_14",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0912,
-            "lon": 55.2356
-          },
-          "students_to_drop": [
-            "ST_267",
-            "ST_313",
-            "ST_337",
-            "ST_349",
-            "ST_560"
-          ]
-        },
-        {
-          "node_id": "school_18",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0841,
-            "lon": 55.2445
-          },
-          "students_to_drop": [
-            "ST_275",
-            "ST_492",
-            "ST_669"
-          ]
-        },
-        {
-          "node_id": "school_9",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1134,
-            "lon": 55.2056
-          },
-          "students_to_drop": [
-            "ST_288",
-            "ST_304",
-            "ST_539",
-            "ST_579",
-            "ST_615",
-            "ST_630",
-            "ST_654",
-            "ST_698"
-          ]
-        },
-        {
-          "node_id": "school_15",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1089,
-            "lon": 55.2012
-          },
-          "students_to_drop": [
-            "ST_295",
-            "ST_564",
-            "ST_573",
-            "ST_718",
-            "ST_734"
-          ]
-        },
-        {
-          "node_id": "school_6",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0872,
-            "lon": 55.2411
-          },
-          "students_to_drop": [
-            "ST_299",
-            "ST_661",
-            "ST_782"
-          ]
-        },
-        {
-          "node_id": "school_12",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1123,
-            "lon": 55.2078
-          },
-          "students_to_drop": [
-            "ST_311",
-            "ST_312",
-            "ST_323",
-            "ST_357",
-            "ST_624",
-            "ST_646",
-            "ST_696"
-          ]
-        },
-        {
-          "node_id": "school_4",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0905,
-            "lon": 55.2378
-          },
-          "students_to_drop": [
-            "ST_315",
-            "ST_362",
-            "ST_548"
-          ]
-        },
-        {
-          "node_id": "school_11",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1098,
-            "lon": 55.2023
-          },
-          "students_to_drop": [
-            "ST_361",
-            "ST_659"
-          ]
-        },
-        {
-          "node_id": "school_3",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0851,
-            "lon": 55.2423
-          },
-          "students_to_drop": [
-            "ST_535",
-            "ST_599"
-          ]
-        },
-        {
-          "node_id": "school_13",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1145,
-            "lon": 55.2045
-          },
-          "students_to_drop": [
-            "ST_554",
-            "ST_644",
-            "ST_677",
-            "ST_744"
-          ]
-        },
-        {
-          "node_id": "school_7",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0844,
-            "lon": 55.2435
-          },
-          "students_to_drop": [
-            "ST_600",
-            "ST_609",
-            "ST_781"
-          ]
-        }
-      ],
-      "constraints": {
-        "max_capacity": 50,
-        "current_load": 97
-      }
-    },
-    {
       "route_id": 2,
       "capacity": 50,
-      "total_students": 63,
-      "pickup_nodes": [
-        {
-          "node_id": "stop_18",
-          "type": "pickup",
-          "location": {
-            "lat": 25.05202406759206,
-            "lon": 55.201204751715096
-          },
-          "demand": 63,
-          "students": [
-            "ST_524",
-            "ST_794",
-            "ST_798",
-            "ST_804",
-            "ST_808",
-            "ST_809",
-            "ST_811",
-            "ST_815",
-            "ST_824",
-            "ST_830",
-            "ST_831",
-            "ST_832",
-            "ST_833",
-            "ST_836",
-            "ST_840",
-            "ST_846",
-            "ST_849",
-            "ST_855",
-            "ST_857",
-            "ST_858",
-            "ST_860",
-            "ST_862",
-            "ST_864",
-            "ST_866",
-            "ST_872",
-            "ST_873",
-            "ST_875",
-            "ST_879",
-            "ST_884",
-            "ST_885",
-            "ST_888",
-            "ST_893",
-            "ST_896",
-            "ST_899",
-            "ST_900",
-            "ST_904",
-            "ST_905",
-            "ST_908",
-            "ST_909",
-            "ST_915",
-            "ST_918",
-            "ST_922",
-            "ST_925",
-            "ST_933",
-            "ST_935",
-            "ST_937",
-            "ST_942",
-            "ST_944",
-            "ST_949",
-            "ST_950",
-            "ST_956",
-            "ST_959",
-            "ST_963",
-            "ST_966",
-            "ST_967",
-            "ST_971",
-            "ST_974",
-            "ST_991",
-            "ST_992",
-            "ST_993",
-            "ST_994",
-            "ST_996",
-            "ST_998"
-          ]
-        }
-      ],
-      "dropoff_nodes": [
-        {
-          "node_id": "school_2",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0886,
-            "lon": 55.2392
-          },
-          "students_to_drop": [
-            "ST_524",
-            "ST_808",
-            "ST_809",
-            "ST_908",
-            "ST_935",
-            "ST_942",
-            "ST_959"
-          ]
-        },
-        {
-          "node_id": "school_5",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0823,
-            "lon": 55.2456
-          },
-          "students_to_drop": [
-            "ST_794",
-            "ST_857",
-            "ST_944",
-            "ST_993",
-            "ST_996"
-          ]
-        },
-        {
-          "node_id": "school_14",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0912,
-            "lon": 55.2356
-          },
-          "students_to_drop": [
-            "ST_798",
-            "ST_896"
-          ]
-        },
-        {
-          "node_id": "school_10",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1156,
-            "lon": 55.2089
-          },
-          "students_to_drop": [
-            "ST_804",
-            "ST_855",
-            "ST_905"
-          ]
-        },
-        {
-          "node_id": "school_13",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1145,
-            "lon": 55.2045
-          },
-          "students_to_drop": [
-            "ST_811",
-            "ST_918"
-          ]
-        },
-        {
-          "node_id": "school_1",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0934,
-            "lon": 55.2341
-          },
-          "students_to_drop": [
-            "ST_815",
-            "ST_831",
-            "ST_888",
-            "ST_899",
-            "ST_992"
-          ]
-        },
-        {
-          "node_id": "school_19",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0899,
-            "lon": 55.2385
-          },
-          "students_to_drop": [
-            "ST_824",
-            "ST_833"
-          ]
-        },
-        {
-          "node_id": "school_9",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1134,
-            "lon": 55.2056
-          },
-          "students_to_drop": [
-            "ST_830",
-            "ST_858",
-            "ST_922",
-            "ST_949"
-          ]
-        },
-        {
-          "node_id": "school_11",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1098,
-            "lon": 55.2023
-          },
-          "students_to_drop": [
-            "ST_832",
-            "ST_849",
-            "ST_884"
-          ]
-        },
-        {
-          "node_id": "school_4",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0905,
-            "lon": 55.2378
-          },
-          "students_to_drop": [
-            "ST_836",
-            "ST_963"
-          ]
-        },
-        {
-          "node_id": "school_7",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0844,
-            "lon": 55.2435
-          },
-          "students_to_drop": [
-            "ST_840",
-            "ST_909",
-            "ST_933",
-            "ST_967"
-          ]
-        },
-        {
-          "node_id": "school_12",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1123,
-            "lon": 55.2078
-          },
-          "students_to_drop": [
-            "ST_846",
-            "ST_862",
-            "ST_873",
-            "ST_900",
-            "ST_950",
-            "ST_966",
-            "ST_991"
-          ]
-        },
-        {
-          "node_id": "school_16",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0867,
-            "lon": 55.2401
-          },
-          "students_to_drop": [
-            "ST_860",
-            "ST_904",
-            "ST_956"
-          ]
-        },
-        {
-          "node_id": "school_17",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0839,
-            "lon": 55.2442
-          },
-          "students_to_drop": [
-            "ST_864",
-            "ST_893",
-            "ST_915"
-          ]
-        },
-        {
-          "node_id": "school_3",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0851,
-            "lon": 55.2423
-          },
-          "students_to_drop": [
-            "ST_866",
-            "ST_879",
-            "ST_974"
-          ]
-        },
-        {
-          "node_id": "school_6",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0872,
-            "lon": 55.2411
-          },
-          "students_to_drop": [
-            "ST_872",
-            "ST_971"
-          ]
-        },
-        {
-          "node_id": "school_8",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1012,
-            "lon": 55.2289
-          },
-          "students_to_drop": [
-            "ST_875",
-            "ST_925",
-            "ST_937"
-          ]
-        },
-        {
-          "node_id": "school_20",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0921,
-            "lon": 55.2334
-          },
-          "students_to_drop": [
-            "ST_885",
-            "ST_998"
-          ]
-        },
-        {
-          "node_id": "school_18",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0841,
-            "lon": 55.2445
-          },
-          "students_to_drop": [
-            "ST_994"
-          ]
-        }
-      ],
-      "constraints": {
-        "max_capacity": 50,
-        "current_load": 63
-      }
-    },
-    {
-      "route_id": 4,
-      "capacity": 50,
-      "total_students": 30,
-      "pickup_nodes": [
-        {
-          "node_id": "stop_7",
-          "type": "pickup",
-          "location": {
-            "lat": 25.1123,
-            "lon": 55.2089
-          },
-          "demand": 30,
-          "students": [
-            "ST_16",
-            "ST_19",
-            "ST_23",
-            "ST_36",
-            "ST_45",
-            "ST_69",
-            "ST_74",
-            "ST_82",
-            "ST_87",
-            "ST_104",
-            "ST_130",
-            "ST_142",
-            "ST_144",
-            "ST_147",
-            "ST_174",
-            "ST_176",
-            "ST_182",
-            "ST_382",
-            "ST_394",
-            "ST_396",
-            "ST_400",
-            "ST_413",
-            "ST_417",
-            "ST_422",
-            "ST_431",
-            "ST_437",
-            "ST_438",
-            "ST_440",
-            "ST_490",
-            "ST_526"
-          ]
-        }
-      ],
-      "dropoff_nodes": [
-        {
-          "node_id": "school_13",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1145,
-            "lon": 55.2045
-          },
-          "students_to_drop": [
-            "ST_16",
-            "ST_147"
-          ]
-        },
-        {
-          "node_id": "school_14",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0912,
-            "lon": 55.2356
-          },
-          "students_to_drop": [
-            "ST_19",
-            "ST_417",
-            "ST_438"
-          ]
-        },
-        {
-          "node_id": "school_19",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0899,
-            "lon": 55.2385
-          },
-          "students_to_drop": [
-            "ST_23"
-          ]
-        },
-        {
-          "node_id": "school_10",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1156,
-            "lon": 55.2089
-          },
-          "students_to_drop": [
-            "ST_36",
-            "ST_413"
-          ]
-        },
-        {
-          "node_id": "school_20",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0921,
-            "lon": 55.2334
-          },
-          "students_to_drop": [
-            "ST_45",
-            "ST_142",
-            "ST_176"
-          ]
-        },
-        {
-          "node_id": "school_11",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1098,
-            "lon": 55.2023
-          },
-          "students_to_drop": [
-            "ST_69",
-            "ST_396"
-          ]
-        },
-        {
-          "node_id": "school_1",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0934,
-            "lon": 55.2341
-          },
-          "students_to_drop": [
-            "ST_74",
-            "ST_82",
-            "ST_104",
-            "ST_174",
-            "ST_437"
-          ]
-        },
-        {
-          "node_id": "school_9",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1134,
-            "lon": 55.2056
-          },
-          "students_to_drop": [
-            "ST_87",
-            "ST_440",
-            "ST_526"
-          ]
-        },
-        {
-          "node_id": "school_2",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0886,
-            "lon": 55.2392
-          },
-          "students_to_drop": [
-            "ST_130",
-            "ST_144",
-            "ST_490"
-          ]
-        },
-        {
-          "node_id": "school_12",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1123,
-            "lon": 55.2078
-          },
-          "students_to_drop": [
-            "ST_182",
-            "ST_382"
-          ]
-        },
-        {
-          "node_id": "school_8",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1012,
-            "lon": 55.2289
-          },
-          "students_to_drop": [
-            "ST_394",
-            "ST_422"
-          ]
-        },
-        {
-          "node_id": "school_5",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0823,
-            "lon": 55.2456
-          },
-          "students_to_drop": [
-            "ST_400"
-          ]
-        },
-        {
-          "node_id": "school_3",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0851,
-            "lon": 55.2423
-          },
-          "students_to_drop": [
-            "ST_431"
-          ]
-        }
-      ],
-      "constraints": {
-        "max_capacity": 50,
-        "current_load": 30
-      }
-    },
-    {
-      "route_id": 5,
-      "capacity": 50,
-      "total_students": 103,
+      "total_students": 72,
+      "buses_needed": 2,
       "pickup_nodes": [
         {
           "node_id": "stop_4",
           "type": "pickup",
           "location": {
-            "lat": 25.0987,
-            "lon": 55.1798
+            "lat": 25.16870480944356,
+            "lon": 55.23572923710927
           },
-          "demand": 56,
+          "demand": 72,
           "students": [
-            "ST_210",
-            "ST_211",
-            "ST_212",
-            "ST_216",
-            "ST_218",
-            "ST_221",
-            "ST_222",
-            "ST_227",
-            "ST_232",
-            "ST_239",
-            "ST_240",
-            "ST_241",
-            "ST_244",
-            "ST_247",
-            "ST_251",
-            "ST_253",
-            "ST_255",
-            "ST_256",
-            "ST_262",
-            "ST_265",
-            "ST_269",
-            "ST_271",
-            "ST_273",
-            "ST_277",
-            "ST_287",
-            "ST_289",
-            "ST_291",
-            "ST_292",
-            "ST_296",
-            "ST_300",
-            "ST_301",
-            "ST_306",
-            "ST_307",
-            "ST_309",
-            "ST_310",
-            "ST_316",
-            "ST_320",
-            "ST_324",
-            "ST_332",
-            "ST_336",
-            "ST_341",
-            "ST_345",
-            "ST_347",
-            "ST_348",
-            "ST_351",
-            "ST_355",
-            "ST_356",
-            "ST_358",
-            "ST_360",
-            "ST_363",
-            "ST_364",
-            "ST_365",
-            "ST_367",
-            "ST_369",
-            "ST_371",
-            "ST_374"
+            "ST_SAFA_18",
+            "ST_SAFA_35",
+            "ST_SAFA_51",
+            "ST_SAFA_112",
+            "ST_SAFA_264",
+            "ST_SAFA_270",
+            "ST_SAFA_318",
+            "ST_SAFA_319",
+            "ST_SAFA_334",
+            "ST_SAFA_353",
+            "ST_SAFA_354",
+            "ST_SAFA_363",
+            "ST_SAFA_367",
+            "ST_SAFA_395",
+            "ST_SAFA_398",
+            "ST_SAFA_401",
+            "ST_SAFA_402",
+            "ST_SAFA_403",
+            "ST_SAFA_419",
+            "ST_SAFA_426",
+            "ST_SAFA_434",
+            "ST_SAFA_442",
+            "ST_SAFA_446",
+            "ST_SAFA_452",
+            "ST_SAFA_457",
+            "ST_SAFA_464",
+            "ST_SAFA_475",
+            "ST_SAFA_483",
+            "ST_SAFA_493",
+            "ST_SAFA_506",
+            "ST_SAFA_510",
+            "ST_SAFA_524",
+            "ST_SAFA_526",
+            "ST_SAFA_549",
+            "ST_SAFA_552",
+            "ST_SAFA_557",
+            "ST_SAFA_559",
+            "ST_SAFA_571",
+            "ST_SAFA_578",
+            "ST_SAFA_580",
+            "ST_SAFA_581",
+            "ST_SAFA_587",
+            "ST_SAFA_597",
+            "ST_SAFA_620",
+            "ST_SAFA_646",
+            "ST_SAFA_679",
+            "ST_SAFA_687",
+            "ST_SAFA_688",
+            "ST_SAFA_690",
+            "ST_SAFA_695",
+            "ST_SAFA_699",
+            "ST_SAFA_708",
+            "ST_SAFA_709",
+            "ST_SAFA_713",
+            "ST_SAFA_715",
+            "ST_SAFA_729",
+            "ST_SAFA_730",
+            "ST_SAFA_751",
+            "ST_SAFA_756",
+            "ST_SAFA_757",
+            "ST_SAFA_773",
+            "ST_SAFA_799",
+            "ST_SAFA_819",
+            "ST_SAFA_855",
+            "ST_SAFA_870",
+            "ST_SAFA_884",
+            "ST_SAFA_885",
+            "ST_SAFA_892",
+            "ST_SAFA_931",
+            "ST_SAFA_945",
+            "ST_SAFA_950",
+            "ST_SAFA_982"
+          ]
+        }
+      ],
+      "dropoff_nodes": [
+        {
+          "node_id": "school_104",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.172813,
+            "lon": 55.237976
+          },
+          "students_to_drop": [
+            "ST_SAFA_18",
+            "ST_SAFA_112",
+            "ST_SAFA_264",
+            "ST_SAFA_395",
+            "ST_SAFA_398",
+            "ST_SAFA_402",
+            "ST_SAFA_452",
+            "ST_SAFA_581",
+            "ST_SAFA_597",
+            "ST_SAFA_646",
+            "ST_SAFA_819",
+            "ST_SAFA_892",
+            "ST_SAFA_931"
+          ]
+        },
+        {
+          "node_id": "school_101",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.176771,
+            "lon": 55.236021
+          },
+          "students_to_drop": [
+            "ST_SAFA_35",
+            "ST_SAFA_353",
+            "ST_SAFA_401",
+            "ST_SAFA_403",
+            "ST_SAFA_434",
+            "ST_SAFA_446",
+            "ST_SAFA_549",
+            "ST_SAFA_559",
+            "ST_SAFA_690",
+            "ST_SAFA_713",
+            "ST_SAFA_715",
+            "ST_SAFA_773",
+            "ST_SAFA_855",
+            "ST_SAFA_945"
+          ]
+        },
+        {
+          "node_id": "school_105",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.1742,
+            "lon": 55.2395
+          },
+          "students_to_drop": [
+            "ST_SAFA_51",
+            "ST_SAFA_270",
+            "ST_SAFA_475",
+            "ST_SAFA_620",
+            "ST_SAFA_687",
+            "ST_SAFA_708",
+            "ST_SAFA_709",
+            "ST_SAFA_756",
+            "ST_SAFA_884",
+            "ST_SAFA_885",
+            "ST_SAFA_950"
+          ]
+        },
+        {
+          "node_id": "school_102",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.176233,
+            "lon": 55.238662
+          },
+          "students_to_drop": [
+            "ST_SAFA_318",
+            "ST_SAFA_363",
+            "ST_SAFA_457",
+            "ST_SAFA_506",
+            "ST_SAFA_524",
+            "ST_SAFA_557",
+            "ST_SAFA_571",
+            "ST_SAFA_578",
+            "ST_SAFA_688",
+            "ST_SAFA_695",
+            "ST_SAFA_751",
+            "ST_SAFA_870"
+          ]
+        },
+        {
+          "node_id": "school_103",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.178357,
+            "lon": 55.241636
+          },
+          "students_to_drop": [
+            "ST_SAFA_319",
+            "ST_SAFA_334",
+            "ST_SAFA_367",
+            "ST_SAFA_419",
+            "ST_SAFA_442",
+            "ST_SAFA_464",
+            "ST_SAFA_493",
+            "ST_SAFA_526",
+            "ST_SAFA_587",
+            "ST_SAFA_679",
+            "ST_SAFA_729",
+            "ST_SAFA_730",
+            "ST_SAFA_757",
+            "ST_SAFA_799",
+            "ST_SAFA_982"
+          ]
+        },
+        {
+          "node_id": "school_106",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.1715,
+            "lon": 55.243
+          },
+          "students_to_drop": [
+            "ST_SAFA_354",
+            "ST_SAFA_426",
+            "ST_SAFA_483",
+            "ST_SAFA_510",
+            "ST_SAFA_552",
+            "ST_SAFA_580",
+            "ST_SAFA_699"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_capacity": 50,
+        "current_load": 72
+      }
+    },
+    {
+      "route_id": 3,
+      "capacity": 50,
+      "total_students": 125,
+      "buses_needed": 3,
+      "pickup_nodes": [
+        {
+          "node_id": "stop_19",
+          "type": "pickup",
+          "location": {
+            "lat": 25.183489205739015,
+            "lon": 55.23085985860207
+          },
+          "demand": 30,
+          "students": [
+            "ST_SAFA_40",
+            "ST_SAFA_44",
+            "ST_SAFA_53",
+            "ST_SAFA_76",
+            "ST_SAFA_182",
+            "ST_SAFA_221",
+            "ST_SAFA_228",
+            "ST_SAFA_231",
+            "ST_SAFA_233",
+            "ST_SAFA_275",
+            "ST_SAFA_296",
+            "ST_SAFA_297",
+            "ST_SAFA_306",
+            "ST_SAFA_312",
+            "ST_SAFA_366",
+            "ST_SAFA_397",
+            "ST_SAFA_410",
+            "ST_SAFA_431",
+            "ST_SAFA_456",
+            "ST_SAFA_478",
+            "ST_SAFA_494",
+            "ST_SAFA_496",
+            "ST_SAFA_504",
+            "ST_SAFA_507",
+            "ST_SAFA_517",
+            "ST_SAFA_528",
+            "ST_SAFA_568",
+            "ST_SAFA_570",
+            "ST_SAFA_585",
+            "ST_SAFA_596"
           ]
         },
         {
           "node_id": "stop_24",
           "type": "pickup",
           "location": {
-            "lat": 25.06851839635968,
-            "lon": 55.24144100104258
+            "lat": 25.167998300116956,
+            "lon": 55.24260659745687
           },
-          "demand": 47,
+          "demand": 53,
           "students": [
-            "ST_499",
-            "ST_547",
-            "ST_556",
-            "ST_557",
-            "ST_567",
-            "ST_569",
-            "ST_571",
-            "ST_584",
-            "ST_595",
-            "ST_597",
-            "ST_598",
-            "ST_613",
-            "ST_626",
-            "ST_631",
-            "ST_632",
-            "ST_638",
-            "ST_643",
-            "ST_649",
-            "ST_656",
-            "ST_658",
-            "ST_660",
-            "ST_662",
-            "ST_663",
-            "ST_668",
-            "ST_675",
-            "ST_680",
-            "ST_681",
-            "ST_703",
-            "ST_707",
-            "ST_712",
-            "ST_721",
-            "ST_722",
-            "ST_723",
-            "ST_726",
-            "ST_727",
-            "ST_735",
-            "ST_745",
-            "ST_746",
-            "ST_762",
-            "ST_765",
-            "ST_771",
-            "ST_772",
-            "ST_774",
-            "ST_778",
-            "ST_783",
-            "ST_788",
-            "ST_789"
+            "ST_SAFA_100",
+            "ST_SAFA_181",
+            "ST_SAFA_260",
+            "ST_SAFA_266",
+            "ST_SAFA_294",
+            "ST_SAFA_303",
+            "ST_SAFA_421",
+            "ST_SAFA_462",
+            "ST_SAFA_520",
+            "ST_SAFA_541",
+            "ST_SAFA_562",
+            "ST_SAFA_569",
+            "ST_SAFA_610",
+            "ST_SAFA_612",
+            "ST_SAFA_619",
+            "ST_SAFA_629",
+            "ST_SAFA_634",
+            "ST_SAFA_650",
+            "ST_SAFA_673",
+            "ST_SAFA_677",
+            "ST_SAFA_685",
+            "ST_SAFA_702",
+            "ST_SAFA_718",
+            "ST_SAFA_726",
+            "ST_SAFA_733",
+            "ST_SAFA_735",
+            "ST_SAFA_736",
+            "ST_SAFA_771",
+            "ST_SAFA_777",
+            "ST_SAFA_781",
+            "ST_SAFA_784",
+            "ST_SAFA_787",
+            "ST_SAFA_797",
+            "ST_SAFA_798",
+            "ST_SAFA_832",
+            "ST_SAFA_838",
+            "ST_SAFA_859",
+            "ST_SAFA_862",
+            "ST_SAFA_864",
+            "ST_SAFA_887",
+            "ST_SAFA_899",
+            "ST_SAFA_900",
+            "ST_SAFA_906",
+            "ST_SAFA_907",
+            "ST_SAFA_909",
+            "ST_SAFA_911",
+            "ST_SAFA_943",
+            "ST_SAFA_948",
+            "ST_SAFA_957",
+            "ST_SAFA_985",
+            "ST_SAFA_991",
+            "ST_SAFA_993",
+            "ST_SAFA_994"
+          ]
+        },
+        {
+          "node_id": "stop_2",
+          "type": "pickup",
+          "location": {
+            "lat": 25.163231667647548,
+            "lon": 55.244396179095496
+          },
+          "demand": 42,
+          "students": [
+            "ST_SAFA_243",
+            "ST_SAFA_274",
+            "ST_SAFA_358",
+            "ST_SAFA_409",
+            "ST_SAFA_437",
+            "ST_SAFA_444",
+            "ST_SAFA_601",
+            "ST_SAFA_621",
+            "ST_SAFA_626",
+            "ST_SAFA_630",
+            "ST_SAFA_638",
+            "ST_SAFA_640",
+            "ST_SAFA_737",
+            "ST_SAFA_740",
+            "ST_SAFA_745",
+            "ST_SAFA_754",
+            "ST_SAFA_774",
+            "ST_SAFA_782",
+            "ST_SAFA_788",
+            "ST_SAFA_793",
+            "ST_SAFA_807",
+            "ST_SAFA_827",
+            "ST_SAFA_828",
+            "ST_SAFA_829",
+            "ST_SAFA_840",
+            "ST_SAFA_853",
+            "ST_SAFA_863",
+            "ST_SAFA_866",
+            "ST_SAFA_878",
+            "ST_SAFA_888",
+            "ST_SAFA_891",
+            "ST_SAFA_893",
+            "ST_SAFA_902",
+            "ST_SAFA_905",
+            "ST_SAFA_926",
+            "ST_SAFA_934",
+            "ST_SAFA_952",
+            "ST_SAFA_959",
+            "ST_SAFA_965",
+            "ST_SAFA_970",
+            "ST_SAFA_987",
+            "ST_SAFA_997"
           ]
         }
       ],
       "dropoff_nodes": [
         {
-          "node_id": "school_18",
+          "node_id": "school_105",
           "type": "dropoff",
           "location": {
-            "lat": 25.0841,
-            "lon": 55.2445
+            "lat": 25.1742,
+            "lon": 55.2395
           },
           "students_to_drop": [
-            "ST_210",
-            "ST_707"
+            "ST_SAFA_40",
+            "ST_SAFA_221",
+            "ST_SAFA_233",
+            "ST_SAFA_306",
+            "ST_SAFA_312",
+            "ST_SAFA_478",
+            "ST_SAFA_496",
+            "ST_SAFA_517",
+            "ST_SAFA_568",
+            "ST_SAFA_781",
+            "ST_SAFA_787",
+            "ST_SAFA_797",
+            "ST_SAFA_832",
+            "ST_SAFA_907",
+            "ST_SAFA_957",
+            "ST_SAFA_994",
+            "ST_SAFA_829",
+            "ST_SAFA_840"
           ]
         },
         {
-          "node_id": "school_9",
+          "node_id": "school_104",
           "type": "dropoff",
           "location": {
-            "lat": 25.1134,
-            "lon": 55.2056
+            "lat": 25.172813,
+            "lon": 55.237976
           },
           "students_to_drop": [
-            "ST_211",
-            "ST_269",
-            "ST_300",
-            "ST_309",
-            "ST_356",
-            "ST_626",
-            "ST_656",
-            "ST_762"
+            "ST_SAFA_44",
+            "ST_SAFA_76",
+            "ST_SAFA_266",
+            "ST_SAFA_569",
+            "ST_SAFA_610",
+            "ST_SAFA_634",
+            "ST_SAFA_677",
+            "ST_SAFA_726",
+            "ST_SAFA_777",
+            "ST_SAFA_838",
+            "ST_SAFA_899",
+            "ST_SAFA_900",
+            "ST_SAFA_906",
+            "ST_SAFA_911",
+            "ST_SAFA_948",
+            "ST_SAFA_985",
+            "ST_SAFA_409",
+            "ST_SAFA_437",
+            "ST_SAFA_737",
+            "ST_SAFA_754",
+            "ST_SAFA_774",
+            "ST_SAFA_828",
+            "ST_SAFA_891",
+            "ST_SAFA_952",
+            "ST_SAFA_959",
+            "ST_SAFA_965"
           ]
         },
         {
-          "node_id": "school_2",
+          "node_id": "school_102",
           "type": "dropoff",
           "location": {
-            "lat": 25.0886,
-            "lon": 55.2392
+            "lat": 25.176233,
+            "lon": 55.238662
           },
           "students_to_drop": [
-            "ST_212",
-            "ST_227",
-            "ST_277",
-            "ST_292",
-            "ST_351",
-            "ST_358",
-            "ST_499",
-            "ST_649"
+            "ST_SAFA_53",
+            "ST_SAFA_231",
+            "ST_SAFA_397",
+            "ST_SAFA_100",
+            "ST_SAFA_181",
+            "ST_SAFA_462",
+            "ST_SAFA_274",
+            "ST_SAFA_601",
+            "ST_SAFA_640",
+            "ST_SAFA_745",
+            "ST_SAFA_866",
+            "ST_SAFA_878",
+            "ST_SAFA_893",
+            "ST_SAFA_905",
+            "ST_SAFA_987"
           ]
         },
         {
-          "node_id": "school_6",
+          "node_id": "school_101",
           "type": "dropoff",
           "location": {
-            "lat": 25.0872,
-            "lon": 55.2411
+            "lat": 25.176771,
+            "lon": 55.236021
           },
           "students_to_drop": [
-            "ST_216",
-            "ST_218",
-            "ST_262",
-            "ST_789"
+            "ST_SAFA_182",
+            "ST_SAFA_275",
+            "ST_SAFA_296",
+            "ST_SAFA_410",
+            "ST_SAFA_431",
+            "ST_SAFA_570",
+            "ST_SAFA_294",
+            "ST_SAFA_421",
+            "ST_SAFA_520",
+            "ST_SAFA_562",
+            "ST_SAFA_733",
+            "ST_SAFA_771",
+            "ST_SAFA_798",
+            "ST_SAFA_862",
+            "ST_SAFA_358",
+            "ST_SAFA_782",
+            "ST_SAFA_793",
+            "ST_SAFA_807",
+            "ST_SAFA_827",
+            "ST_SAFA_888",
+            "ST_SAFA_902",
+            "ST_SAFA_926",
+            "ST_SAFA_934"
           ]
         },
         {
-          "node_id": "school_5",
+          "node_id": "school_103",
           "type": "dropoff",
           "location": {
-            "lat": 25.0823,
-            "lon": 55.2456
+            "lat": 25.178357,
+            "lon": 55.241636
           },
           "students_to_drop": [
-            "ST_221",
-            "ST_240",
-            "ST_613",
-            "ST_774"
+            "ST_SAFA_228",
+            "ST_SAFA_366",
+            "ST_SAFA_494",
+            "ST_SAFA_504",
+            "ST_SAFA_507",
+            "ST_SAFA_260",
+            "ST_SAFA_303",
+            "ST_SAFA_541",
+            "ST_SAFA_612",
+            "ST_SAFA_629",
+            "ST_SAFA_673",
+            "ST_SAFA_702",
+            "ST_SAFA_735",
+            "ST_SAFA_736",
+            "ST_SAFA_784",
+            "ST_SAFA_859",
+            "ST_SAFA_909",
+            "ST_SAFA_943",
+            "ST_SAFA_243",
+            "ST_SAFA_626",
+            "ST_SAFA_788",
+            "ST_SAFA_853",
+            "ST_SAFA_970",
+            "ST_SAFA_997"
           ]
         },
         {
-          "node_id": "school_19",
+          "node_id": "school_106",
           "type": "dropoff",
           "location": {
-            "lat": 25.0899,
-            "lon": 55.2385
+            "lat": 25.1715,
+            "lon": 55.243
           },
           "students_to_drop": [
-            "ST_222",
-            "ST_232",
-            "ST_348",
-            "ST_595",
-            "ST_681",
-            "ST_712",
-            "ST_745"
+            "ST_SAFA_297",
+            "ST_SAFA_456",
+            "ST_SAFA_528",
+            "ST_SAFA_585",
+            "ST_SAFA_596",
+            "ST_SAFA_619",
+            "ST_SAFA_650",
+            "ST_SAFA_685",
+            "ST_SAFA_718",
+            "ST_SAFA_864",
+            "ST_SAFA_887",
+            "ST_SAFA_991",
+            "ST_SAFA_993",
+            "ST_SAFA_444",
+            "ST_SAFA_621",
+            "ST_SAFA_630",
+            "ST_SAFA_638",
+            "ST_SAFA_740",
+            "ST_SAFA_863"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_capacity": 50,
+        "current_load": 125
+      }
+    },
+    {
+      "route_id": 4,
+      "capacity": 50,
+      "total_students": 103,
+      "buses_needed": 3,
+      "pickup_nodes": [
+        {
+          "node_id": "stop_17",
+          "type": "pickup",
+          "location": {
+            "lat": 25.1755,
+            "lon": 55.239
+          },
+          "demand": 103,
+          "students": [
+            "ST_SAFA_1",
+            "ST_SAFA_6",
+            "ST_SAFA_11",
+            "ST_SAFA_13",
+            "ST_SAFA_17",
+            "ST_SAFA_25",
+            "ST_SAFA_38",
+            "ST_SAFA_39",
+            "ST_SAFA_55",
+            "ST_SAFA_71",
+            "ST_SAFA_74",
+            "ST_SAFA_86",
+            "ST_SAFA_91",
+            "ST_SAFA_98",
+            "ST_SAFA_99",
+            "ST_SAFA_101",
+            "ST_SAFA_106",
+            "ST_SAFA_117",
+            "ST_SAFA_129",
+            "ST_SAFA_131",
+            "ST_SAFA_148",
+            "ST_SAFA_158",
+            "ST_SAFA_165",
+            "ST_SAFA_203",
+            "ST_SAFA_213",
+            "ST_SAFA_224",
+            "ST_SAFA_226",
+            "ST_SAFA_230",
+            "ST_SAFA_232",
+            "ST_SAFA_234",
+            "ST_SAFA_244",
+            "ST_SAFA_250",
+            "ST_SAFA_255",
+            "ST_SAFA_262",
+            "ST_SAFA_277",
+            "ST_SAFA_280",
+            "ST_SAFA_298",
+            "ST_SAFA_302",
+            "ST_SAFA_304",
+            "ST_SAFA_308",
+            "ST_SAFA_316",
+            "ST_SAFA_329",
+            "ST_SAFA_333",
+            "ST_SAFA_337",
+            "ST_SAFA_338",
+            "ST_SAFA_347",
+            "ST_SAFA_368",
+            "ST_SAFA_375",
+            "ST_SAFA_381",
+            "ST_SAFA_388",
+            "ST_SAFA_391",
+            "ST_SAFA_392",
+            "ST_SAFA_399",
+            "ST_SAFA_406",
+            "ST_SAFA_407",
+            "ST_SAFA_412",
+            "ST_SAFA_415",
+            "ST_SAFA_417",
+            "ST_SAFA_420",
+            "ST_SAFA_430",
+            "ST_SAFA_438",
+            "ST_SAFA_439",
+            "ST_SAFA_448",
+            "ST_SAFA_449",
+            "ST_SAFA_453",
+            "ST_SAFA_470",
+            "ST_SAFA_471",
+            "ST_SAFA_485",
+            "ST_SAFA_522",
+            "ST_SAFA_523",
+            "ST_SAFA_538",
+            "ST_SAFA_540",
+            "ST_SAFA_550",
+            "ST_SAFA_560",
+            "ST_SAFA_579",
+            "ST_SAFA_586",
+            "ST_SAFA_588",
+            "ST_SAFA_591",
+            "ST_SAFA_594",
+            "ST_SAFA_595",
+            "ST_SAFA_616",
+            "ST_SAFA_617",
+            "ST_SAFA_618",
+            "ST_SAFA_625",
+            "ST_SAFA_651",
+            "ST_SAFA_664",
+            "ST_SAFA_672",
+            "ST_SAFA_686",
+            "ST_SAFA_693",
+            "ST_SAFA_694",
+            "ST_SAFA_705",
+            "ST_SAFA_725",
+            "ST_SAFA_728",
+            "ST_SAFA_738",
+            "ST_SAFA_760",
+            "ST_SAFA_761",
+            "ST_SAFA_786",
+            "ST_SAFA_791",
+            "ST_SAFA_792",
+            "ST_SAFA_927",
+            "ST_SAFA_947",
+            "ST_SAFA_961",
+            "ST_SAFA_990"
+          ]
+        }
+      ],
+      "dropoff_nodes": [
+        {
+          "node_id": "school_105",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.1742,
+            "lon": 55.2395
+          },
+          "students_to_drop": [
+            "ST_SAFA_1",
+            "ST_SAFA_131",
+            "ST_SAFA_203",
+            "ST_SAFA_250",
+            "ST_SAFA_304",
+            "ST_SAFA_338",
+            "ST_SAFA_375",
+            "ST_SAFA_438",
+            "ST_SAFA_470",
+            "ST_SAFA_588",
+            "ST_SAFA_616",
+            "ST_SAFA_617",
+            "ST_SAFA_990"
           ]
         },
         {
-          "node_id": "school_12",
+          "node_id": "school_102",
           "type": "dropoff",
           "location": {
-            "lat": 25.1123,
-            "lon": 55.2078
+            "lat": 25.176233,
+            "lon": 55.238662
           },
           "students_to_drop": [
-            "ST_239",
-            "ST_255",
-            "ST_256",
-            "ST_369",
-            "ST_632",
-            "ST_638",
-            "ST_660",
-            "ST_726",
-            "ST_765"
+            "ST_SAFA_6",
+            "ST_SAFA_71",
+            "ST_SAFA_98",
+            "ST_SAFA_129",
+            "ST_SAFA_165",
+            "ST_SAFA_213",
+            "ST_SAFA_224",
+            "ST_SAFA_302",
+            "ST_SAFA_407",
+            "ST_SAFA_439",
+            "ST_SAFA_448",
+            "ST_SAFA_449",
+            "ST_SAFA_485",
+            "ST_SAFA_591",
+            "ST_SAFA_664",
+            "ST_SAFA_672",
+            "ST_SAFA_728",
+            "ST_SAFA_761",
+            "ST_SAFA_786",
+            "ST_SAFA_791"
           ]
         },
         {
-          "node_id": "school_1",
+          "node_id": "school_104",
           "type": "dropoff",
           "location": {
-            "lat": 25.0934,
-            "lon": 55.2341
+            "lat": 25.172813,
+            "lon": 55.237976
           },
           "students_to_drop": [
-            "ST_241",
-            "ST_247",
-            "ST_341",
-            "ST_360",
-            "ST_557",
-            "ST_567",
-            "ST_598",
-            "ST_658",
-            "ST_662"
+            "ST_SAFA_11",
+            "ST_SAFA_25",
+            "ST_SAFA_38",
+            "ST_SAFA_39",
+            "ST_SAFA_55",
+            "ST_SAFA_226",
+            "ST_SAFA_230",
+            "ST_SAFA_232",
+            "ST_SAFA_244",
+            "ST_SAFA_298",
+            "ST_SAFA_308",
+            "ST_SAFA_316",
+            "ST_SAFA_337",
+            "ST_SAFA_347",
+            "ST_SAFA_412",
+            "ST_SAFA_420",
+            "ST_SAFA_522",
+            "ST_SAFA_538",
+            "ST_SAFA_579",
+            "ST_SAFA_586",
+            "ST_SAFA_594",
+            "ST_SAFA_618",
+            "ST_SAFA_686",
+            "ST_SAFA_705",
+            "ST_SAFA_792",
+            "ST_SAFA_961"
           ]
         },
         {
-          "node_id": "school_16",
+          "node_id": "school_106",
           "type": "dropoff",
           "location": {
-            "lat": 25.0867,
-            "lon": 55.2401
+            "lat": 25.1715,
+            "lon": 55.243
           },
           "students_to_drop": [
-            "ST_244",
-            "ST_253",
-            "ST_771"
+            "ST_SAFA_13",
+            "ST_SAFA_17",
+            "ST_SAFA_86",
+            "ST_SAFA_91",
+            "ST_SAFA_117",
+            "ST_SAFA_158",
+            "ST_SAFA_277",
+            "ST_SAFA_329",
+            "ST_SAFA_333",
+            "ST_SAFA_368",
+            "ST_SAFA_391",
+            "ST_SAFA_415",
+            "ST_SAFA_471",
+            "ST_SAFA_625",
+            "ST_SAFA_651",
+            "ST_SAFA_760",
+            "ST_SAFA_947"
           ]
         },
         {
-          "node_id": "school_8",
+          "node_id": "school_101",
           "type": "dropoff",
           "location": {
-            "lat": 25.1012,
-            "lon": 55.2289
+            "lat": 25.176771,
+            "lon": 55.236021
           },
           "students_to_drop": [
-            "ST_251",
-            "ST_289",
-            "ST_320",
-            "ST_336"
+            "ST_SAFA_74",
+            "ST_SAFA_99",
+            "ST_SAFA_280",
+            "ST_SAFA_381",
+            "ST_SAFA_392",
+            "ST_SAFA_399",
+            "ST_SAFA_406",
+            "ST_SAFA_430",
+            "ST_SAFA_523",
+            "ST_SAFA_550",
+            "ST_SAFA_694",
+            "ST_SAFA_738",
+            "ST_SAFA_927"
           ]
         },
         {
-          "node_id": "school_20",
+          "node_id": "school_103",
           "type": "dropoff",
           "location": {
-            "lat": 25.0921,
-            "lon": 55.2334
+            "lat": 25.178357,
+            "lon": 55.241636
           },
           "students_to_drop": [
-            "ST_265",
-            "ST_271",
-            "ST_287",
-            "ST_296",
-            "ST_332",
-            "ST_584",
-            "ST_675",
-            "ST_722",
-            "ST_723",
-            "ST_783"
-          ]
-        },
-        {
-          "node_id": "school_11",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1098,
-            "lon": 55.2023
-          },
-          "students_to_drop": [
-            "ST_273",
-            "ST_663"
-          ]
-        },
-        {
-          "node_id": "school_17",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0839,
-            "lon": 55.2442
-          },
-          "students_to_drop": [
-            "ST_291",
-            "ST_371",
-            "ST_597"
-          ]
-        },
-        {
-          "node_id": "school_3",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0851,
-            "lon": 55.2423
-          },
-          "students_to_drop": [
-            "ST_301",
-            "ST_364",
-            "ST_721",
-            "ST_735",
-            "ST_772"
-          ]
-        },
-        {
-          "node_id": "school_4",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0905,
-            "lon": 55.2378
-          },
-          "students_to_drop": [
-            "ST_306",
-            "ST_680",
-            "ST_727"
-          ]
-        },
-        {
-          "node_id": "school_7",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0844,
-            "lon": 55.2435
-          },
-          "students_to_drop": [
-            "ST_307",
-            "ST_310",
-            "ST_374",
-            "ST_556",
-            "ST_643",
-            "ST_788"
-          ]
-        },
-        {
-          "node_id": "school_10",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1156,
-            "lon": 55.2089
-          },
-          "students_to_drop": [
-            "ST_316",
-            "ST_365",
-            "ST_367",
-            "ST_569",
-            "ST_631",
-            "ST_703",
-            "ST_778"
-          ]
-        },
-        {
-          "node_id": "school_13",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1145,
-            "lon": 55.2045
-          },
-          "students_to_drop": [
-            "ST_324",
-            "ST_547",
-            "ST_746"
-          ]
-        },
-        {
-          "node_id": "school_14",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0912,
-            "lon": 55.2356
-          },
-          "students_to_drop": [
-            "ST_345",
-            "ST_347",
-            "ST_355",
-            "ST_363"
-          ]
-        },
-        {
-          "node_id": "school_15",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1089,
-            "lon": 55.2012
-          },
-          "students_to_drop": [
-            "ST_571",
-            "ST_668"
+            "ST_SAFA_101",
+            "ST_SAFA_106",
+            "ST_SAFA_148",
+            "ST_SAFA_234",
+            "ST_SAFA_255",
+            "ST_SAFA_262",
+            "ST_SAFA_388",
+            "ST_SAFA_417",
+            "ST_SAFA_453",
+            "ST_SAFA_540",
+            "ST_SAFA_560",
+            "ST_SAFA_595",
+            "ST_SAFA_693",
+            "ST_SAFA_725"
           ]
         }
       ],
@@ -1436,3353 +878,2525 @@
       }
     },
     {
+      "route_id": 5,
+      "capacity": 50,
+      "total_students": 11,
+      "buses_needed": 1,
+      "pickup_nodes": [
+        {
+          "node_id": "stop_25",
+          "type": "pickup",
+          "location": {
+            "lat": 25.177829927768457,
+            "lon": 55.22217804436908
+          },
+          "demand": 11,
+          "students": [
+            "ST_SAFA_173",
+            "ST_SAFA_369",
+            "ST_SAFA_423",
+            "ST_SAFA_435",
+            "ST_SAFA_461",
+            "ST_SAFA_473",
+            "ST_SAFA_491",
+            "ST_SAFA_492",
+            "ST_SAFA_503",
+            "ST_SAFA_521",
+            "ST_SAFA_561"
+          ]
+        }
+      ],
+      "dropoff_nodes": [
+        {
+          "node_id": "school_101",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.176771,
+            "lon": 55.236021
+          },
+          "students_to_drop": [
+            "ST_SAFA_173",
+            "ST_SAFA_492"
+          ]
+        },
+        {
+          "node_id": "school_106",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.1715,
+            "lon": 55.243
+          },
+          "students_to_drop": [
+            "ST_SAFA_369"
+          ]
+        },
+        {
+          "node_id": "school_103",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.178357,
+            "lon": 55.241636
+          },
+          "students_to_drop": [
+            "ST_SAFA_423",
+            "ST_SAFA_521"
+          ]
+        },
+        {
+          "node_id": "school_104",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.172813,
+            "lon": 55.237976
+          },
+          "students_to_drop": [
+            "ST_SAFA_435",
+            "ST_SAFA_461",
+            "ST_SAFA_473",
+            "ST_SAFA_503",
+            "ST_SAFA_561"
+          ]
+        },
+        {
+          "node_id": "school_105",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.1742,
+            "lon": 55.2395
+          },
+          "students_to_drop": [
+            "ST_SAFA_491"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_capacity": 50,
+        "current_load": 11
+      }
+    },
+    {
       "route_id": 6,
       "capacity": 50,
-      "total_students": 130,
+      "total_students": 89,
+      "buses_needed": 2,
+      "pickup_nodes": [
+        {
+          "node_id": "stop_8",
+          "type": "pickup",
+          "location": {
+            "lat": 25.176,
+            "lon": 55.232
+          },
+          "demand": 89,
+          "students": [
+            "ST_SAFA_15",
+            "ST_SAFA_23",
+            "ST_SAFA_36",
+            "ST_SAFA_54",
+            "ST_SAFA_57",
+            "ST_SAFA_85",
+            "ST_SAFA_119",
+            "ST_SAFA_122",
+            "ST_SAFA_155",
+            "ST_SAFA_161",
+            "ST_SAFA_162",
+            "ST_SAFA_174",
+            "ST_SAFA_189",
+            "ST_SAFA_197",
+            "ST_SAFA_201",
+            "ST_SAFA_214",
+            "ST_SAFA_220",
+            "ST_SAFA_242",
+            "ST_SAFA_254",
+            "ST_SAFA_258",
+            "ST_SAFA_276",
+            "ST_SAFA_286",
+            "ST_SAFA_301",
+            "ST_SAFA_305",
+            "ST_SAFA_309",
+            "ST_SAFA_315",
+            "ST_SAFA_323",
+            "ST_SAFA_324",
+            "ST_SAFA_325",
+            "ST_SAFA_328",
+            "ST_SAFA_330",
+            "ST_SAFA_331",
+            "ST_SAFA_332",
+            "ST_SAFA_341",
+            "ST_SAFA_351",
+            "ST_SAFA_357",
+            "ST_SAFA_359",
+            "ST_SAFA_360",
+            "ST_SAFA_361",
+            "ST_SAFA_371",
+            "ST_SAFA_378",
+            "ST_SAFA_379",
+            "ST_SAFA_380",
+            "ST_SAFA_405",
+            "ST_SAFA_411",
+            "ST_SAFA_413",
+            "ST_SAFA_418",
+            "ST_SAFA_425",
+            "ST_SAFA_427",
+            "ST_SAFA_429",
+            "ST_SAFA_445",
+            "ST_SAFA_447",
+            "ST_SAFA_454",
+            "ST_SAFA_458",
+            "ST_SAFA_465",
+            "ST_SAFA_466",
+            "ST_SAFA_467",
+            "ST_SAFA_477",
+            "ST_SAFA_480",
+            "ST_SAFA_488",
+            "ST_SAFA_489",
+            "ST_SAFA_490",
+            "ST_SAFA_501",
+            "ST_SAFA_505",
+            "ST_SAFA_511",
+            "ST_SAFA_513",
+            "ST_SAFA_514",
+            "ST_SAFA_518",
+            "ST_SAFA_527",
+            "ST_SAFA_539",
+            "ST_SAFA_542",
+            "ST_SAFA_544",
+            "ST_SAFA_558",
+            "ST_SAFA_565",
+            "ST_SAFA_566",
+            "ST_SAFA_572",
+            "ST_SAFA_574",
+            "ST_SAFA_577",
+            "ST_SAFA_582",
+            "ST_SAFA_609",
+            "ST_SAFA_636",
+            "ST_SAFA_654",
+            "ST_SAFA_689",
+            "ST_SAFA_741",
+            "ST_SAFA_743",
+            "ST_SAFA_778",
+            "ST_SAFA_854",
+            "ST_SAFA_860",
+            "ST_SAFA_925"
+          ]
+        }
+      ],
+      "dropoff_nodes": [
+        {
+          "node_id": "school_105",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.1742,
+            "lon": 55.2395
+          },
+          "students_to_drop": [
+            "ST_SAFA_15",
+            "ST_SAFA_36",
+            "ST_SAFA_201",
+            "ST_SAFA_220",
+            "ST_SAFA_305",
+            "ST_SAFA_324",
+            "ST_SAFA_325",
+            "ST_SAFA_425",
+            "ST_SAFA_467",
+            "ST_SAFA_565",
+            "ST_SAFA_609",
+            "ST_SAFA_741",
+            "ST_SAFA_925"
+          ]
+        },
+        {
+          "node_id": "school_103",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.178357,
+            "lon": 55.241636
+          },
+          "students_to_drop": [
+            "ST_SAFA_23",
+            "ST_SAFA_57",
+            "ST_SAFA_119",
+            "ST_SAFA_122",
+            "ST_SAFA_242",
+            "ST_SAFA_254",
+            "ST_SAFA_286",
+            "ST_SAFA_405",
+            "ST_SAFA_413",
+            "ST_SAFA_418",
+            "ST_SAFA_447",
+            "ST_SAFA_488",
+            "ST_SAFA_490",
+            "ST_SAFA_511",
+            "ST_SAFA_558",
+            "ST_SAFA_574",
+            "ST_SAFA_743",
+            "ST_SAFA_778",
+            "ST_SAFA_860"
+          ]
+        },
+        {
+          "node_id": "school_102",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.176233,
+            "lon": 55.238662
+          },
+          "students_to_drop": [
+            "ST_SAFA_54",
+            "ST_SAFA_174",
+            "ST_SAFA_189",
+            "ST_SAFA_197",
+            "ST_SAFA_276",
+            "ST_SAFA_323",
+            "ST_SAFA_332",
+            "ST_SAFA_351",
+            "ST_SAFA_357",
+            "ST_SAFA_445",
+            "ST_SAFA_480",
+            "ST_SAFA_505",
+            "ST_SAFA_513",
+            "ST_SAFA_539",
+            "ST_SAFA_544",
+            "ST_SAFA_636"
+          ]
+        },
+        {
+          "node_id": "school_101",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.176771,
+            "lon": 55.236021
+          },
+          "students_to_drop": [
+            "ST_SAFA_85",
+            "ST_SAFA_258",
+            "ST_SAFA_301",
+            "ST_SAFA_309",
+            "ST_SAFA_330",
+            "ST_SAFA_361",
+            "ST_SAFA_429",
+            "ST_SAFA_458",
+            "ST_SAFA_465",
+            "ST_SAFA_572",
+            "ST_SAFA_577",
+            "ST_SAFA_582"
+          ]
+        },
+        {
+          "node_id": "school_104",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.172813,
+            "lon": 55.237976
+          },
+          "students_to_drop": [
+            "ST_SAFA_155",
+            "ST_SAFA_328",
+            "ST_SAFA_341",
+            "ST_SAFA_359",
+            "ST_SAFA_360",
+            "ST_SAFA_371",
+            "ST_SAFA_378",
+            "ST_SAFA_380",
+            "ST_SAFA_411",
+            "ST_SAFA_427",
+            "ST_SAFA_454",
+            "ST_SAFA_466",
+            "ST_SAFA_477",
+            "ST_SAFA_501",
+            "ST_SAFA_514",
+            "ST_SAFA_542",
+            "ST_SAFA_654"
+          ]
+        },
+        {
+          "node_id": "school_106",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.1715,
+            "lon": 55.243
+          },
+          "students_to_drop": [
+            "ST_SAFA_161",
+            "ST_SAFA_162",
+            "ST_SAFA_214",
+            "ST_SAFA_315",
+            "ST_SAFA_331",
+            "ST_SAFA_379",
+            "ST_SAFA_489",
+            "ST_SAFA_518",
+            "ST_SAFA_527",
+            "ST_SAFA_566",
+            "ST_SAFA_689",
+            "ST_SAFA_854"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_capacity": 50,
+        "current_load": 89
+      }
+    },
+    {
+      "route_id": 7,
+      "capacity": 50,
+      "total_students": 59,
+      "buses_needed": 2,
       "pickup_nodes": [
         {
           "node_id": "stop_9",
           "type": "pickup",
           "location": {
-            "lat": 25.1156,
-            "lon": 55.2005
+            "lat": 25.1725,
+            "lon": 55.2415
           },
-          "demand": 83,
+          "demand": 59,
           "students": [
-            "ST_1",
-            "ST_2",
-            "ST_5",
-            "ST_10",
-            "ST_11",
-            "ST_12",
-            "ST_13",
-            "ST_14",
-            "ST_15",
-            "ST_22",
-            "ST_30",
-            "ST_31",
-            "ST_35",
-            "ST_39",
-            "ST_41",
-            "ST_48",
-            "ST_50",
-            "ST_51",
-            "ST_52",
-            "ST_55",
-            "ST_59",
-            "ST_60",
-            "ST_61",
-            "ST_64",
-            "ST_66",
-            "ST_67",
-            "ST_72",
-            "ST_76",
-            "ST_77",
-            "ST_78",
-            "ST_83",
-            "ST_85",
-            "ST_86",
-            "ST_90",
-            "ST_91",
-            "ST_92",
-            "ST_93",
-            "ST_97",
-            "ST_98",
-            "ST_101",
-            "ST_103",
-            "ST_105",
-            "ST_106",
-            "ST_111",
-            "ST_115",
-            "ST_119",
-            "ST_121",
-            "ST_123",
-            "ST_126",
-            "ST_127",
-            "ST_128",
-            "ST_129",
-            "ST_137",
-            "ST_138",
-            "ST_139",
-            "ST_152",
-            "ST_153",
-            "ST_154",
-            "ST_157",
-            "ST_158",
-            "ST_160",
-            "ST_164",
-            "ST_168",
-            "ST_172",
-            "ST_173",
-            "ST_175",
-            "ST_178",
-            "ST_179",
-            "ST_183",
-            "ST_186",
-            "ST_188",
-            "ST_189",
-            "ST_191",
-            "ST_192",
-            "ST_193",
-            "ST_197",
-            "ST_199",
-            "ST_203",
-            "ST_207",
-            "ST_208",
-            "ST_390",
-            "ST_459",
-            "ST_477"
-          ]
-        },
-        {
-          "node_id": "stop_8",
-          "type": "pickup",
-          "location": {
-            "lat": 25.058974860039598,
-            "lon": 55.24749539442484
-          },
-          "demand": 47,
-          "students": [
-            "ST_550",
-            "ST_552",
-            "ST_562",
-            "ST_565",
-            "ST_581",
-            "ST_588",
-            "ST_589",
-            "ST_594",
-            "ST_604",
-            "ST_607",
-            "ST_618",
-            "ST_620",
-            "ST_621",
-            "ST_622",
-            "ST_633",
-            "ST_635",
-            "ST_636",
-            "ST_647",
-            "ST_652",
-            "ST_672",
-            "ST_673",
-            "ST_674",
-            "ST_676",
-            "ST_684",
-            "ST_687",
-            "ST_693",
-            "ST_699",
-            "ST_710",
-            "ST_713",
-            "ST_717",
-            "ST_724",
-            "ST_725",
-            "ST_736",
-            "ST_739",
-            "ST_741",
-            "ST_748",
-            "ST_752",
-            "ST_757",
-            "ST_759",
-            "ST_763",
-            "ST_764",
-            "ST_769",
-            "ST_770",
-            "ST_776",
-            "ST_777",
-            "ST_779",
-            "ST_786"
+            "ST_SAFA_52",
+            "ST_SAFA_60",
+            "ST_SAFA_92",
+            "ST_SAFA_149",
+            "ST_SAFA_177",
+            "ST_SAFA_202",
+            "ST_SAFA_207",
+            "ST_SAFA_208",
+            "ST_SAFA_223",
+            "ST_SAFA_236",
+            "ST_SAFA_241",
+            "ST_SAFA_261",
+            "ST_SAFA_279",
+            "ST_SAFA_281",
+            "ST_SAFA_290",
+            "ST_SAFA_326",
+            "ST_SAFA_349",
+            "ST_SAFA_352",
+            "ST_SAFA_383",
+            "ST_SAFA_436",
+            "ST_SAFA_460",
+            "ST_SAFA_463",
+            "ST_SAFA_592",
+            "ST_SAFA_606",
+            "ST_SAFA_622",
+            "ST_SAFA_624",
+            "ST_SAFA_632",
+            "ST_SAFA_645",
+            "ST_SAFA_647",
+            "ST_SAFA_653",
+            "ST_SAFA_661",
+            "ST_SAFA_674",
+            "ST_SAFA_717",
+            "ST_SAFA_720",
+            "ST_SAFA_724",
+            "ST_SAFA_734",
+            "ST_SAFA_739",
+            "ST_SAFA_747",
+            "ST_SAFA_749",
+            "ST_SAFA_759",
+            "ST_SAFA_766",
+            "ST_SAFA_775",
+            "ST_SAFA_776",
+            "ST_SAFA_779",
+            "ST_SAFA_785",
+            "ST_SAFA_794",
+            "ST_SAFA_800",
+            "ST_SAFA_817",
+            "ST_SAFA_846",
+            "ST_SAFA_877",
+            "ST_SAFA_883",
+            "ST_SAFA_889",
+            "ST_SAFA_901",
+            "ST_SAFA_904",
+            "ST_SAFA_969",
+            "ST_SAFA_973",
+            "ST_SAFA_976",
+            "ST_SAFA_995",
+            "ST_SAFA_1000"
           ]
         }
       ],
       "dropoff_nodes": [
         {
-          "node_id": "school_4",
+          "node_id": "school_105",
           "type": "dropoff",
           "location": {
-            "lat": 25.0905,
-            "lon": 55.2378
+            "lat": 25.1742,
+            "lon": 55.2395
           },
           "students_to_drop": [
-            "ST_1",
-            "ST_154",
-            "ST_172",
-            "ST_673",
-            "ST_724"
+            "ST_SAFA_52",
+            "ST_SAFA_236",
+            "ST_SAFA_326",
+            "ST_SAFA_632",
+            "ST_SAFA_645",
+            "ST_SAFA_647",
+            "ST_SAFA_734",
+            "ST_SAFA_776",
+            "ST_SAFA_800",
+            "ST_SAFA_995"
           ]
         },
         {
-          "node_id": "school_2",
+          "node_id": "school_101",
           "type": "dropoff",
           "location": {
-            "lat": 25.0886,
-            "lon": 55.2392
+            "lat": 25.176771,
+            "lon": 55.236021
           },
           "students_to_drop": [
-            "ST_2",
-            "ST_51",
-            "ST_67",
-            "ST_72",
-            "ST_93",
-            "ST_105",
-            "ST_121",
-            "ST_127",
-            "ST_128",
-            "ST_139",
-            "ST_192",
-            "ST_594",
-            "ST_607",
-            "ST_676",
-            "ST_687",
-            "ST_699",
-            "ST_770"
+            "ST_SAFA_60",
+            "ST_SAFA_279",
+            "ST_SAFA_592",
+            "ST_SAFA_606",
+            "ST_SAFA_624",
+            "ST_SAFA_724",
+            "ST_SAFA_759",
+            "ST_SAFA_1000"
           ]
         },
         {
-          "node_id": "school_1",
+          "node_id": "school_103",
           "type": "dropoff",
           "location": {
-            "lat": 25.0934,
-            "lon": 55.2341
+            "lat": 25.178357,
+            "lon": 55.241636
           },
           "students_to_drop": [
-            "ST_5",
-            "ST_12",
-            "ST_164",
-            "ST_197",
-            "ST_203",
-            "ST_684",
-            "ST_764",
-            "ST_776"
+            "ST_SAFA_92",
+            "ST_SAFA_207",
+            "ST_SAFA_281",
+            "ST_SAFA_349",
+            "ST_SAFA_352",
+            "ST_SAFA_383",
+            "ST_SAFA_460",
+            "ST_SAFA_463",
+            "ST_SAFA_739",
+            "ST_SAFA_785",
+            "ST_SAFA_889"
           ]
         },
         {
-          "node_id": "school_19",
+          "node_id": "school_104",
           "type": "dropoff",
           "location": {
-            "lat": 25.0899,
-            "lon": 55.2385
+            "lat": 25.172813,
+            "lon": 55.237976
           },
           "students_to_drop": [
-            "ST_10",
-            "ST_60",
-            "ST_90",
-            "ST_91",
-            "ST_115",
-            "ST_137",
-            "ST_179",
-            "ST_208",
-            "ST_769",
-            "ST_786"
+            "ST_SAFA_149",
+            "ST_SAFA_436",
+            "ST_SAFA_622",
+            "ST_SAFA_747",
+            "ST_SAFA_901",
+            "ST_SAFA_904",
+            "ST_SAFA_969"
           ]
         },
         {
-          "node_id": "school_13",
+          "node_id": "school_106",
           "type": "dropoff",
           "location": {
-            "lat": 25.1145,
-            "lon": 55.2045
+            "lat": 25.1715,
+            "lon": 55.243
           },
           "students_to_drop": [
-            "ST_11",
-            "ST_13",
-            "ST_15",
-            "ST_717",
-            "ST_752",
-            "ST_759"
+            "ST_SAFA_177",
+            "ST_SAFA_202",
+            "ST_SAFA_223",
+            "ST_SAFA_241",
+            "ST_SAFA_261",
+            "ST_SAFA_661",
+            "ST_SAFA_674",
+            "ST_SAFA_766",
+            "ST_SAFA_775",
+            "ST_SAFA_779",
+            "ST_SAFA_794"
           ]
         },
         {
-          "node_id": "school_12",
+          "node_id": "school_102",
           "type": "dropoff",
           "location": {
-            "lat": 25.1123,
-            "lon": 55.2078
+            "lat": 25.176233,
+            "lon": 55.238662
           },
           "students_to_drop": [
-            "ST_14",
-            "ST_52",
-            "ST_76",
-            "ST_78",
-            "ST_98",
-            "ST_175",
-            "ST_193",
-            "ST_552",
-            "ST_581",
-            "ST_604",
-            "ST_635",
-            "ST_674",
-            "ST_748",
-            "ST_777"
-          ]
-        },
-        {
-          "node_id": "school_15",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1089,
-            "lon": 55.2012
-          },
-          "students_to_drop": [
-            "ST_22",
-            "ST_106",
-            "ST_126",
-            "ST_168",
-            "ST_178",
-            "ST_757"
-          ]
-        },
-        {
-          "node_id": "school_9",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1134,
-            "lon": 55.2056
-          },
-          "students_to_drop": [
-            "ST_30",
-            "ST_61",
-            "ST_138",
-            "ST_160",
-            "ST_550",
-            "ST_565",
-            "ST_693",
-            "ST_779"
-          ]
-        },
-        {
-          "node_id": "school_14",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0912,
-            "lon": 55.2356
-          },
-          "students_to_drop": [
-            "ST_31",
-            "ST_152"
-          ]
-        },
-        {
-          "node_id": "school_20",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0921,
-            "lon": 55.2334
-          },
-          "students_to_drop": [
-            "ST_35",
-            "ST_77",
-            "ST_173",
-            "ST_188",
-            "ST_199",
-            "ST_207",
-            "ST_589",
-            "ST_633",
-            "ST_652"
-          ]
-        },
-        {
-          "node_id": "school_18",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0841,
-            "lon": 55.2445
-          },
-          "students_to_drop": [
-            "ST_39",
-            "ST_119",
-            "ST_129",
-            "ST_191",
-            "ST_636",
-            "ST_647",
-            "ST_713"
-          ]
-        },
-        {
-          "node_id": "school_8",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1012,
-            "lon": 55.2289
-          },
-          "students_to_drop": [
-            "ST_41",
-            "ST_64",
-            "ST_92",
-            "ST_157"
-          ]
-        },
-        {
-          "node_id": "school_17",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0839,
-            "lon": 55.2442
-          },
-          "students_to_drop": [
-            "ST_48",
-            "ST_97",
-            "ST_103"
-          ]
-        },
-        {
-          "node_id": "school_3",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0851,
-            "lon": 55.2423
-          },
-          "students_to_drop": [
-            "ST_50",
-            "ST_111",
-            "ST_123",
-            "ST_153",
-            "ST_562"
-          ]
-        },
-        {
-          "node_id": "school_6",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0872,
-            "lon": 55.2411
-          },
-          "students_to_drop": [
-            "ST_55",
-            "ST_59",
-            "ST_85",
-            "ST_158",
-            "ST_186",
-            "ST_620",
-            "ST_621",
-            "ST_710"
-          ]
-        },
-        {
-          "node_id": "school_11",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1098,
-            "lon": 55.2023
-          },
-          "students_to_drop": [
-            "ST_66",
-            "ST_390",
-            "ST_477",
-            "ST_672",
-            "ST_739",
-            "ST_763"
-          ]
-        },
-        {
-          "node_id": "school_16",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0867,
-            "lon": 55.2401
-          },
-          "students_to_drop": [
-            "ST_83"
-          ]
-        },
-        {
-          "node_id": "school_10",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1156,
-            "lon": 55.2089
-          },
-          "students_to_drop": [
-            "ST_86",
-            "ST_183",
-            "ST_189",
-            "ST_459",
-            "ST_588",
-            "ST_622",
-            "ST_725",
-            "ST_736",
-            "ST_741"
-          ]
-        },
-        {
-          "node_id": "school_7",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0844,
-            "lon": 55.2435
-          },
-          "students_to_drop": [
-            "ST_101",
-            "ST_618"
+            "ST_SAFA_208",
+            "ST_SAFA_290",
+            "ST_SAFA_653",
+            "ST_SAFA_717",
+            "ST_SAFA_720",
+            "ST_SAFA_749",
+            "ST_SAFA_817",
+            "ST_SAFA_846",
+            "ST_SAFA_877",
+            "ST_SAFA_883",
+            "ST_SAFA_973",
+            "ST_SAFA_976"
           ]
         }
       ],
       "constraints": {
         "max_capacity": 50,
-        "current_load": 130
+        "current_load": 59
+      }
+    },
+    {
+      "route_id": 8,
+      "capacity": 50,
+      "total_students": 42,
+      "buses_needed": 1,
+      "pickup_nodes": [
+        {
+          "node_id": "stop_20",
+          "type": "pickup",
+          "location": {
+            "lat": 25.184713709012698,
+            "lon": 55.2462438831013
+          },
+          "demand": 42,
+          "students": [
+            "ST_SAFA_28",
+            "ST_SAFA_37",
+            "ST_SAFA_48",
+            "ST_SAFA_50",
+            "ST_SAFA_56",
+            "ST_SAFA_68",
+            "ST_SAFA_95",
+            "ST_SAFA_102",
+            "ST_SAFA_105",
+            "ST_SAFA_109",
+            "ST_SAFA_139",
+            "ST_SAFA_146",
+            "ST_SAFA_150",
+            "ST_SAFA_157",
+            "ST_SAFA_167",
+            "ST_SAFA_178",
+            "ST_SAFA_186",
+            "ST_SAFA_192",
+            "ST_SAFA_204",
+            "ST_SAFA_210",
+            "ST_SAFA_215",
+            "ST_SAFA_237",
+            "ST_SAFA_240",
+            "ST_SAFA_251",
+            "ST_SAFA_256",
+            "ST_SAFA_265",
+            "ST_SAFA_269",
+            "ST_SAFA_292",
+            "ST_SAFA_300",
+            "ST_SAFA_317",
+            "ST_SAFA_340",
+            "ST_SAFA_414",
+            "ST_SAFA_515",
+            "ST_SAFA_536",
+            "ST_SAFA_554",
+            "ST_SAFA_593",
+            "ST_SAFA_669",
+            "ST_SAFA_671",
+            "ST_SAFA_710",
+            "ST_SAFA_753",
+            "ST_SAFA_764",
+            "ST_SAFA_769"
+          ]
+        }
+      ],
+      "dropoff_nodes": [
+        {
+          "node_id": "school_101",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.176771,
+            "lon": 55.236021
+          },
+          "students_to_drop": [
+            "ST_SAFA_28",
+            "ST_SAFA_109",
+            "ST_SAFA_204",
+            "ST_SAFA_265",
+            "ST_SAFA_515"
+          ]
+        },
+        {
+          "node_id": "school_102",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.176233,
+            "lon": 55.238662
+          },
+          "students_to_drop": [
+            "ST_SAFA_37",
+            "ST_SAFA_48",
+            "ST_SAFA_50",
+            "ST_SAFA_146",
+            "ST_SAFA_186",
+            "ST_SAFA_210",
+            "ST_SAFA_240"
+          ]
+        },
+        {
+          "node_id": "school_103",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.178357,
+            "lon": 55.241636
+          },
+          "students_to_drop": [
+            "ST_SAFA_56",
+            "ST_SAFA_167",
+            "ST_SAFA_215",
+            "ST_SAFA_554",
+            "ST_SAFA_671",
+            "ST_SAFA_764"
+          ]
+        },
+        {
+          "node_id": "school_104",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.172813,
+            "lon": 55.237976
+          },
+          "students_to_drop": [
+            "ST_SAFA_68",
+            "ST_SAFA_95",
+            "ST_SAFA_139",
+            "ST_SAFA_150",
+            "ST_SAFA_178",
+            "ST_SAFA_256",
+            "ST_SAFA_269",
+            "ST_SAFA_292",
+            "ST_SAFA_300",
+            "ST_SAFA_340",
+            "ST_SAFA_414",
+            "ST_SAFA_536"
+          ]
+        },
+        {
+          "node_id": "school_105",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.1742,
+            "lon": 55.2395
+          },
+          "students_to_drop": [
+            "ST_SAFA_102",
+            "ST_SAFA_157",
+            "ST_SAFA_251",
+            "ST_SAFA_317",
+            "ST_SAFA_593",
+            "ST_SAFA_669",
+            "ST_SAFA_753"
+          ]
+        },
+        {
+          "node_id": "school_106",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.1715,
+            "lon": 55.243
+          },
+          "students_to_drop": [
+            "ST_SAFA_105",
+            "ST_SAFA_192",
+            "ST_SAFA_237",
+            "ST_SAFA_710",
+            "ST_SAFA_769"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_capacity": 50,
+        "current_load": 42
+      }
+    },
+    {
+      "route_id": 9,
+      "capacity": 50,
+      "total_students": 124,
+      "buses_needed": 3,
+      "pickup_nodes": [
+        {
+          "node_id": "stop_3",
+          "type": "pickup",
+          "location": {
+            "lat": 25.179,
+            "lon": 55.245
+          },
+          "demand": 71,
+          "students": [
+            "ST_SAFA_3",
+            "ST_SAFA_7",
+            "ST_SAFA_8",
+            "ST_SAFA_32",
+            "ST_SAFA_42",
+            "ST_SAFA_47",
+            "ST_SAFA_49",
+            "ST_SAFA_62",
+            "ST_SAFA_64",
+            "ST_SAFA_65",
+            "ST_SAFA_66",
+            "ST_SAFA_67",
+            "ST_SAFA_75",
+            "ST_SAFA_79",
+            "ST_SAFA_88",
+            "ST_SAFA_89",
+            "ST_SAFA_93",
+            "ST_SAFA_96",
+            "ST_SAFA_97",
+            "ST_SAFA_108",
+            "ST_SAFA_110",
+            "ST_SAFA_123",
+            "ST_SAFA_128",
+            "ST_SAFA_134",
+            "ST_SAFA_135",
+            "ST_SAFA_140",
+            "ST_SAFA_156",
+            "ST_SAFA_159",
+            "ST_SAFA_160",
+            "ST_SAFA_166",
+            "ST_SAFA_169",
+            "ST_SAFA_170",
+            "ST_SAFA_176",
+            "ST_SAFA_183",
+            "ST_SAFA_187",
+            "ST_SAFA_200",
+            "ST_SAFA_206",
+            "ST_SAFA_211",
+            "ST_SAFA_212",
+            "ST_SAFA_222",
+            "ST_SAFA_227",
+            "ST_SAFA_239",
+            "ST_SAFA_259",
+            "ST_SAFA_263",
+            "ST_SAFA_267",
+            "ST_SAFA_271",
+            "ST_SAFA_284",
+            "ST_SAFA_293",
+            "ST_SAFA_299",
+            "ST_SAFA_314",
+            "ST_SAFA_443",
+            "ST_SAFA_498",
+            "ST_SAFA_534",
+            "ST_SAFA_548",
+            "ST_SAFA_564",
+            "ST_SAFA_600",
+            "ST_SAFA_614",
+            "ST_SAFA_615",
+            "ST_SAFA_655",
+            "ST_SAFA_662",
+            "ST_SAFA_681",
+            "ST_SAFA_683",
+            "ST_SAFA_697",
+            "ST_SAFA_703",
+            "ST_SAFA_727",
+            "ST_SAFA_752",
+            "ST_SAFA_767",
+            "ST_SAFA_801",
+            "ST_SAFA_811",
+            "ST_SAFA_844",
+            "ST_SAFA_880"
+          ]
+        },
+        {
+          "node_id": "stop_14",
+          "type": "pickup",
+          "location": {
+            "lat": 25.171640650056926,
+            "lon": 55.22815497108008
+          },
+          "demand": 37,
+          "students": [
+            "ST_SAFA_115",
+            "ST_SAFA_145",
+            "ST_SAFA_152",
+            "ST_SAFA_172",
+            "ST_SAFA_235",
+            "ST_SAFA_282",
+            "ST_SAFA_327",
+            "ST_SAFA_355",
+            "ST_SAFA_364",
+            "ST_SAFA_365",
+            "ST_SAFA_382",
+            "ST_SAFA_384",
+            "ST_SAFA_386",
+            "ST_SAFA_389",
+            "ST_SAFA_400",
+            "ST_SAFA_433",
+            "ST_SAFA_451",
+            "ST_SAFA_455",
+            "ST_SAFA_469",
+            "ST_SAFA_474",
+            "ST_SAFA_484",
+            "ST_SAFA_499",
+            "ST_SAFA_509",
+            "ST_SAFA_519",
+            "ST_SAFA_535",
+            "ST_SAFA_547",
+            "ST_SAFA_575",
+            "ST_SAFA_576",
+            "ST_SAFA_584",
+            "ST_SAFA_598",
+            "ST_SAFA_599",
+            "ST_SAFA_633",
+            "ST_SAFA_635",
+            "ST_SAFA_772",
+            "ST_SAFA_858",
+            "ST_SAFA_915",
+            "ST_SAFA_940"
+          ]
+        },
+        {
+          "node_id": "stop_13",
+          "type": "pickup",
+          "location": {
+            "lat": 25.159641220135875,
+            "lon": 55.25054303672146
+          },
+          "demand": 16,
+          "students": [
+            "ST_SAFA_441",
+            "ST_SAFA_607",
+            "ST_SAFA_722",
+            "ST_SAFA_744",
+            "ST_SAFA_783",
+            "ST_SAFA_814",
+            "ST_SAFA_824",
+            "ST_SAFA_826",
+            "ST_SAFA_850",
+            "ST_SAFA_872",
+            "ST_SAFA_882",
+            "ST_SAFA_903",
+            "ST_SAFA_923",
+            "ST_SAFA_960",
+            "ST_SAFA_967",
+            "ST_SAFA_971"
+          ]
+        }
+      ],
+      "dropoff_nodes": [
+        {
+          "node_id": "school_106",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.1715,
+            "lon": 55.243
+          },
+          "students_to_drop": [
+            "ST_SAFA_3",
+            "ST_SAFA_42",
+            "ST_SAFA_62",
+            "ST_SAFA_65",
+            "ST_SAFA_96",
+            "ST_SAFA_128",
+            "ST_SAFA_134",
+            "ST_SAFA_176",
+            "ST_SAFA_284",
+            "ST_SAFA_299",
+            "ST_SAFA_683",
+            "ST_SAFA_844",
+            "ST_SAFA_172",
+            "ST_SAFA_365",
+            "ST_SAFA_400",
+            "ST_SAFA_469",
+            "ST_SAFA_575",
+            "ST_SAFA_858",
+            "ST_SAFA_971"
+          ]
+        },
+        {
+          "node_id": "school_102",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.176233,
+            "lon": 55.238662
+          },
+          "students_to_drop": [
+            "ST_SAFA_7",
+            "ST_SAFA_49",
+            "ST_SAFA_64",
+            "ST_SAFA_89",
+            "ST_SAFA_123",
+            "ST_SAFA_159",
+            "ST_SAFA_160",
+            "ST_SAFA_183",
+            "ST_SAFA_200",
+            "ST_SAFA_206",
+            "ST_SAFA_212",
+            "ST_SAFA_498",
+            "ST_SAFA_548",
+            "ST_SAFA_614",
+            "ST_SAFA_880",
+            "ST_SAFA_364",
+            "ST_SAFA_509",
+            "ST_SAFA_519",
+            "ST_SAFA_576",
+            "ST_SAFA_635",
+            "ST_SAFA_772",
+            "ST_SAFA_915",
+            "ST_SAFA_783",
+            "ST_SAFA_814",
+            "ST_SAFA_826"
+          ]
+        },
+        {
+          "node_id": "school_103",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.178357,
+            "lon": 55.241636
+          },
+          "students_to_drop": [
+            "ST_SAFA_8",
+            "ST_SAFA_67",
+            "ST_SAFA_156",
+            "ST_SAFA_170",
+            "ST_SAFA_187",
+            "ST_SAFA_314",
+            "ST_SAFA_443",
+            "ST_SAFA_534",
+            "ST_SAFA_655",
+            "ST_SAFA_801",
+            "ST_SAFA_355",
+            "ST_SAFA_433",
+            "ST_SAFA_455",
+            "ST_SAFA_484",
+            "ST_SAFA_535",
+            "ST_SAFA_607",
+            "ST_SAFA_923",
+            "ST_SAFA_960"
+          ]
+        },
+        {
+          "node_id": "school_101",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.176771,
+            "lon": 55.236021
+          },
+          "students_to_drop": [
+            "ST_SAFA_32",
+            "ST_SAFA_47",
+            "ST_SAFA_93",
+            "ST_SAFA_135",
+            "ST_SAFA_166",
+            "ST_SAFA_227",
+            "ST_SAFA_239",
+            "ST_SAFA_259",
+            "ST_SAFA_263",
+            "ST_SAFA_293",
+            "ST_SAFA_564",
+            "ST_SAFA_681",
+            "ST_SAFA_703",
+            "ST_SAFA_752",
+            "ST_SAFA_811",
+            "ST_SAFA_235",
+            "ST_SAFA_382",
+            "ST_SAFA_384",
+            "ST_SAFA_389",
+            "ST_SAFA_547",
+            "ST_SAFA_599",
+            "ST_SAFA_940",
+            "ST_SAFA_824",
+            "ST_SAFA_850",
+            "ST_SAFA_872"
+          ]
+        },
+        {
+          "node_id": "school_105",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.1742,
+            "lon": 55.2395
+          },
+          "students_to_drop": [
+            "ST_SAFA_66",
+            "ST_SAFA_75",
+            "ST_SAFA_97",
+            "ST_SAFA_108",
+            "ST_SAFA_110",
+            "ST_SAFA_169",
+            "ST_SAFA_211",
+            "ST_SAFA_222",
+            "ST_SAFA_727",
+            "ST_SAFA_767",
+            "ST_SAFA_115",
+            "ST_SAFA_145",
+            "ST_SAFA_386",
+            "ST_SAFA_451",
+            "ST_SAFA_474",
+            "ST_SAFA_584",
+            "ST_SAFA_633",
+            "ST_SAFA_441",
+            "ST_SAFA_722",
+            "ST_SAFA_744",
+            "ST_SAFA_903",
+            "ST_SAFA_967"
+          ]
+        },
+        {
+          "node_id": "school_104",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.172813,
+            "lon": 55.237976
+          },
+          "students_to_drop": [
+            "ST_SAFA_79",
+            "ST_SAFA_88",
+            "ST_SAFA_140",
+            "ST_SAFA_267",
+            "ST_SAFA_271",
+            "ST_SAFA_600",
+            "ST_SAFA_615",
+            "ST_SAFA_662",
+            "ST_SAFA_697",
+            "ST_SAFA_152",
+            "ST_SAFA_282",
+            "ST_SAFA_327",
+            "ST_SAFA_499",
+            "ST_SAFA_598",
+            "ST_SAFA_882"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_capacity": 50,
+        "current_load": 124
       }
     },
     {
       "route_id": 10,
       "capacity": 50,
-      "total_students": 46,
+      "total_students": 32,
+      "buses_needed": 1,
       "pickup_nodes": [
         {
-          "node_id": "stop_2",
+          "node_id": "stop_10",
           "type": "pickup",
           "location": {
-            "lat": 25.121075783821382,
-            "lon": 55.19447978408364
+            "lat": 25.187582518429345,
+            "lon": 55.23473971241714
           },
-          "demand": 46,
+          "demand": 16,
           "students": [
-            "ST_7",
-            "ST_21",
-            "ST_25",
-            "ST_27",
-            "ST_37",
-            "ST_38",
-            "ST_40",
-            "ST_49",
-            "ST_54",
-            "ST_57",
-            "ST_68",
-            "ST_73",
-            "ST_75",
-            "ST_79",
-            "ST_80",
-            "ST_94",
-            "ST_95",
-            "ST_96",
-            "ST_99",
-            "ST_110",
-            "ST_112",
-            "ST_114",
-            "ST_118",
-            "ST_124",
-            "ST_125",
-            "ST_131",
-            "ST_134",
-            "ST_136",
-            "ST_143",
-            "ST_150",
-            "ST_151",
-            "ST_167",
-            "ST_171",
-            "ST_177",
-            "ST_180",
-            "ST_185",
-            "ST_187",
-            "ST_194",
-            "ST_198",
-            "ST_201",
-            "ST_202",
-            "ST_204",
-            "ST_205",
-            "ST_397",
-            "ST_404",
-            "ST_446"
+            "ST_SAFA_5",
+            "ST_SAFA_27",
+            "ST_SAFA_41",
+            "ST_SAFA_77",
+            "ST_SAFA_80",
+            "ST_SAFA_136",
+            "ST_SAFA_180",
+            "ST_SAFA_191",
+            "ST_SAFA_198",
+            "ST_SAFA_289",
+            "ST_SAFA_350",
+            "ST_SAFA_374",
+            "ST_SAFA_424",
+            "ST_SAFA_428",
+            "ST_SAFA_476",
+            "ST_SAFA_567"
+          ]
+        },
+        {
+          "node_id": "stop_18",
+          "type": "pickup",
+          "location": {
+            "lat": 25.15707741722147,
+            "lon": 55.239585579405336
+          },
+          "demand": 16,
+          "students": [
+            "ST_SAFA_641",
+            "ST_SAFA_802",
+            "ST_SAFA_813",
+            "ST_SAFA_823",
+            "ST_SAFA_825",
+            "ST_SAFA_845",
+            "ST_SAFA_873",
+            "ST_SAFA_897",
+            "ST_SAFA_914",
+            "ST_SAFA_918",
+            "ST_SAFA_919",
+            "ST_SAFA_963",
+            "ST_SAFA_974",
+            "ST_SAFA_984",
+            "ST_SAFA_989",
+            "ST_SAFA_998"
           ]
         }
       ],
       "dropoff_nodes": [
         {
-          "node_id": "school_8",
+          "node_id": "school_106",
           "type": "dropoff",
           "location": {
-            "lat": 25.1012,
-            "lon": 55.2289
+            "lat": 25.1715,
+            "lon": 55.243
           },
           "students_to_drop": [
-            "ST_7",
-            "ST_40",
-            "ST_125",
-            "ST_187"
+            "ST_SAFA_5",
+            "ST_SAFA_198",
+            "ST_SAFA_802",
+            "ST_SAFA_813",
+            "ST_SAFA_825",
+            "ST_SAFA_974",
+            "ST_SAFA_984"
           ]
         },
         {
-          "node_id": "school_6",
+          "node_id": "school_102",
           "type": "dropoff",
           "location": {
-            "lat": 25.0872,
-            "lon": 55.2411
+            "lat": 25.176233,
+            "lon": 55.238662
           },
           "students_to_drop": [
-            "ST_21",
-            "ST_54",
-            "ST_136"
+            "ST_SAFA_27",
+            "ST_SAFA_180",
+            "ST_SAFA_191",
+            "ST_SAFA_289",
+            "ST_SAFA_428",
+            "ST_SAFA_897"
           ]
         },
         {
-          "node_id": "school_4",
+          "node_id": "school_101",
           "type": "dropoff",
           "location": {
-            "lat": 25.0905,
-            "lon": 55.2378
+            "lat": 25.176771,
+            "lon": 55.236021
           },
           "students_to_drop": [
-            "ST_25",
-            "ST_57",
-            "ST_167",
-            "ST_205"
+            "ST_SAFA_41",
+            "ST_SAFA_963"
           ]
         },
         {
-          "node_id": "school_15",
+          "node_id": "school_104",
           "type": "dropoff",
           "location": {
-            "lat": 25.1089,
-            "lon": 55.2012
+            "lat": 25.172813,
+            "lon": 55.237976
           },
           "students_to_drop": [
-            "ST_27",
-            "ST_68",
-            "ST_94",
-            "ST_112"
+            "ST_SAFA_77",
+            "ST_SAFA_136",
+            "ST_SAFA_476",
+            "ST_SAFA_823",
+            "ST_SAFA_919"
           ]
         },
         {
-          "node_id": "school_10",
+          "node_id": "school_105",
           "type": "dropoff",
           "location": {
-            "lat": 25.1156,
-            "lon": 55.2089
+            "lat": 25.1742,
+            "lon": 55.2395
           },
           "students_to_drop": [
-            "ST_37",
-            "ST_180",
-            "ST_194",
-            "ST_198",
-            "ST_201"
+            "ST_SAFA_80",
+            "ST_SAFA_567",
+            "ST_SAFA_845",
+            "ST_SAFA_998"
           ]
         },
         {
-          "node_id": "school_16",
+          "node_id": "school_103",
           "type": "dropoff",
           "location": {
-            "lat": 25.0867,
-            "lon": 55.2401
+            "lat": 25.178357,
+            "lon": 55.241636
           },
           "students_to_drop": [
-            "ST_38",
-            "ST_95",
-            "ST_150",
-            "ST_204"
-          ]
-        },
-        {
-          "node_id": "school_9",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1134,
-            "lon": 55.2056
-          },
-          "students_to_drop": [
-            "ST_49",
-            "ST_185"
-          ]
-        },
-        {
-          "node_id": "school_2",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0886,
-            "lon": 55.2392
-          },
-          "students_to_drop": [
-            "ST_73",
-            "ST_79",
-            "ST_80",
-            "ST_110",
-            "ST_143",
-            "ST_171"
-          ]
-        },
-        {
-          "node_id": "school_20",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0921,
-            "lon": 55.2334
-          },
-          "students_to_drop": [
-            "ST_75",
-            "ST_131",
-            "ST_404"
-          ]
-        },
-        {
-          "node_id": "school_12",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1123,
-            "lon": 55.2078
-          },
-          "students_to_drop": [
-            "ST_96",
-            "ST_118",
-            "ST_202",
-            "ST_397"
-          ]
-        },
-        {
-          "node_id": "school_19",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0899,
-            "lon": 55.2385
-          },
-          "students_to_drop": [
-            "ST_99",
-            "ST_124",
-            "ST_446"
-          ]
-        },
-        {
-          "node_id": "school_1",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0934,
-            "lon": 55.2341
-          },
-          "students_to_drop": [
-            "ST_114",
-            "ST_177"
-          ]
-        },
-        {
-          "node_id": "school_13",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1145,
-            "lon": 55.2045
-          },
-          "students_to_drop": [
-            "ST_134"
-          ]
-        },
-        {
-          "node_id": "school_11",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1098,
-            "lon": 55.2023
-          },
-          "students_to_drop": [
-            "ST_151"
+            "ST_SAFA_350",
+            "ST_SAFA_374",
+            "ST_SAFA_424",
+            "ST_SAFA_641",
+            "ST_SAFA_873",
+            "ST_SAFA_914",
+            "ST_SAFA_918",
+            "ST_SAFA_989"
           ]
         }
       ],
       "constraints": {
         "max_capacity": 50,
-        "current_load": 46
+        "current_load": 32
       }
     },
     {
-      "route_id": 12,
+      "route_id": 11,
       "capacity": 50,
-      "total_students": 49,
+      "total_students": 75,
+      "buses_needed": 2,
       "pickup_nodes": [
-        {
-          "node_id": "stop_13",
-          "type": "pickup",
-          "location": {
-            "lat": 25.109520401299662,
-            "lon": 55.22154902157201
-          },
-          "demand": 29,
-          "students": [
-            "ST_32",
-            "ST_148",
-            "ST_375",
-            "ST_380",
-            "ST_383",
-            "ST_386",
-            "ST_393",
-            "ST_401",
-            "ST_408",
-            "ST_412",
-            "ST_416",
-            "ST_421",
-            "ST_423",
-            "ST_432",
-            "ST_452",
-            "ST_458",
-            "ST_461",
-            "ST_465",
-            "ST_467",
-            "ST_479",
-            "ST_483",
-            "ST_484",
-            "ST_488",
-            "ST_495",
-            "ST_507",
-            "ST_510",
-            "ST_516",
-            "ST_529",
-            "ST_540"
-          ]
-        },
         {
           "node_id": "stop_5",
           "type": "pickup",
           "location": {
-            "lat": 25.109129207109763,
-            "lon": 55.236808293365044
+            "lat": 25.1845,
+            "lon": 55.238
+          },
+          "demand": 55,
+          "students": [
+            "ST_SAFA_10",
+            "ST_SAFA_16",
+            "ST_SAFA_24",
+            "ST_SAFA_26",
+            "ST_SAFA_30",
+            "ST_SAFA_33",
+            "ST_SAFA_34",
+            "ST_SAFA_43",
+            "ST_SAFA_61",
+            "ST_SAFA_63",
+            "ST_SAFA_81",
+            "ST_SAFA_83",
+            "ST_SAFA_103",
+            "ST_SAFA_111",
+            "ST_SAFA_121",
+            "ST_SAFA_124",
+            "ST_SAFA_127",
+            "ST_SAFA_138",
+            "ST_SAFA_168",
+            "ST_SAFA_171",
+            "ST_SAFA_185",
+            "ST_SAFA_194",
+            "ST_SAFA_199",
+            "ST_SAFA_216",
+            "ST_SAFA_218",
+            "ST_SAFA_225",
+            "ST_SAFA_246",
+            "ST_SAFA_247",
+            "ST_SAFA_249",
+            "ST_SAFA_272",
+            "ST_SAFA_273",
+            "ST_SAFA_278",
+            "ST_SAFA_283",
+            "ST_SAFA_285",
+            "ST_SAFA_291",
+            "ST_SAFA_335",
+            "ST_SAFA_339",
+            "ST_SAFA_342",
+            "ST_SAFA_345",
+            "ST_SAFA_348",
+            "ST_SAFA_370",
+            "ST_SAFA_377",
+            "ST_SAFA_404",
+            "ST_SAFA_422",
+            "ST_SAFA_479",
+            "ST_SAFA_495",
+            "ST_SAFA_508",
+            "ST_SAFA_525",
+            "ST_SAFA_563",
+            "ST_SAFA_659",
+            "ST_SAFA_667",
+            "ST_SAFA_698",
+            "ST_SAFA_707",
+            "ST_SAFA_765",
+            "ST_SAFA_924"
+          ]
+        },
+        {
+          "node_id": "stop_16",
+          "type": "pickup",
+          "location": {
+            "lat": 25.181366844571222,
+            "lon": 55.253282888312924
           },
           "demand": 20,
           "students": [
-            "ST_392",
-            "ST_405",
-            "ST_410",
-            "ST_411",
-            "ST_418",
-            "ST_420",
-            "ST_425",
-            "ST_427",
-            "ST_439",
-            "ST_442",
-            "ST_443",
-            "ST_468",
-            "ST_489",
-            "ST_491",
-            "ST_493",
-            "ST_501",
-            "ST_517",
-            "ST_525",
-            "ST_530",
-            "ST_537"
+            "ST_SAFA_126",
+            "ST_SAFA_133",
+            "ST_SAFA_137",
+            "ST_SAFA_141",
+            "ST_SAFA_163",
+            "ST_SAFA_184",
+            "ST_SAFA_219",
+            "ST_SAFA_393",
+            "ST_SAFA_502",
+            "ST_SAFA_603",
+            "ST_SAFA_613",
+            "ST_SAFA_639",
+            "ST_SAFA_668",
+            "ST_SAFA_675",
+            "ST_SAFA_701",
+            "ST_SAFA_815",
+            "ST_SAFA_842",
+            "ST_SAFA_843",
+            "ST_SAFA_932",
+            "ST_SAFA_958"
           ]
         }
       ],
       "dropoff_nodes": [
         {
-          "node_id": "school_20",
+          "node_id": "school_103",
           "type": "dropoff",
           "location": {
-            "lat": 25.0921,
-            "lon": 55.2334
+            "lat": 25.178357,
+            "lon": 55.241636
           },
           "students_to_drop": [
-            "ST_32",
-            "ST_405"
+            "ST_SAFA_10",
+            "ST_SAFA_16",
+            "ST_SAFA_34",
+            "ST_SAFA_43",
+            "ST_SAFA_81",
+            "ST_SAFA_185",
+            "ST_SAFA_216",
+            "ST_SAFA_283",
+            "ST_SAFA_370",
+            "ST_SAFA_404",
+            "ST_SAFA_479",
+            "ST_SAFA_659",
+            "ST_SAFA_765",
+            "ST_SAFA_126",
+            "ST_SAFA_219",
+            "ST_SAFA_393",
+            "ST_SAFA_613",
+            "ST_SAFA_701",
+            "ST_SAFA_842"
           ]
         },
         {
-          "node_id": "school_12",
+          "node_id": "school_102",
           "type": "dropoff",
           "location": {
-            "lat": 25.1123,
-            "lon": 55.2078
+            "lat": 25.176233,
+            "lon": 55.238662
           },
           "students_to_drop": [
-            "ST_148",
-            "ST_423",
-            "ST_461",
-            "ST_529",
-            "ST_517"
+            "ST_SAFA_24",
+            "ST_SAFA_33",
+            "ST_SAFA_121",
+            "ST_SAFA_124",
+            "ST_SAFA_127",
+            "ST_SAFA_138",
+            "ST_SAFA_171",
+            "ST_SAFA_199",
+            "ST_SAFA_345",
+            "ST_SAFA_377",
+            "ST_SAFA_422",
+            "ST_SAFA_495",
+            "ST_SAFA_525",
+            "ST_SAFA_563",
+            "ST_SAFA_707",
+            "ST_SAFA_133",
+            "ST_SAFA_163",
+            "ST_SAFA_815"
           ]
         },
         {
-          "node_id": "school_4",
+          "node_id": "school_101",
           "type": "dropoff",
           "location": {
-            "lat": 25.0905,
-            "lon": 55.2378
+            "lat": 25.176771,
+            "lon": 55.236021
           },
           "students_to_drop": [
-            "ST_375",
-            "ST_495",
-            "ST_516"
+            "ST_SAFA_26",
+            "ST_SAFA_30",
+            "ST_SAFA_111",
+            "ST_SAFA_168",
+            "ST_SAFA_225",
+            "ST_SAFA_246",
+            "ST_SAFA_273",
+            "ST_SAFA_285",
+            "ST_SAFA_335",
+            "ST_SAFA_667",
+            "ST_SAFA_184",
+            "ST_SAFA_668",
+            "ST_SAFA_932"
           ]
         },
         {
-          "node_id": "school_9",
+          "node_id": "school_105",
           "type": "dropoff",
           "location": {
-            "lat": 25.1134,
-            "lon": 55.2056
+            "lat": 25.1742,
+            "lon": 55.2395
           },
           "students_to_drop": [
-            "ST_380",
-            "ST_393",
-            "ST_501"
+            "ST_SAFA_61",
+            "ST_SAFA_63",
+            "ST_SAFA_103",
+            "ST_SAFA_249",
+            "ST_SAFA_291",
+            "ST_SAFA_348",
+            "ST_SAFA_508",
+            "ST_SAFA_924",
+            "ST_SAFA_137",
+            "ST_SAFA_639",
+            "ST_SAFA_843"
           ]
         },
         {
-          "node_id": "school_14",
+          "node_id": "school_104",
           "type": "dropoff",
           "location": {
-            "lat": 25.0912,
-            "lon": 55.2356
+            "lat": 25.172813,
+            "lon": 55.237976
           },
           "students_to_drop": [
-            "ST_383"
+            "ST_SAFA_83",
+            "ST_SAFA_247",
+            "ST_SAFA_272",
+            "ST_SAFA_698",
+            "ST_SAFA_675"
           ]
         },
         {
-          "node_id": "school_5",
+          "node_id": "school_106",
           "type": "dropoff",
           "location": {
-            "lat": 25.0823,
-            "lon": 55.2456
+            "lat": 25.1715,
+            "lon": 55.243
           },
           "students_to_drop": [
-            "ST_386",
-            "ST_401",
-            "ST_510"
-          ]
-        },
-        {
-          "node_id": "school_2",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0886,
-            "lon": 55.2392
-          },
-          "students_to_drop": [
-            "ST_408",
-            "ST_416",
-            "ST_465",
-            "ST_479",
-            "ST_483",
-            "ST_488",
-            "ST_392",
-            "ST_411",
-            "ST_420",
-            "ST_427"
-          ]
-        },
-        {
-          "node_id": "school_8",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1012,
-            "lon": 55.2289
-          },
-          "students_to_drop": [
-            "ST_412",
-            "ST_418"
-          ]
-        },
-        {
-          "node_id": "school_13",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1145,
-            "lon": 55.2045
-          },
-          "students_to_drop": [
-            "ST_421"
-          ]
-        },
-        {
-          "node_id": "school_1",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0934,
-            "lon": 55.2341
-          },
-          "students_to_drop": [
-            "ST_432",
-            "ST_467",
-            "ST_484",
-            "ST_525",
-            "ST_530"
-          ]
-        },
-        {
-          "node_id": "school_6",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0872,
-            "lon": 55.2411
-          },
-          "students_to_drop": [
-            "ST_452"
-          ]
-        },
-        {
-          "node_id": "school_11",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1098,
-            "lon": 55.2023
-          },
-          "students_to_drop": [
-            "ST_458"
-          ]
-        },
-        {
-          "node_id": "school_17",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0839,
-            "lon": 55.2442
-          },
-          "students_to_drop": [
-            "ST_507",
-            "ST_442",
-            "ST_468"
-          ]
-        },
-        {
-          "node_id": "school_3",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0851,
-            "lon": 55.2423
-          },
-          "students_to_drop": [
-            "ST_540",
-            "ST_489"
-          ]
-        },
-        {
-          "node_id": "school_10",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1156,
-            "lon": 55.2089
-          },
-          "students_to_drop": [
-            "ST_410",
-            "ST_443",
-            "ST_491"
-          ]
-        },
-        {
-          "node_id": "school_7",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0844,
-            "lon": 55.2435
-          },
-          "students_to_drop": [
-            "ST_425",
-            "ST_493"
-          ]
-        },
-        {
-          "node_id": "school_16",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0867,
-            "lon": 55.2401
-          },
-          "students_to_drop": [
-            "ST_439",
-            "ST_537"
+            "ST_SAFA_194",
+            "ST_SAFA_218",
+            "ST_SAFA_278",
+            "ST_SAFA_339",
+            "ST_SAFA_342",
+            "ST_SAFA_141",
+            "ST_SAFA_502",
+            "ST_SAFA_603",
+            "ST_SAFA_958"
           ]
         }
       ],
       "constraints": {
         "max_capacity": 50,
-        "current_load": 49
+        "current_load": 75
       }
     },
     {
-      "route_id": 13,
+      "route_id": 14,
       "capacity": 50,
-      "total_students": 128,
+      "total_students": 45,
+      "buses_needed": 1,
+      "pickup_nodes": [
+        {
+          "node_id": "stop_1",
+          "type": "pickup",
+          "location": {
+            "lat": 25.183,
+            "lon": 55.2355
+          },
+          "demand": 45,
+          "students": [
+            "ST_SAFA_4",
+            "ST_SAFA_9",
+            "ST_SAFA_21",
+            "ST_SAFA_22",
+            "ST_SAFA_45",
+            "ST_SAFA_70",
+            "ST_SAFA_82",
+            "ST_SAFA_87",
+            "ST_SAFA_113",
+            "ST_SAFA_114",
+            "ST_SAFA_116",
+            "ST_SAFA_125",
+            "ST_SAFA_130",
+            "ST_SAFA_142",
+            "ST_SAFA_147",
+            "ST_SAFA_175",
+            "ST_SAFA_238",
+            "ST_SAFA_253",
+            "ST_SAFA_287",
+            "ST_SAFA_322",
+            "ST_SAFA_344",
+            "ST_SAFA_346",
+            "ST_SAFA_356",
+            "ST_SAFA_373",
+            "ST_SAFA_385",
+            "ST_SAFA_390",
+            "ST_SAFA_408",
+            "ST_SAFA_468",
+            "ST_SAFA_472",
+            "ST_SAFA_486",
+            "ST_SAFA_497",
+            "ST_SAFA_512",
+            "ST_SAFA_529",
+            "ST_SAFA_530",
+            "ST_SAFA_532",
+            "ST_SAFA_546",
+            "ST_SAFA_553",
+            "ST_SAFA_555",
+            "ST_SAFA_589",
+            "ST_SAFA_590",
+            "ST_SAFA_604",
+            "ST_SAFA_648",
+            "ST_SAFA_665",
+            "ST_SAFA_692",
+            "ST_SAFA_706"
+          ]
+        }
+      ],
+      "dropoff_nodes": [
+        {
+          "node_id": "school_105",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.1742,
+            "lon": 55.2395
+          },
+          "students_to_drop": [
+            "ST_SAFA_4",
+            "ST_SAFA_82",
+            "ST_SAFA_113",
+            "ST_SAFA_116",
+            "ST_SAFA_125",
+            "ST_SAFA_408",
+            "ST_SAFA_486",
+            "ST_SAFA_553",
+            "ST_SAFA_555"
+          ]
+        },
+        {
+          "node_id": "school_103",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.178357,
+            "lon": 55.241636
+          },
+          "students_to_drop": [
+            "ST_SAFA_9",
+            "ST_SAFA_21",
+            "ST_SAFA_22",
+            "ST_SAFA_45",
+            "ST_SAFA_346",
+            "ST_SAFA_468"
+          ]
+        },
+        {
+          "node_id": "school_106",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.1715,
+            "lon": 55.243
+          },
+          "students_to_drop": [
+            "ST_SAFA_70",
+            "ST_SAFA_130",
+            "ST_SAFA_142",
+            "ST_SAFA_497",
+            "ST_SAFA_529",
+            "ST_SAFA_546",
+            "ST_SAFA_590"
+          ]
+        },
+        {
+          "node_id": "school_104",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.172813,
+            "lon": 55.237976
+          },
+          "students_to_drop": [
+            "ST_SAFA_87",
+            "ST_SAFA_147",
+            "ST_SAFA_175",
+            "ST_SAFA_253",
+            "ST_SAFA_322",
+            "ST_SAFA_356",
+            "ST_SAFA_373",
+            "ST_SAFA_385",
+            "ST_SAFA_604",
+            "ST_SAFA_665",
+            "ST_SAFA_706"
+          ]
+        },
+        {
+          "node_id": "school_102",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.176233,
+            "lon": 55.238662
+          },
+          "students_to_drop": [
+            "ST_SAFA_114",
+            "ST_SAFA_344",
+            "ST_SAFA_390",
+            "ST_SAFA_512",
+            "ST_SAFA_589",
+            "ST_SAFA_648"
+          ]
+        },
+        {
+          "node_id": "school_101",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.176771,
+            "lon": 55.236021
+          },
+          "students_to_drop": [
+            "ST_SAFA_238",
+            "ST_SAFA_287",
+            "ST_SAFA_472",
+            "ST_SAFA_530",
+            "ST_SAFA_532",
+            "ST_SAFA_692"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_capacity": 50,
+        "current_load": 45
+      }
+    },
+    {
+      "route_id": 15,
+      "capacity": 50,
+      "total_students": 68,
+      "buses_needed": 2,
+      "pickup_nodes": [
+        {
+          "node_id": "stop_22",
+          "type": "pickup",
+          "location": {
+            "lat": 25.1905417511786,
+            "lon": 55.24169873977501
+          },
+          "demand": 27,
+          "students": [
+            "ST_SAFA_29",
+            "ST_SAFA_31",
+            "ST_SAFA_58",
+            "ST_SAFA_59",
+            "ST_SAFA_69",
+            "ST_SAFA_73",
+            "ST_SAFA_78",
+            "ST_SAFA_84",
+            "ST_SAFA_94",
+            "ST_SAFA_104",
+            "ST_SAFA_118",
+            "ST_SAFA_132",
+            "ST_SAFA_143",
+            "ST_SAFA_153",
+            "ST_SAFA_179",
+            "ST_SAFA_188",
+            "ST_SAFA_195",
+            "ST_SAFA_209",
+            "ST_SAFA_248",
+            "ST_SAFA_252",
+            "ST_SAFA_268",
+            "ST_SAFA_288",
+            "ST_SAFA_295",
+            "ST_SAFA_313",
+            "ST_SAFA_343",
+            "ST_SAFA_750",
+            "ST_SAFA_809"
+          ]
+        },
+        {
+          "node_id": "stop_7",
+          "type": "pickup",
+          "location": {
+            "lat": 25.165,
+            "lon": 55.249
+          },
+          "demand": 41,
+          "students": [
+            "ST_SAFA_482",
+            "ST_SAFA_533",
+            "ST_SAFA_537",
+            "ST_SAFA_644",
+            "ST_SAFA_666",
+            "ST_SAFA_680",
+            "ST_SAFA_691",
+            "ST_SAFA_719",
+            "ST_SAFA_731",
+            "ST_SAFA_742",
+            "ST_SAFA_763",
+            "ST_SAFA_803",
+            "ST_SAFA_806",
+            "ST_SAFA_808",
+            "ST_SAFA_810",
+            "ST_SAFA_821",
+            "ST_SAFA_831",
+            "ST_SAFA_833",
+            "ST_SAFA_835",
+            "ST_SAFA_849",
+            "ST_SAFA_851",
+            "ST_SAFA_865",
+            "ST_SAFA_868",
+            "ST_SAFA_898",
+            "ST_SAFA_917",
+            "ST_SAFA_921",
+            "ST_SAFA_928",
+            "ST_SAFA_930",
+            "ST_SAFA_933",
+            "ST_SAFA_935",
+            "ST_SAFA_939",
+            "ST_SAFA_941",
+            "ST_SAFA_954",
+            "ST_SAFA_962",
+            "ST_SAFA_964",
+            "ST_SAFA_978",
+            "ST_SAFA_980",
+            "ST_SAFA_981",
+            "ST_SAFA_983",
+            "ST_SAFA_988",
+            "ST_SAFA_996"
+          ]
+        }
+      ],
+      "dropoff_nodes": [
+        {
+          "node_id": "school_105",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.1742,
+            "lon": 55.2395
+          },
+          "students_to_drop": [
+            "ST_SAFA_29",
+            "ST_SAFA_153",
+            "ST_SAFA_248",
+            "ST_SAFA_268",
+            "ST_SAFA_343",
+            "ST_SAFA_750",
+            "ST_SAFA_719",
+            "ST_SAFA_763",
+            "ST_SAFA_835",
+            "ST_SAFA_849",
+            "ST_SAFA_851",
+            "ST_SAFA_865",
+            "ST_SAFA_935",
+            "ST_SAFA_939"
+          ]
+        },
+        {
+          "node_id": "school_101",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.176771,
+            "lon": 55.236021
+          },
+          "students_to_drop": [
+            "ST_SAFA_31",
+            "ST_SAFA_104",
+            "ST_SAFA_143",
+            "ST_SAFA_195",
+            "ST_SAFA_533",
+            "ST_SAFA_537",
+            "ST_SAFA_644",
+            "ST_SAFA_666",
+            "ST_SAFA_808",
+            "ST_SAFA_810",
+            "ST_SAFA_928",
+            "ST_SAFA_930",
+            "ST_SAFA_962",
+            "ST_SAFA_981",
+            "ST_SAFA_988"
+          ]
+        },
+        {
+          "node_id": "school_102",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.176233,
+            "lon": 55.238662
+          },
+          "students_to_drop": [
+            "ST_SAFA_58",
+            "ST_SAFA_188",
+            "ST_SAFA_288",
+            "ST_SAFA_313",
+            "ST_SAFA_731",
+            "ST_SAFA_803",
+            "ST_SAFA_831",
+            "ST_SAFA_917",
+            "ST_SAFA_921",
+            "ST_SAFA_933",
+            "ST_SAFA_941",
+            "ST_SAFA_954",
+            "ST_SAFA_964",
+            "ST_SAFA_983",
+            "ST_SAFA_996"
+          ]
+        },
+        {
+          "node_id": "school_103",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.178357,
+            "lon": 55.241636
+          },
+          "students_to_drop": [
+            "ST_SAFA_59",
+            "ST_SAFA_78",
+            "ST_SAFA_809",
+            "ST_SAFA_742",
+            "ST_SAFA_978"
+          ]
+        },
+        {
+          "node_id": "school_104",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.172813,
+            "lon": 55.237976
+          },
+          "students_to_drop": [
+            "ST_SAFA_69",
+            "ST_SAFA_84",
+            "ST_SAFA_94",
+            "ST_SAFA_118",
+            "ST_SAFA_482",
+            "ST_SAFA_680",
+            "ST_SAFA_691",
+            "ST_SAFA_806",
+            "ST_SAFA_821",
+            "ST_SAFA_833",
+            "ST_SAFA_868",
+            "ST_SAFA_980"
+          ]
+        },
+        {
+          "node_id": "school_106",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.1715,
+            "lon": 55.243
+          },
+          "students_to_drop": [
+            "ST_SAFA_73",
+            "ST_SAFA_132",
+            "ST_SAFA_179",
+            "ST_SAFA_209",
+            "ST_SAFA_252",
+            "ST_SAFA_295",
+            "ST_SAFA_898"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_capacity": 50,
+        "current_load": 68
+      }
+    },
+    {
+      "route_id": 16,
+      "capacity": 50,
+      "total_students": 41,
+      "buses_needed": 1,
+      "pickup_nodes": [
+        {
+          "node_id": "stop_21",
+          "type": "pickup",
+          "location": {
+            "lat": 25.163769643547596,
+            "lon": 55.232737764180456
+          },
+          "demand": 27,
+          "students": [
+            "ST_SAFA_310",
+            "ST_SAFA_311",
+            "ST_SAFA_320",
+            "ST_SAFA_372",
+            "ST_SAFA_394",
+            "ST_SAFA_396",
+            "ST_SAFA_459",
+            "ST_SAFA_481",
+            "ST_SAFA_500",
+            "ST_SAFA_516",
+            "ST_SAFA_543",
+            "ST_SAFA_556",
+            "ST_SAFA_583",
+            "ST_SAFA_682",
+            "ST_SAFA_704",
+            "ST_SAFA_716",
+            "ST_SAFA_723",
+            "ST_SAFA_818",
+            "ST_SAFA_836",
+            "ST_SAFA_852",
+            "ST_SAFA_857",
+            "ST_SAFA_910",
+            "ST_SAFA_922",
+            "ST_SAFA_929",
+            "ST_SAFA_955",
+            "ST_SAFA_977",
+            "ST_SAFA_992"
+          ]
+        },
+        {
+          "node_id": "stop_6",
+          "type": "pickup",
+          "location": {
+            "lat": 25.16623305421582,
+            "lon": 55.25428228138958
+          },
+          "demand": 14,
+          "students": [
+            "ST_SAFA_605",
+            "ST_SAFA_684",
+            "ST_SAFA_714",
+            "ST_SAFA_732",
+            "ST_SAFA_758",
+            "ST_SAFA_796",
+            "ST_SAFA_804",
+            "ST_SAFA_805",
+            "ST_SAFA_816",
+            "ST_SAFA_847",
+            "ST_SAFA_848",
+            "ST_SAFA_913",
+            "ST_SAFA_949",
+            "ST_SAFA_975"
+          ]
+        }
+      ],
+      "dropoff_nodes": [
+        {
+          "node_id": "school_102",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.176233,
+            "lon": 55.238662
+          },
+          "students_to_drop": [
+            "ST_SAFA_310",
+            "ST_SAFA_320",
+            "ST_SAFA_394",
+            "ST_SAFA_516",
+            "ST_SAFA_605",
+            "ST_SAFA_732",
+            "ST_SAFA_758",
+            "ST_SAFA_975"
+          ]
+        },
+        {
+          "node_id": "school_101",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.176771,
+            "lon": 55.236021
+          },
+          "students_to_drop": [
+            "ST_SAFA_311",
+            "ST_SAFA_481",
+            "ST_SAFA_500",
+            "ST_SAFA_543",
+            "ST_SAFA_857",
+            "ST_SAFA_910",
+            "ST_SAFA_816",
+            "ST_SAFA_847",
+            "ST_SAFA_949"
+          ]
+        },
+        {
+          "node_id": "school_104",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.172813,
+            "lon": 55.237976
+          },
+          "students_to_drop": [
+            "ST_SAFA_372",
+            "ST_SAFA_818",
+            "ST_SAFA_992"
+          ]
+        },
+        {
+          "node_id": "school_106",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.1715,
+            "lon": 55.243
+          },
+          "students_to_drop": [
+            "ST_SAFA_396",
+            "ST_SAFA_459",
+            "ST_SAFA_583",
+            "ST_SAFA_704",
+            "ST_SAFA_716",
+            "ST_SAFA_852",
+            "ST_SAFA_922",
+            "ST_SAFA_955",
+            "ST_SAFA_714"
+          ]
+        },
+        {
+          "node_id": "school_103",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.178357,
+            "lon": 55.241636
+          },
+          "students_to_drop": [
+            "ST_SAFA_556",
+            "ST_SAFA_682",
+            "ST_SAFA_836",
+            "ST_SAFA_977",
+            "ST_SAFA_804"
+          ]
+        },
+        {
+          "node_id": "school_105",
+          "type": "dropoff",
+          "location": {
+            "lat": 25.1742,
+            "lon": 55.2395
+          },
+          "students_to_drop": [
+            "ST_SAFA_723",
+            "ST_SAFA_929",
+            "ST_SAFA_684",
+            "ST_SAFA_796",
+            "ST_SAFA_805",
+            "ST_SAFA_848",
+            "ST_SAFA_913"
+          ]
+        }
+      ],
+      "constraints": {
+        "max_capacity": 50,
+        "current_load": 41
+      }
+    },
+    {
+      "route_id": 17,
+      "capacity": 50,
+      "total_students": 83,
+      "buses_needed": 2,
       "pickup_nodes": [
         {
           "node_id": "stop_23",
           "type": "pickup",
           "location": {
-            "lat": 25.111226811891065,
-            "lon": 55.192417207913444
+            "lat": 25.173881331534357,
+            "lon": 55.24547379512519
           },
-          "demand": 27,
+          "demand": 43,
           "students": [
-            "ST_3",
-            "ST_6",
-            "ST_20",
-            "ST_24",
-            "ST_28",
-            "ST_29",
-            "ST_43",
-            "ST_46",
-            "ST_47",
-            "ST_53",
-            "ST_58",
-            "ST_62",
-            "ST_70",
-            "ST_71",
-            "ST_108",
-            "ST_116",
-            "ST_132",
-            "ST_135",
-            "ST_141",
-            "ST_156",
-            "ST_161",
-            "ST_162",
-            "ST_166",
-            "ST_184",
-            "ST_195",
-            "ST_285",
-            "ST_429"
+            "ST_SAFA_2",
+            "ST_SAFA_14",
+            "ST_SAFA_19",
+            "ST_SAFA_20",
+            "ST_SAFA_46",
+            "ST_SAFA_72",
+            "ST_SAFA_144",
+            "ST_SAFA_151",
+            "ST_SAFA_154",
+            "ST_SAFA_190",
+            "ST_SAFA_193",
+            "ST_SAFA_196",
+            "ST_SAFA_205",
+            "ST_SAFA_217",
+            "ST_SAFA_229",
+            "ST_SAFA_257",
+            "ST_SAFA_387",
+            "ST_SAFA_416",
+            "ST_SAFA_531",
+            "ST_SAFA_545",
+            "ST_SAFA_643",
+            "ST_SAFA_649",
+            "ST_SAFA_670",
+            "ST_SAFA_678",
+            "ST_SAFA_700",
+            "ST_SAFA_711",
+            "ST_SAFA_721",
+            "ST_SAFA_746",
+            "ST_SAFA_748",
+            "ST_SAFA_755",
+            "ST_SAFA_762",
+            "ST_SAFA_770",
+            "ST_SAFA_789",
+            "ST_SAFA_820",
+            "ST_SAFA_830",
+            "ST_SAFA_869",
+            "ST_SAFA_890",
+            "ST_SAFA_894",
+            "ST_SAFA_895",
+            "ST_SAFA_896",
+            "ST_SAFA_908",
+            "ST_SAFA_936",
+            "ST_SAFA_953"
           ]
         },
         {
           "node_id": "stop_15",
           "type": "pickup",
           "location": {
-            "lat": 25.06983642751287,
-            "lon": 55.20853867642836
+            "lat": 25.165082863955057,
+            "lon": 55.2387388838558
           },
-          "demand": 17,
+          "demand": 40,
           "students": [
-            "ST_406",
-            "ST_474",
-            "ST_480",
-            "ST_497",
-            "ST_498",
-            "ST_506",
-            "ST_527",
-            "ST_536",
-            "ST_793",
-            "ST_863",
-            "ST_886",
-            "ST_934",
-            "ST_936",
-            "ST_943",
-            "ST_946",
-            "ST_960",
-            "ST_979"
-          ]
-        },
-        {
-          "node_id": "stop_1",
-          "type": "pickup",
-          "location": {
-            "lat": 25.057,
-            "lon": 55.2
-          },
-          "demand": 84,
-          "students": [
-            "ST_531",
-            "ST_791",
-            "ST_795",
-            "ST_797",
-            "ST_799",
-            "ST_800",
-            "ST_802",
-            "ST_805",
-            "ST_806",
-            "ST_807",
-            "ST_810",
-            "ST_813",
-            "ST_816",
-            "ST_817",
-            "ST_819",
-            "ST_820",
-            "ST_821",
-            "ST_822",
-            "ST_823",
-            "ST_825",
-            "ST_826",
-            "ST_827",
-            "ST_828",
-            "ST_834",
-            "ST_837",
-            "ST_838",
-            "ST_843",
-            "ST_844",
-            "ST_845",
-            "ST_848",
-            "ST_850",
-            "ST_851",
-            "ST_852",
-            "ST_853",
-            "ST_854",
-            "ST_856",
-            "ST_859",
-            "ST_861",
-            "ST_865",
-            "ST_868",
-            "ST_869",
-            "ST_870",
-            "ST_871",
-            "ST_877",
-            "ST_878",
-            "ST_882",
-            "ST_887",
-            "ST_891",
-            "ST_892",
-            "ST_894",
-            "ST_895",
-            "ST_897",
-            "ST_898",
-            "ST_901",
-            "ST_902",
-            "ST_903",
-            "ST_906",
-            "ST_907",
-            "ST_911",
-            "ST_913",
-            "ST_916",
-            "ST_917",
-            "ST_926",
-            "ST_928",
-            "ST_929",
-            "ST_930",
-            "ST_932",
-            "ST_945",
-            "ST_947",
-            "ST_951",
-            "ST_954",
-            "ST_962",
-            "ST_968",
-            "ST_970",
-            "ST_975",
-            "ST_976",
-            "ST_977",
-            "ST_981",
-            "ST_982",
-            "ST_983",
-            "ST_984",
-            "ST_985",
-            "ST_989",
-            "ST_995"
+            "ST_SAFA_307",
+            "ST_SAFA_321",
+            "ST_SAFA_336",
+            "ST_SAFA_362",
+            "ST_SAFA_376",
+            "ST_SAFA_432",
+            "ST_SAFA_440",
+            "ST_SAFA_450",
+            "ST_SAFA_487",
+            "ST_SAFA_551",
+            "ST_SAFA_573",
+            "ST_SAFA_627",
+            "ST_SAFA_628",
+            "ST_SAFA_631",
+            "ST_SAFA_652",
+            "ST_SAFA_656",
+            "ST_SAFA_657",
+            "ST_SAFA_663",
+            "ST_SAFA_696",
+            "ST_SAFA_712",
+            "ST_SAFA_768",
+            "ST_SAFA_790",
+            "ST_SAFA_795",
+            "ST_SAFA_837",
+            "ST_SAFA_841",
+            "ST_SAFA_856",
+            "ST_SAFA_867",
+            "ST_SAFA_871",
+            "ST_SAFA_874",
+            "ST_SAFA_875",
+            "ST_SAFA_876",
+            "ST_SAFA_879",
+            "ST_SAFA_886",
+            "ST_SAFA_920",
+            "ST_SAFA_937",
+            "ST_SAFA_946",
+            "ST_SAFA_956",
+            "ST_SAFA_968",
+            "ST_SAFA_972",
+            "ST_SAFA_999"
           ]
         }
       ],
       "dropoff_nodes": [
         {
-          "node_id": "school_12",
+          "node_id": "school_104",
           "type": "dropoff",
           "location": {
-            "lat": 25.1123,
-            "lon": 55.2078
+            "lat": 25.172813,
+            "lon": 55.237976
           },
           "students_to_drop": [
-            "ST_3",
-            "ST_161",
-            "ST_802",
-            "ST_903",
-            "ST_945",
-            "ST_983"
+            "ST_SAFA_2",
+            "ST_SAFA_19",
+            "ST_SAFA_217",
+            "ST_SAFA_416",
+            "ST_SAFA_643",
+            "ST_SAFA_755",
+            "ST_SAFA_894",
+            "ST_SAFA_450",
+            "ST_SAFA_663",
+            "ST_SAFA_696",
+            "ST_SAFA_879",
+            "ST_SAFA_956"
           ]
         },
         {
-          "node_id": "school_19",
+          "node_id": "school_106",
           "type": "dropoff",
           "location": {
-            "lat": 25.0899,
-            "lon": 55.2385
+            "lat": 25.1715,
+            "lon": 55.243
           },
           "students_to_drop": [
-            "ST_6",
-            "ST_46",
-            "ST_62",
-            "ST_826",
-            "ST_844",
-            "ST_897",
-            "ST_930"
+            "ST_SAFA_14",
+            "ST_SAFA_144",
+            "ST_SAFA_151",
+            "ST_SAFA_387",
+            "ST_SAFA_670",
+            "ST_SAFA_869",
+            "ST_SAFA_890",
+            "ST_SAFA_336",
+            "ST_SAFA_376",
+            "ST_SAFA_628",
+            "ST_SAFA_652",
+            "ST_SAFA_867",
+            "ST_SAFA_920",
+            "ST_SAFA_946"
           ]
         },
         {
-          "node_id": "school_3",
+          "node_id": "school_105",
           "type": "dropoff",
           "location": {
-            "lat": 25.0851,
-            "lon": 55.2423
+            "lat": 25.1742,
+            "lon": 55.2395
           },
           "students_to_drop": [
-            "ST_20",
-            "ST_799",
-            "ST_827",
-            "ST_838",
-            "ST_848",
-            "ST_853",
-            "ST_861",
-            "ST_898"
+            "ST_SAFA_20",
+            "ST_SAFA_190",
+            "ST_SAFA_257",
+            "ST_SAFA_531",
+            "ST_SAFA_678",
+            "ST_SAFA_770",
+            "ST_SAFA_307",
+            "ST_SAFA_440",
+            "ST_SAFA_657",
+            "ST_SAFA_875"
           ]
         },
         {
-          "node_id": "school_2",
+          "node_id": "school_101",
           "type": "dropoff",
           "location": {
-            "lat": 25.0886,
-            "lon": 55.2392
+            "lat": 25.176771,
+            "lon": 55.236021
           },
           "students_to_drop": [
-            "ST_24",
-            "ST_43",
-            "ST_108",
-            "ST_116",
-            "ST_793",
-            "ST_863",
-            "ST_934",
-            "ST_946",
-            "ST_807",
-            "ST_813",
-            "ST_856",
-            "ST_859",
-            "ST_911",
-            "ST_929",
-            "ST_947",
-            "ST_985",
-            "ST_989"
+            "ST_SAFA_46",
+            "ST_SAFA_72",
+            "ST_SAFA_154",
+            "ST_SAFA_193",
+            "ST_SAFA_746",
+            "ST_SAFA_748",
+            "ST_SAFA_321",
+            "ST_SAFA_362",
+            "ST_SAFA_627",
+            "ST_SAFA_631",
+            "ST_SAFA_656",
+            "ST_SAFA_768",
+            "ST_SAFA_790",
+            "ST_SAFA_856",
+            "ST_SAFA_886"
           ]
         },
         {
-          "node_id": "school_20",
+          "node_id": "school_103",
           "type": "dropoff",
           "location": {
-            "lat": 25.0921,
-            "lon": 55.2334
+            "lat": 25.178357,
+            "lon": 55.241636
           },
           "students_to_drop": [
-            "ST_28",
-            "ST_162",
-            "ST_184",
-            "ST_195",
-            "ST_497",
-            "ST_877",
-            "ST_892",
-            "ST_916",
-            "ST_981"
+            "ST_SAFA_196",
+            "ST_SAFA_229",
+            "ST_SAFA_545",
+            "ST_SAFA_700",
+            "ST_SAFA_711",
+            "ST_SAFA_789",
+            "ST_SAFA_830",
+            "ST_SAFA_908",
+            "ST_SAFA_936",
+            "ST_SAFA_487",
+            "ST_SAFA_551",
+            "ST_SAFA_573",
+            "ST_SAFA_712",
+            "ST_SAFA_795",
+            "ST_SAFA_841",
+            "ST_SAFA_874",
+            "ST_SAFA_876",
+            "ST_SAFA_968",
+            "ST_SAFA_999"
           ]
         },
         {
-          "node_id": "school_10",
+          "node_id": "school_102",
           "type": "dropoff",
           "location": {
-            "lat": 25.1156,
-            "lon": 55.2089
+            "lat": 25.176233,
+            "lon": 55.238662
           },
           "students_to_drop": [
-            "ST_29",
-            "ST_71",
-            "ST_886",
-            "ST_960",
-            "ST_834"
-          ]
-        },
-        {
-          "node_id": "school_14",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0912,
-            "lon": 55.2356
-          },
-          "students_to_drop": [
-            "ST_47",
-            "ST_531",
-            "ST_850",
-            "ST_854",
-            "ST_926"
-          ]
-        },
-        {
-          "node_id": "school_9",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1134,
-            "lon": 55.2056
-          },
-          "students_to_drop": [
-            "ST_53",
-            "ST_979",
-            "ST_810",
-            "ST_821",
-            "ST_851",
-            "ST_852",
-            "ST_871",
-            "ST_887",
-            "ST_906",
-            "ST_932",
-            "ST_977"
-          ]
-        },
-        {
-          "node_id": "school_11",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1098,
-            "lon": 55.2023
-          },
-          "students_to_drop": [
-            "ST_58",
-            "ST_166",
-            "ST_536",
-            "ST_800",
-            "ST_805",
-            "ST_843",
-            "ST_902",
-            "ST_954",
-            "ST_982"
-          ]
-        },
-        {
-          "node_id": "school_13",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1145,
-            "lon": 55.2045
-          },
-          "students_to_drop": [
-            "ST_70",
-            "ST_132",
-            "ST_406",
-            "ST_943",
-            "ST_797",
-            "ST_822",
-            "ST_828",
-            "ST_917",
-            "ST_975"
-          ]
-        },
-        {
-          "node_id": "school_1",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0934,
-            "lon": 55.2341
-          },
-          "students_to_drop": [
-            "ST_135",
-            "ST_936",
-            "ST_816",
-            "ST_825",
-            "ST_865"
-          ]
-        },
-        {
-          "node_id": "school_5",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0823,
-            "lon": 55.2456
-          },
-          "students_to_drop": [
-            "ST_141"
-          ]
-        },
-        {
-          "node_id": "school_15",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1089,
-            "lon": 55.2012
-          },
-          "students_to_drop": [
-            "ST_156",
-            "ST_878",
-            "ST_928",
-            "ST_995"
-          ]
-        },
-        {
-          "node_id": "school_8",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1012,
-            "lon": 55.2289
-          },
-          "students_to_drop": [
-            "ST_285",
-            "ST_480",
-            "ST_498",
-            "ST_527",
-            "ST_791",
-            "ST_901",
-            "ST_951",
-            "ST_984"
-          ]
-        },
-        {
-          "node_id": "school_18",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0841,
-            "lon": 55.2445
-          },
-          "students_to_drop": [
-            "ST_429",
-            "ST_806",
-            "ST_970"
-          ]
-        },
-        {
-          "node_id": "school_6",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0872,
-            "lon": 55.2411
-          },
-          "students_to_drop": [
-            "ST_474",
-            "ST_820",
-            "ST_823",
-            "ST_870",
-            "ST_891"
-          ]
-        },
-        {
-          "node_id": "school_16",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0867,
-            "lon": 55.2401
-          },
-          "students_to_drop": [
-            "ST_506",
-            "ST_817",
-            "ST_962",
-            "ST_968"
-          ]
-        },
-        {
-          "node_id": "school_4",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0905,
-            "lon": 55.2378
-          },
-          "students_to_drop": [
-            "ST_795",
-            "ST_819",
-            "ST_837",
-            "ST_845",
-            "ST_868",
-            "ST_869",
-            "ST_882",
-            "ST_976"
-          ]
-        },
-        {
-          "node_id": "school_17",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0839,
-            "lon": 55.2442
-          },
-          "students_to_drop": [
-            "ST_894",
-            "ST_907"
-          ]
-        },
-        {
-          "node_id": "school_7",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0844,
-            "lon": 55.2435
-          },
-          "students_to_drop": [
-            "ST_895",
-            "ST_913"
+            "ST_SAFA_205",
+            "ST_SAFA_649",
+            "ST_SAFA_721",
+            "ST_SAFA_762",
+            "ST_SAFA_820",
+            "ST_SAFA_895",
+            "ST_SAFA_896",
+            "ST_SAFA_953",
+            "ST_SAFA_432",
+            "ST_SAFA_837",
+            "ST_SAFA_871",
+            "ST_SAFA_937",
+            "ST_SAFA_972"
           ]
         }
       ],
       "constraints": {
         "max_capacity": 50,
-        "current_load": 128
+        "current_load": 83
       }
     },
     {
-      "route_id": 14,
+      "route_id": 18,
       "capacity": 50,
-      "total_students": 100,
-      "pickup_nodes": [
-        {
-          "node_id": "stop_14",
-          "type": "pickup",
-          "location": {
-            "lat": 25.086418217040215,
-            "lon": 55.231666355944384
-          },
-          "demand": 26,
-          "students": [
-            "ST_376",
-            "ST_377",
-            "ST_378",
-            "ST_387",
-            "ST_398",
-            "ST_435",
-            "ST_444",
-            "ST_450",
-            "ST_454",
-            "ST_460",
-            "ST_466",
-            "ST_470",
-            "ST_481",
-            "ST_482",
-            "ST_485",
-            "ST_486",
-            "ST_504",
-            "ST_509",
-            "ST_513",
-            "ST_514",
-            "ST_515",
-            "ST_518",
-            "ST_519",
-            "ST_523",
-            "ST_532",
-            "ST_533"
-          ]
-        },
-        {
-          "node_id": "stop_17",
-          "type": "pickup",
-          "location": {
-            "lat": 25.0589,
-            "lon": 55.2389
-          },
-          "demand": 74,
-          "students": [
-            "ST_542",
-            "ST_543",
-            "ST_544",
-            "ST_545",
-            "ST_546",
-            "ST_549",
-            "ST_553",
-            "ST_561",
-            "ST_568",
-            "ST_570",
-            "ST_572",
-            "ST_574",
-            "ST_576",
-            "ST_577",
-            "ST_583",
-            "ST_585",
-            "ST_586",
-            "ST_590",
-            "ST_602",
-            "ST_603",
-            "ST_605",
-            "ST_608",
-            "ST_611",
-            "ST_612",
-            "ST_616",
-            "ST_619",
-            "ST_625",
-            "ST_628",
-            "ST_639",
-            "ST_640",
-            "ST_641",
-            "ST_645",
-            "ST_648",
-            "ST_650",
-            "ST_651",
-            "ST_653",
-            "ST_655",
-            "ST_657",
-            "ST_665",
-            "ST_667",
-            "ST_679",
-            "ST_683",
-            "ST_685",
-            "ST_686",
-            "ST_688",
-            "ST_689",
-            "ST_692",
-            "ST_701",
-            "ST_702",
-            "ST_706",
-            "ST_708",
-            "ST_709",
-            "ST_711",
-            "ST_714",
-            "ST_715",
-            "ST_719",
-            "ST_728",
-            "ST_730",
-            "ST_731",
-            "ST_733",
-            "ST_738",
-            "ST_750",
-            "ST_751",
-            "ST_755",
-            "ST_756",
-            "ST_761",
-            "ST_766",
-            "ST_767",
-            "ST_768",
-            "ST_780",
-            "ST_784",
-            "ST_785",
-            "ST_787",
-            "ST_790"
-          ]
-        }
-      ],
-      "dropoff_nodes": [
-        {
-          "node_id": "school_20",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0921,
-            "lon": 55.2334
-          },
-          "students_to_drop": [
-            "ST_376",
-            "ST_398",
-            "ST_533",
-            "ST_543",
-            "ST_568",
-            "ST_572",
-            "ST_628",
-            "ST_665",
-            "ST_751"
-          ]
-        },
-        {
-          "node_id": "school_10",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1156,
-            "lon": 55.2089
-          },
-          "students_to_drop": [
-            "ST_377",
-            "ST_435",
-            "ST_523",
-            "ST_616",
-            "ST_645",
-            "ST_657",
-            "ST_711",
-            "ST_731",
-            "ST_780"
-          ]
-        },
-        {
-          "node_id": "school_3",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0851,
-            "lon": 55.2423
-          },
-          "students_to_drop": [
-            "ST_378",
-            "ST_454",
-            "ST_702",
-            "ST_714",
-            "ST_787",
-            "ST_790"
-          ]
-        },
-        {
-          "node_id": "school_2",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0886,
-            "lon": 55.2392
-          },
-          "students_to_drop": [
-            "ST_387",
-            "ST_504",
-            "ST_513",
-            "ST_518",
-            "ST_561",
-            "ST_585",
-            "ST_586",
-            "ST_602",
-            "ST_612",
-            "ST_639",
-            "ST_653",
-            "ST_655",
-            "ST_715",
-            "ST_738"
-          ]
-        },
-        {
-          "node_id": "school_7",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0844,
-            "lon": 55.2435
-          },
-          "students_to_drop": [
-            "ST_444",
-            "ST_688",
-            "ST_756"
-          ]
-        },
-        {
-          "node_id": "school_1",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0934,
-            "lon": 55.2341
-          },
-          "students_to_drop": [
-            "ST_450",
-            "ST_466",
-            "ST_679",
-            "ST_709",
-            "ST_785"
-          ]
-        },
-        {
-          "node_id": "school_19",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0899,
-            "lon": 55.2385
-          },
-          "students_to_drop": [
-            "ST_460",
-            "ST_542",
-            "ST_546",
-            "ST_651"
-          ]
-        },
-        {
-          "node_id": "school_14",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0912,
-            "lon": 55.2356
-          },
-          "students_to_drop": [
-            "ST_470",
-            "ST_685"
-          ]
-        },
-        {
-          "node_id": "school_16",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0867,
-            "lon": 55.2401
-          },
-          "students_to_drop": [
-            "ST_481",
-            "ST_686",
-            "ST_689",
-            "ST_733",
-            "ST_768"
-          ]
-        },
-        {
-          "node_id": "school_6",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0872,
-            "lon": 55.2411
-          },
-          "students_to_drop": [
-            "ST_482",
-            "ST_485",
-            "ST_608",
-            "ST_640",
-            "ST_648",
-            "ST_701",
-            "ST_750"
-          ]
-        },
-        {
-          "node_id": "school_17",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0839,
-            "lon": 55.2442
-          },
-          "students_to_drop": [
-            "ST_486",
-            "ST_514",
-            "ST_574",
-            "ST_706"
-          ]
-        },
-        {
-          "node_id": "school_8",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1012,
-            "lon": 55.2289
-          },
-          "students_to_drop": [
-            "ST_509",
-            "ST_532",
-            "ST_577",
-            "ST_667",
-            "ST_728",
-            "ST_766"
-          ]
-        },
-        {
-          "node_id": "school_15",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1089,
-            "lon": 55.2012
-          },
-          "students_to_drop": [
-            "ST_515",
-            "ST_619"
-          ]
-        },
-        {
-          "node_id": "school_12",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1123,
-            "lon": 55.2078
-          },
-          "students_to_drop": [
-            "ST_519",
-            "ST_545",
-            "ST_611",
-            "ST_641",
-            "ST_708",
-            "ST_767"
-          ]
-        },
-        {
-          "node_id": "school_9",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1134,
-            "lon": 55.2056
-          },
-          "students_to_drop": [
-            "ST_544",
-            "ST_570",
-            "ST_576",
-            "ST_583",
-            "ST_650",
-            "ST_719",
-            "ST_755",
-            "ST_761"
-          ]
-        },
-        {
-          "node_id": "school_4",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0905,
-            "lon": 55.2378
-          },
-          "students_to_drop": [
-            "ST_549",
-            "ST_553",
-            "ST_603",
-            "ST_625",
-            "ST_730",
-            "ST_784"
-          ]
-        },
-        {
-          "node_id": "school_5",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0823,
-            "lon": 55.2456
-          },
-          "students_to_drop": [
-            "ST_590",
-            "ST_605"
-          ]
-        },
-        {
-          "node_id": "school_11",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1098,
-            "lon": 55.2023
-          },
-          "students_to_drop": [
-            "ST_683"
-          ]
-        },
-        {
-          "node_id": "school_18",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0841,
-            "lon": 55.2445
-          },
-          "students_to_drop": [
-            "ST_692"
-          ]
-        }
-      ],
-      "constraints": {
-        "max_capacity": 50,
-        "current_load": 100
-      }
-    },
-    {
-      "route_id": 15,
-      "capacity": 50,
-      "total_students": 28,
-      "pickup_nodes": [
-        {
-          "node_id": "stop_6",
-          "type": "pickup",
-          "location": {
-            "lat": 25.090389641143325,
-            "lon": 55.21661432213003
-          },
-          "demand": 28,
-          "students": [
-            "ST_395",
-            "ST_399",
-            "ST_407",
-            "ST_409",
-            "ST_414",
-            "ST_426",
-            "ST_434",
-            "ST_436",
-            "ST_445",
-            "ST_448",
-            "ST_453",
-            "ST_455",
-            "ST_457",
-            "ST_463",
-            "ST_464",
-            "ST_469",
-            "ST_472",
-            "ST_476",
-            "ST_496",
-            "ST_500",
-            "ST_503",
-            "ST_505",
-            "ST_511",
-            "ST_512",
-            "ST_520",
-            "ST_528",
-            "ST_534",
-            "ST_538"
-          ]
-        }
-      ],
-      "dropoff_nodes": [
-        {
-          "node_id": "school_13",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1145,
-            "lon": 55.2045
-          },
-          "students_to_drop": [
-            "ST_395"
-          ]
-        },
-        {
-          "node_id": "school_1",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0934,
-            "lon": 55.2341
-          },
-          "students_to_drop": [
-            "ST_399",
-            "ST_445",
-            "ST_448"
-          ]
-        },
-        {
-          "node_id": "school_4",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0905,
-            "lon": 55.2378
-          },
-          "students_to_drop": [
-            "ST_407",
-            "ST_538"
-          ]
-        },
-        {
-          "node_id": "school_17",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0839,
-            "lon": 55.2442
-          },
-          "students_to_drop": [
-            "ST_409"
-          ]
-        },
-        {
-          "node_id": "school_5",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0823,
-            "lon": 55.2456
-          },
-          "students_to_drop": [
-            "ST_414"
-          ]
-        },
-        {
-          "node_id": "school_12",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1123,
-            "lon": 55.2078
-          },
-          "students_to_drop": [
-            "ST_426",
-            "ST_464",
-            "ST_500"
-          ]
-        },
-        {
-          "node_id": "school_20",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0921,
-            "lon": 55.2334
-          },
-          "students_to_drop": [
-            "ST_434"
-          ]
-        },
-        {
-          "node_id": "school_2",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0886,
-            "lon": 55.2392
-          },
-          "students_to_drop": [
-            "ST_436",
-            "ST_457",
-            "ST_476"
-          ]
-        },
-        {
-          "node_id": "school_14",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0912,
-            "lon": 55.2356
-          },
-          "students_to_drop": [
-            "ST_453",
-            "ST_512"
-          ]
-        },
-        {
-          "node_id": "school_8",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1012,
-            "lon": 55.2289
-          },
-          "students_to_drop": [
-            "ST_455",
-            "ST_503"
-          ]
-        },
-        {
-          "node_id": "school_3",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0851,
-            "lon": 55.2423
-          },
-          "students_to_drop": [
-            "ST_463",
-            "ST_469"
-          ]
-        },
-        {
-          "node_id": "school_7",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0844,
-            "lon": 55.2435
-          },
-          "students_to_drop": [
-            "ST_472"
-          ]
-        },
-        {
-          "node_id": "school_6",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0872,
-            "lon": 55.2411
-          },
-          "students_to_drop": [
-            "ST_496",
-            "ST_520"
-          ]
-        },
-        {
-          "node_id": "school_9",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1134,
-            "lon": 55.2056
-          },
-          "students_to_drop": [
-            "ST_505",
-            "ST_528"
-          ]
-        },
-        {
-          "node_id": "school_18",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0841,
-            "lon": 55.2445
-          },
-          "students_to_drop": [
-            "ST_511"
-          ]
-        },
-        {
-          "node_id": "school_19",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0899,
-            "lon": 55.2385
-          },
-          "students_to_drop": [
-            "ST_534"
-          ]
-        }
-      ],
-      "constraints": {
-        "max_capacity": 50,
-        "current_load": 28
-      }
-    },
-    {
-      "route_id": 16,
-      "capacity": 50,
-      "total_students": 37,
-      "pickup_nodes": [
-        {
-          "node_id": "stop_16",
-          "type": "pickup",
-          "location": {
-            "lat": 25.102703575087858,
-            "lon": 55.17718544121304
-          },
-          "demand": 23,
-          "students": [
-            "ST_213",
-            "ST_234",
-            "ST_237",
-            "ST_246",
-            "ST_249",
-            "ST_252",
-            "ST_261",
-            "ST_263",
-            "ST_266",
-            "ST_279",
-            "ST_280",
-            "ST_281",
-            "ST_286",
-            "ST_294",
-            "ST_297",
-            "ST_331",
-            "ST_339",
-            "ST_354",
-            "ST_359",
-            "ST_366",
-            "ST_372",
-            "ST_373",
-            "ST_441"
-          ]
-        },
-        {
-          "node_id": "stop_22",
-          "type": "pickup",
-          "location": {
-            "lat": 25.09601357177099,
-            "lon": 55.20299584547367
-          },
-          "demand": 14,
-          "students": [
-            "ST_346",
-            "ST_379",
-            "ST_385",
-            "ST_389",
-            "ST_419",
-            "ST_424",
-            "ST_430",
-            "ST_449",
-            "ST_451",
-            "ST_456",
-            "ST_473",
-            "ST_475",
-            "ST_502",
-            "ST_508"
-          ]
-        }
-      ],
-      "dropoff_nodes": [
-        {
-          "node_id": "school_8",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1012,
-            "lon": 55.2289
-          },
-          "students_to_drop": [
-            "ST_213",
-            "ST_354",
-            "ST_389",
-            "ST_430"
-          ]
-        },
-        {
-          "node_id": "school_20",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0921,
-            "lon": 55.2334
-          },
-          "students_to_drop": [
-            "ST_234",
-            "ST_237",
-            "ST_359"
-          ]
-        },
-        {
-          "node_id": "school_2",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0886,
-            "lon": 55.2392
-          },
-          "students_to_drop": [
-            "ST_246",
-            "ST_261",
-            "ST_297",
-            "ST_379"
-          ]
-        },
-        {
-          "node_id": "school_16",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0867,
-            "lon": 55.2401
-          },
-          "students_to_drop": [
-            "ST_249",
-            "ST_502"
-          ]
-        },
-        {
-          "node_id": "school_6",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0872,
-            "lon": 55.2411
-          },
-          "students_to_drop": [
-            "ST_252"
-          ]
-        },
-        {
-          "node_id": "school_10",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1156,
-            "lon": 55.2089
-          },
-          "students_to_drop": [
-            "ST_263",
-            "ST_280",
-            "ST_346",
-            "ST_449",
-            "ST_456",
-            "ST_508"
-          ]
-        },
-        {
-          "node_id": "school_11",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1098,
-            "lon": 55.2023
-          },
-          "students_to_drop": [
-            "ST_266",
-            "ST_424"
-          ]
-        },
-        {
-          "node_id": "school_9",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1134,
-            "lon": 55.2056
-          },
-          "students_to_drop": [
-            "ST_279",
-            "ST_286",
-            "ST_441"
-          ]
-        },
-        {
-          "node_id": "school_12",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1123,
-            "lon": 55.2078
-          },
-          "students_to_drop": [
-            "ST_281",
-            "ST_419",
-            "ST_451"
-          ]
-        },
-        {
-          "node_id": "school_17",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0839,
-            "lon": 55.2442
-          },
-          "students_to_drop": [
-            "ST_294"
-          ]
-        },
-        {
-          "node_id": "school_14",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0912,
-            "lon": 55.2356
-          },
-          "students_to_drop": [
-            "ST_331",
-            "ST_385"
-          ]
-        },
-        {
-          "node_id": "school_18",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0841,
-            "lon": 55.2445
-          },
-          "students_to_drop": [
-            "ST_339"
-          ]
-        },
-        {
-          "node_id": "school_4",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0905,
-            "lon": 55.2378
-          },
-          "students_to_drop": [
-            "ST_366",
-            "ST_473"
-          ]
-        },
-        {
-          "node_id": "school_7",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0844,
-            "lon": 55.2435
-          },
-          "students_to_drop": [
-            "ST_372"
-          ]
-        },
-        {
-          "node_id": "school_19",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0899,
-            "lon": 55.2385
-          },
-          "students_to_drop": [
-            "ST_373"
-          ]
-        },
-        {
-          "node_id": "school_1",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0934,
-            "lon": 55.2341
-          },
-          "students_to_drop": [
-            "ST_475"
-          ]
-        }
-      ],
-      "constraints": {
-        "max_capacity": 50,
-        "current_load": 37
-      }
-    },
-    {
-      "route_id": 17,
-      "capacity": 50,
-      "total_students": 131,
+      "total_students": 31,
+      "buses_needed": 1,
       "pickup_nodes": [
         {
           "node_id": "stop_12",
           "type": "pickup",
           "location": {
-            "lat": 25.12295322349726,
-            "lon": 55.20373041065281
+            "lat": 25.17359839692305,
+            "lon": 55.25052938810196
           },
-          "demand": 49,
+          "demand": 31,
           "students": [
-            "ST_4",
-            "ST_8",
-            "ST_9",
-            "ST_17",
-            "ST_18",
-            "ST_26",
-            "ST_33",
-            "ST_34",
-            "ST_42",
-            "ST_44",
-            "ST_56",
-            "ST_63",
-            "ST_65",
-            "ST_81",
-            "ST_84",
-            "ST_88",
-            "ST_89",
-            "ST_100",
-            "ST_102",
-            "ST_107",
-            "ST_109",
-            "ST_113",
-            "ST_117",
-            "ST_120",
-            "ST_122",
-            "ST_133",
-            "ST_140",
-            "ST_145",
-            "ST_146",
-            "ST_149",
-            "ST_155",
-            "ST_159",
-            "ST_163",
-            "ST_165",
-            "ST_169",
-            "ST_170",
-            "ST_181",
-            "ST_190",
-            "ST_196",
-            "ST_200",
-            "ST_206",
-            "ST_391",
-            "ST_402",
-            "ST_403",
-            "ST_415",
-            "ST_428",
-            "ST_433",
-            "ST_447",
-            "ST_521"
-          ]
-        },
-        {
-          "node_id": "stop_19",
-          "type": "pickup",
-          "location": {
-            "lat": 25.089225330149976,
-            "lon": 55.177636752360605
-          },
-          "demand": 46,
-          "students": [
-            "ST_217",
-            "ST_219",
-            "ST_223",
-            "ST_226",
-            "ST_228",
-            "ST_229",
-            "ST_230",
-            "ST_231",
-            "ST_233",
-            "ST_235",
-            "ST_238",
-            "ST_243",
-            "ST_254",
-            "ST_257",
-            "ST_258",
-            "ST_260",
-            "ST_270",
-            "ST_272",
-            "ST_274",
-            "ST_276",
-            "ST_278",
-            "ST_283",
-            "ST_284",
-            "ST_290",
-            "ST_302",
-            "ST_303",
-            "ST_319",
-            "ST_321",
-            "ST_322",
-            "ST_326",
-            "ST_327",
-            "ST_328",
-            "ST_329",
-            "ST_330",
-            "ST_333",
-            "ST_338",
-            "ST_340",
-            "ST_342",
-            "ST_343",
-            "ST_344",
-            "ST_352",
-            "ST_353",
-            "ST_368",
-            "ST_370",
-            "ST_388",
-            "ST_462"
-          ]
-        },
-        {
-          "node_id": "stop_3",
-          "type": "pickup",
-          "location": {
-            "lat": 25.06021302847532,
-            "lon": 55.232214364327035
-          },
-          "demand": 36,
-          "students": [
-            "ST_478",
-            "ST_541",
-            "ST_555",
-            "ST_558",
-            "ST_559",
-            "ST_575",
-            "ST_578",
-            "ST_580",
-            "ST_582",
-            "ST_587",
-            "ST_591",
-            "ST_593",
-            "ST_596",
-            "ST_601",
-            "ST_606",
-            "ST_610",
-            "ST_614",
-            "ST_617",
-            "ST_627",
-            "ST_634",
-            "ST_637",
-            "ST_642",
-            "ST_671",
-            "ST_678",
-            "ST_690",
-            "ST_691",
-            "ST_700",
-            "ST_705",
-            "ST_729",
-            "ST_732",
-            "ST_737",
-            "ST_743",
-            "ST_747",
-            "ST_749",
-            "ST_754",
-            "ST_773"
+            "ST_SAFA_12",
+            "ST_SAFA_90",
+            "ST_SAFA_107",
+            "ST_SAFA_120",
+            "ST_SAFA_164",
+            "ST_SAFA_245",
+            "ST_SAFA_602",
+            "ST_SAFA_608",
+            "ST_SAFA_611",
+            "ST_SAFA_623",
+            "ST_SAFA_637",
+            "ST_SAFA_642",
+            "ST_SAFA_658",
+            "ST_SAFA_660",
+            "ST_SAFA_676",
+            "ST_SAFA_780",
+            "ST_SAFA_812",
+            "ST_SAFA_822",
+            "ST_SAFA_834",
+            "ST_SAFA_839",
+            "ST_SAFA_861",
+            "ST_SAFA_881",
+            "ST_SAFA_912",
+            "ST_SAFA_916",
+            "ST_SAFA_938",
+            "ST_SAFA_942",
+            "ST_SAFA_944",
+            "ST_SAFA_951",
+            "ST_SAFA_966",
+            "ST_SAFA_979",
+            "ST_SAFA_986"
           ]
         }
       ],
       "dropoff_nodes": [
         {
-          "node_id": "school_17",
+          "node_id": "school_101",
           "type": "dropoff",
           "location": {
-            "lat": 25.0839,
-            "lon": 55.2442
+            "lat": 25.176771,
+            "lon": 55.236021
           },
           "students_to_drop": [
-            "ST_4",
-            "ST_140"
+            "ST_SAFA_12",
+            "ST_SAFA_90",
+            "ST_SAFA_642",
+            "ST_SAFA_660",
+            "ST_SAFA_834",
+            "ST_SAFA_912",
+            "ST_SAFA_942"
           ]
         },
         {
-          "node_id": "school_13",
+          "node_id": "school_102",
           "type": "dropoff",
           "location": {
-            "lat": 25.1145,
-            "lon": 55.2045
+            "lat": 25.176233,
+            "lon": 55.238662
           },
           "students_to_drop": [
-            "ST_8",
-            "ST_146",
-            "ST_402",
-            "ST_226",
-            "ST_258",
-            "ST_322",
-            "ST_327",
-            "ST_328",
-            "ST_614",
-            "ST_634",
-            "ST_671"
+            "ST_SAFA_107",
+            "ST_SAFA_881",
+            "ST_SAFA_916"
           ]
         },
         {
-          "node_id": "school_2",
+          "node_id": "school_104",
           "type": "dropoff",
           "location": {
-            "lat": 25.0886,
-            "lon": 55.2392
+            "lat": 25.172813,
+            "lon": 55.237976
           },
           "students_to_drop": [
-            "ST_9",
-            "ST_42",
-            "ST_44",
-            "ST_63",
-            "ST_65",
-            "ST_170",
-            "ST_190",
-            "ST_196",
-            "ST_391",
-            "ST_272",
-            "ST_274",
-            "ST_303",
-            "ST_333",
-            "ST_342",
-            "ST_627",
-            "ST_678",
-            "ST_737",
-            "ST_773"
+            "ST_SAFA_120",
+            "ST_SAFA_637",
+            "ST_SAFA_658",
+            "ST_SAFA_812",
+            "ST_SAFA_822",
+            "ST_SAFA_839",
+            "ST_SAFA_986"
           ]
         },
         {
-          "node_id": "school_15",
+          "node_id": "school_103",
           "type": "dropoff",
           "location": {
-            "lat": 25.1089,
-            "lon": 55.2012
+            "lat": 25.178357,
+            "lon": 55.241636
           },
           "students_to_drop": [
-            "ST_17",
-            "ST_206",
-            "ST_353",
-            "ST_593",
-            "ST_690"
+            "ST_SAFA_164",
+            "ST_SAFA_602",
+            "ST_SAFA_608",
+            "ST_SAFA_623",
+            "ST_SAFA_979"
           ]
         },
         {
-          "node_id": "school_7",
+          "node_id": "school_106",
           "type": "dropoff",
           "location": {
-            "lat": 25.0844,
-            "lon": 55.2435
+            "lat": 25.1715,
+            "lon": 55.243
           },
           "students_to_drop": [
-            "ST_18",
-            "ST_81",
-            "ST_133",
-            "ST_428"
+            "ST_SAFA_245",
+            "ST_SAFA_676",
+            "ST_SAFA_780",
+            "ST_SAFA_966"
           ]
         },
         {
-          "node_id": "school_12",
+          "node_id": "school_105",
           "type": "dropoff",
           "location": {
-            "lat": 25.1123,
-            "lon": 55.2078
+            "lat": 25.1742,
+            "lon": 55.2395
           },
           "students_to_drop": [
-            "ST_26",
-            "ST_89",
-            "ST_278",
-            "ST_319",
-            "ST_344",
-            "ST_368",
-            "ST_541",
-            "ST_747"
-          ]
-        },
-        {
-          "node_id": "school_19",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0899,
-            "lon": 55.2385
-          },
-          "students_to_drop": [
-            "ST_33",
-            "ST_102",
-            "ST_117",
-            "ST_223",
-            "ST_228",
-            "ST_326",
-            "ST_338"
-          ]
-        },
-        {
-          "node_id": "school_14",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0912,
-            "lon": 55.2356
-          },
-          "students_to_drop": [
-            "ST_34",
-            "ST_200",
-            "ST_231",
-            "ST_284",
-            "ST_582"
-          ]
-        },
-        {
-          "node_id": "school_8",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1012,
-            "lon": 55.2289
-          },
-          "students_to_drop": [
-            "ST_56",
-            "ST_100",
-            "ST_109",
-            "ST_181",
-            "ST_233",
-            "ST_270",
-            "ST_290",
-            "ST_321"
-          ]
-        },
-        {
-          "node_id": "school_1",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0934,
-            "lon": 55.2341
-          },
-          "students_to_drop": [
-            "ST_84",
-            "ST_283",
-            "ST_329",
-            "ST_340",
-            "ST_388",
-            "ST_754"
-          ]
-        },
-        {
-          "node_id": "school_11",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1098,
-            "lon": 55.2023
-          },
-          "students_to_drop": [
-            "ST_88",
-            "ST_403",
-            "ST_276",
-            "ST_330",
-            "ST_370",
-            "ST_478"
-          ]
-        },
-        {
-          "node_id": "school_9",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1134,
-            "lon": 55.2056
-          },
-          "students_to_drop": [
-            "ST_107",
-            "ST_113",
-            "ST_145",
-            "ST_165",
-            "ST_352",
-            "ST_575",
-            "ST_580",
-            "ST_596",
-            "ST_606",
-            "ST_610",
-            "ST_729",
-            "ST_749"
-          ]
-        },
-        {
-          "node_id": "school_4",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0905,
-            "lon": 55.2378
-          },
-          "students_to_drop": [
-            "ST_120",
-            "ST_149",
-            "ST_235",
-            "ST_617"
-          ]
-        },
-        {
-          "node_id": "school_16",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0867,
-            "lon": 55.2401
-          },
-          "students_to_drop": [
-            "ST_122",
-            "ST_155",
-            "ST_217",
-            "ST_254",
-            "ST_559",
-            "ST_691",
-            "ST_700"
-          ]
-        },
-        {
-          "node_id": "school_3",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0851,
-            "lon": 55.2423
-          },
-          "students_to_drop": [
-            "ST_159",
-            "ST_163",
-            "ST_229",
-            "ST_601",
-            "ST_642",
-            "ST_743"
-          ]
-        },
-        {
-          "node_id": "school_6",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0872,
-            "lon": 55.2411
-          },
-          "students_to_drop": [
-            "ST_169",
-            "ST_521",
-            "ST_587",
-            "ST_637"
-          ]
-        },
-        {
-          "node_id": "school_10",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1156,
-            "lon": 55.2089
-          },
-          "students_to_drop": [
-            "ST_415",
-            "ST_433",
-            "ST_219",
-            "ST_257",
-            "ST_578",
-            "ST_705"
-          ]
-        },
-        {
-          "node_id": "school_5",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0823,
-            "lon": 55.2456
-          },
-          "students_to_drop": [
-            "ST_447",
-            "ST_243",
-            "ST_260",
-            "ST_343",
-            "ST_462"
-          ]
-        },
-        {
-          "node_id": "school_20",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0921,
-            "lon": 55.2334
-          },
-          "students_to_drop": [
-            "ST_230",
-            "ST_238",
-            "ST_555",
-            "ST_558",
-            "ST_591"
-          ]
-        },
-        {
-          "node_id": "school_18",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0841,
-            "lon": 55.2445
-          },
-          "students_to_drop": [
-            "ST_302",
-            "ST_732"
+            "ST_SAFA_611",
+            "ST_SAFA_861",
+            "ST_SAFA_938",
+            "ST_SAFA_944",
+            "ST_SAFA_951"
           ]
         }
       ],
       "constraints": {
         "max_capacity": 50,
-        "current_load": 131
-      }
-    },
-    {
-      "route_id": 20,
-      "capacity": 50,
-      "total_students": 56,
-      "pickup_nodes": [
-        {
-          "node_id": "stop_25",
-          "type": "pickup",
-          "location": {
-            "lat": 25.14266311957129,
-            "lon": 55.22462446508546
-          },
-          "demand": 2,
-          "students": [
-            "ST_381",
-            "ST_384"
-          ]
-        },
-        {
-          "node_id": "stop_21",
-          "type": "pickup",
-          "location": {
-            "lat": 25.05783863563394,
-            "lon": 55.19337516886926
-          },
-          "demand": 54,
-          "students": [
-            "ST_792",
-            "ST_796",
-            "ST_801",
-            "ST_803",
-            "ST_812",
-            "ST_814",
-            "ST_818",
-            "ST_829",
-            "ST_835",
-            "ST_839",
-            "ST_841",
-            "ST_842",
-            "ST_847",
-            "ST_867",
-            "ST_874",
-            "ST_876",
-            "ST_880",
-            "ST_881",
-            "ST_883",
-            "ST_889",
-            "ST_890",
-            "ST_910",
-            "ST_912",
-            "ST_914",
-            "ST_919",
-            "ST_920",
-            "ST_921",
-            "ST_923",
-            "ST_924",
-            "ST_927",
-            "ST_931",
-            "ST_938",
-            "ST_939",
-            "ST_940",
-            "ST_941",
-            "ST_948",
-            "ST_952",
-            "ST_953",
-            "ST_955",
-            "ST_957",
-            "ST_958",
-            "ST_961",
-            "ST_964",
-            "ST_965",
-            "ST_969",
-            "ST_972",
-            "ST_973",
-            "ST_978",
-            "ST_980",
-            "ST_986",
-            "ST_987",
-            "ST_988",
-            "ST_990",
-            "ST_997"
-          ]
-        }
-      ],
-      "dropoff_nodes": [
-        {
-          "node_id": "school_4",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0905,
-            "lon": 55.2378
-          },
-          "students_to_drop": [
-            "ST_381",
-            "ST_997"
-          ]
-        },
-        {
-          "node_id": "school_8",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1012,
-            "lon": 55.2289
-          },
-          "students_to_drop": [
-            "ST_384",
-            "ST_876",
-            "ST_952"
-          ]
-        },
-        {
-          "node_id": "school_9",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1134,
-            "lon": 55.2056
-          },
-          "students_to_drop": [
-            "ST_792",
-            "ST_814",
-            "ST_818",
-            "ST_940",
-            "ST_948",
-            "ST_972",
-            "ST_973"
-          ]
-        },
-        {
-          "node_id": "school_3",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0851,
-            "lon": 55.2423
-          },
-          "students_to_drop": [
-            "ST_796",
-            "ST_847",
-            "ST_964"
-          ]
-        },
-        {
-          "node_id": "school_18",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0841,
-            "lon": 55.2445
-          },
-          "students_to_drop": [
-            "ST_801"
-          ]
-        },
-        {
-          "node_id": "school_2",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0886,
-            "lon": 55.2392
-          },
-          "students_to_drop": [
-            "ST_803",
-            "ST_842",
-            "ST_920",
-            "ST_921",
-            "ST_923",
-            "ST_927",
-            "ST_941",
-            "ST_965",
-            "ST_980",
-            "ST_988"
-          ]
-        },
-        {
-          "node_id": "school_19",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0899,
-            "lon": 55.2385
-          },
-          "students_to_drop": [
-            "ST_812",
-            "ST_883",
-            "ST_910",
-            "ST_931",
-            "ST_939",
-            "ST_961"
-          ]
-        },
-        {
-          "node_id": "school_16",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0867,
-            "lon": 55.2401
-          },
-          "students_to_drop": [
-            "ST_829",
-            "ST_867",
-            "ST_874",
-            "ST_987"
-          ]
-        },
-        {
-          "node_id": "school_13",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1145,
-            "lon": 55.2045
-          },
-          "students_to_drop": [
-            "ST_835",
-            "ST_914"
-          ]
-        },
-        {
-          "node_id": "school_12",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1123,
-            "lon": 55.2078
-          },
-          "students_to_drop": [
-            "ST_839",
-            "ST_953",
-            "ST_958"
-          ]
-        },
-        {
-          "node_id": "school_14",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0912,
-            "lon": 55.2356
-          },
-          "students_to_drop": [
-            "ST_841"
-          ]
-        },
-        {
-          "node_id": "school_17",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0839,
-            "lon": 55.2442
-          },
-          "students_to_drop": [
-            "ST_880",
-            "ST_890"
-          ]
-        },
-        {
-          "node_id": "school_5",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0823,
-            "lon": 55.2456
-          },
-          "students_to_drop": [
-            "ST_881",
-            "ST_957"
-          ]
-        },
-        {
-          "node_id": "school_10",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1156,
-            "lon": 55.2089
-          },
-          "students_to_drop": [
-            "ST_889",
-            "ST_955",
-            "ST_969"
-          ]
-        },
-        {
-          "node_id": "school_20",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0921,
-            "lon": 55.2334
-          },
-          "students_to_drop": [
-            "ST_912",
-            "ST_924"
-          ]
-        },
-        {
-          "node_id": "school_11",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.1098,
-            "lon": 55.2023
-          },
-          "students_to_drop": [
-            "ST_919"
-          ]
-        },
-        {
-          "node_id": "school_1",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0934,
-            "lon": 55.2341
-          },
-          "students_to_drop": [
-            "ST_938",
-            "ST_990"
-          ]
-        },
-        {
-          "node_id": "school_6",
-          "type": "dropoff",
-          "location": {
-            "lat": 25.0872,
-            "lon": 55.2411
-          },
-          "students_to_drop": [
-            "ST_978",
-            "ST_986"
-          ]
-        }
-      ],
-      "constraints": {
-        "max_capacity": 50,
-        "current_load": 56
+        "current_load": 31
       }
     }
   ],
   "metadata": {
-    "total_routes": 13,
-    "total_students": 998,
+    "total_routes": 15,
+    "total_students": 1000,
     "clustering_quality": {
-      "total_zones": 13,
-      "total_students": 998,
-      "avg_students_per_zone": 76.76923076923077,
-      "std_students_per_zone": 37.74642896233078,
-      "min_students_per_zone": 28,
-      "max_students_per_zone": 131,
-      "avg_walking_distance_km": 0.4561166930113189,
-      "max_walking_distance_km": 2.5850138664245605,
-      "total_walking_distance_km": 455.2044596252963,
-      "std_walking_distance_km": 0.28075612321028914,
-      "avg_zone_compactness_km": 2.0166617173414965,
-      "silhouette_score": -0.2932902736030519,
-      "avg_intra_cluster_distance": 5.545372009277344,
-      "avg_inter_cluster_distance": 1.9748683071136475,
-      "avg_capacity_utilization": 1.5353846153846158,
-      "min_capacity_utilization": 0.56,
-      "max_capacity_utilization": 2.62,
-      "std_capacity_utilization": 0.7549285792466157,
-      "zones_over_capacity": 8,
-      "pct_zones_over_capacity": 61.53846153846154,
-      "load_balance_cv": 0.49168695041112237,
-      "total_capacity_wasted": 60,
-      "avg_schools_per_zone": 17.76923076923077,
-      "max_schools_per_zone": 20,
-      "min_schools_per_zone": 13,
-      "std_schools_per_zone": 2.292256065500206,
-      "zones_with_multiple_schools": 13,
-      "avg_school_diversity_penalty": 0.00039881241257087543
+      "total_zones": 15,
+      "total_students": 1000,
+      "avg_students_per_zone": 66.66666666666667,
+      "std_students_per_zone": 32.90727714182516,
+      "min_students_per_zone": 11,
+      "max_students_per_zone": 125,
+      "avg_walking_distance_km": 0.26812162323622035,
+      "max_walking_distance_km": 1.2947174310684204,
+      "total_walking_distance_km": 268.12162323622033,
+      "std_walking_distance_km": 0.13177971700536437,
+      "avg_zone_compactness_km": 0.5334127505620321,
+      "silhouette_score": -0.09927848726511002,
+      "avg_intra_cluster_distance": 2.1645596101880074,
+      "avg_inter_cluster_distance": 0.7303939710060755,
+      "avg_capacity_utilization": 1.3333333333333335,
+      "min_capacity_utilization": 0.22,
+      "max_capacity_utilization": 2.5,
+      "std_capacity_utilization": 0.6581455428365033,
+      "zones_over_capacity": 9,
+      "pct_zones_over_capacity": 60.0,
+      "load_balance_cv": 0.4936091571273774,
+      "total_capacity_wasted": 98,
+      "avg_schools_per_zone": 5.933333333333334,
+      "max_schools_per_zone": 6,
+      "min_schools_per_zone": 5,
+      "std_schools_per_zone": 0.24944382578492938,
+      "zones_with_multiple_schools": 15,
+      "avg_school_diversity_penalty": 1.3280855394744625e-05
     }
   }
 }

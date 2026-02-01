@@ -1,0 +1,112 @@
+# ============================================================================
+# DATASET CONFIGURATION
+# ============================================================================
+# This file configures which CSV files to use for the bus routing pipeline.
+# Update the paths below when you want to use different datasets.
+#
+# To switch datasets:
+#   1. Update the file paths in the 'active_dataset' section
+#   2. Run: python run_pipeline.py
+#   3. The system will re-cluster and re-optimize routes
+# ============================================================================
+
+# Active dataset configuration
+active_dataset:
+  name: "Al Barsha Dubai (Synthetic)"
+  description: "Synthetic student data for Al Barsha area in Dubai"
+  
+  # CSV file paths (relative to project root or absolute paths)
+  students_csv: "safa1_students.csv"
+  schools_csv: "safa1_schools.csv"
+  associations_csv: "safa1_student_school_association.csv"
+  assembly_points_csv: "safa1_assembly_points.csv"
+  
+  # Map center coordinates (for frontend visualization)
+  map_center:
+    latitude: 25.0950
+    longitude: 55.2200
+  
+  # Region/area name for display
+  region: "Al Barsha, Dubai, UAE"
+
+# ============================================================================
+# PIPELINE PARAMETERS
+# ============================================================================
+# Adjust these based on your operational requirements
+
+clustering:
+  bus_capacity: 50                    # Maximum students per bus
+  max_schools_per_zone: 5            # Max schools a single bus zone can serve
+  school_proximity_threshold: 3.0     # km - Schools within this distance can share buses
+  home_weight: 1.0                   # Weight for residential proximity (0-1)
+  school_weight: 0.0                 # Weight for school proximity (0-1)
+  max_walking_distance: 0.8          # km - Max walking distance to assembly point
+  use_pytorch_optimization: true      # Enable PyTorch clustering optimization
+  optimization_epochs: 1500            # Number of optimization iterations
+
+route_optimization:
+  use_rl4co: true                     # Use RL4CO for route optimization
+  model_type: "attention"             # Model type: attention, pomo, etc.
+  device: "auto"                      # auto, cpu, cuda, or mps
+
+# ============================================================================
+# OUTPUT FILES
+# ============================================================================
+
+output:
+  clustering_json: "clustering_output.json"
+  route_optimizer_input: "route_optimizer_input.json"
+  optimized_routes: "optimized_routes.json"
+  
+# ============================================================================
+# SAVED DATASET PRESETS
+# ============================================================================
+# Quick-switch between different datasets by copying a preset to active_dataset
+
+presets:
+  # Current synthetic dataset
+  al_barsha_synthetic:
+    name: "Al Barsha Dubai (Synthetic)"
+    students_csv: "barsha_students_synthetic (1).csv"
+    schools_csv: "barsha_schools_synthetic (1).csv"
+    associations_csv: "student_school_association (1).csv"
+    assembly_points_csv: "assembly_points (1).csv"
+    map_center:
+      latitude: 25.0950
+      longitude: 55.2200
+    region: "Al Barsha, Dubai, UAE"
+  
+  # Template for real data (uncomment and fill in when ready)
+  # real_data:
+  #   name: "Production Dataset"
+  #   students_csv: "data/real/students.csv"
+  #   schools_csv: "data/real/schools.csv"
+  #   associations_csv: "data/real/associations.csv"
+  #   assembly_points_csv: "data/real/assembly_points.csv"
+  #   map_center:
+  #     latitude: 25.0950
+  #     longitude: 55.2200
+  #   region: "Your Region Name"
+
+# ============================================================================
+# CSV FILE FORMAT REQUIREMENTS
+# ============================================================================
+# 
+# students.csv:
+#   Required columns: student_id, lat, lon
+#   Optional columns: name, grade, phone, etc.
+#
+# schools.csv:
+#   Required columns: school_id, latitude, longitude, school_name
+#   Optional columns: capacity, address, etc.
+#
+# associations.csv:
+#   Required columns: student_id, school_id
+#   This links each student to their school
+#
+# assembly_points.csv:
+#   Required columns: stop_id, lat, lon
+#   Optional columns: name, capacity, etc.
+#   These are the pickup/collection points where students gather
+#
+# ============================================================================

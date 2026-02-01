@@ -175,6 +175,7 @@ class OutputFormatter:
                 'route_id': zone.zone_id,
                 'capacity': zone.capacity,
                 'total_students': zone.total_students,
+                'buses_needed': zone.buses_needed,  # Number of buses required for this zone
                 'pickup_nodes': assembly_nodes,
                 'dropoff_nodes': school_nodes,
                 'constraints': {

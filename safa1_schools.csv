@@ -1,0 +1,7 @@
+school_id,school_name,latitude,longitude,cluster_zone,student_count_est
+101,Jumeirah College,25.176771,55.236021,Al Safa 1,1100
+102,Jumeirah Primary School (JPS),25.176233,55.238662,Al Safa 1,1400
+103,Emirates English Speaking School,25.178357,55.241636,Al Safa 1,950
+104,Al Ittihad Private School (Jumeirah),25.172813,55.237976,Al Safa 1,1200
+105,Horizon English School,25.1742,55.2395,Al Safa 1,850
+106,JSS Private School,25.1715,55.243,Al Safa 1,1300

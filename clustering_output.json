@@ -1,0 +1,618 @@
+{
+  "zones": [
+    {
+      "zone_id": 2,
+      "assembly_nodes": [
+        "stop_4"
+      ],
+      "schools": [
+        "school_105",
+        "school_104",
+        "school_106",
+        "school_102",
+        "school_103",
+        "school_101"
+      ],
+      "student_count": 72,
+      "capacity": 50,
+      "capacity_utilization": 1.44,
+      "school_distribution": {
+        "school_104": 13,
+        "school_101": 14,
+        "school_105": 11,
+        "school_102": 12,
+        "school_103": 15,
+        "school_106": 7
+      },
+      "zone_centroid": [
+        25.168704986572266,
+        55.2357292175293
+      ],
+      "home_centroid": [
+        25.169343948364258,
+        55.23563766479492
+      ],
+      "school_centroid": [
+        25.175390243530273,
+        55.239192962646484
+      ],
+      "num_assembly_points": 1
+    },
+    {
+      "zone_id": 3,
+      "assembly_nodes": [
+        "stop_19",
+        "stop_24",
+        "stop_2"
+      ],
+      "schools": [
+        "school_105",
+        "school_104",
+        "school_106",
+        "school_102",
+        "school_103",
+        "school_101"
+      ],
+      "student_count": 125,
+      "capacity": 50,
+      "capacity_utilization": 2.5,
+      "school_distribution": {
+        "school_105": 18,
+        "school_104": 26,
+        "school_102": 15,
+        "school_101": 23,
+        "school_103": 24,
+        "school_106": 19
+      },
+      "zone_centroid": [
+        25.171571731567383,
+        55.239288330078125
+      ],
+      "home_centroid": [
+        25.170015335083008,
+        55.24040603637695
+      ],
+      "school_centroid": [
+        25.175016403198242,
+        55.239383697509766
+      ],
+      "num_assembly_points": 3
+    },
+    {
+      "zone_id": 4,
+      "assembly_nodes": [
+        "stop_17"
+      ],
+      "schools": [
+        "school_105",
+        "school_104",
+        "school_106",
+        "school_102",
+        "school_103",
+        "school_101"
+      ],
+      "student_count": 103,
+      "capacity": 50,
+      "capacity_utilization": 2.06,
+      "school_distribution": {
+        "school_105": 13,
+        "school_102": 20,
+        "school_104": 26,
+        "school_106": 17,
+        "school_101": 13,
+        "school_103": 14
+      },
+      "zone_centroid": [
+        25.175500869750977,
+        55.23899841308594
+      ],
+      "home_centroid": [
+        25.176151275634766,
+        55.238792419433594
+      ],
+      "school_centroid": [
+        25.1746883392334,
+        55.2393798828125
+      ],
+      "num_assembly_points": 1
+    },
+    {
+      "zone_id": 5,
+      "assembly_nodes": [
+        "stop_25"
+      ],
+      "schools": [
+        "school_105",
+        "school_104",
+        "school_106",
+        "school_103",
+        "school_101"
+      ],
+      "student_count": 11,
+      "capacity": 50,
+      "capacity_utilization": 0.22,
+      "school_distribution": {
+        "school_101": 2,
+        "school_106": 1,
+        "school_103": 2,
+        "school_104": 5,
+        "school_105": 1
+      },
+      "zone_centroid": [
+        25.17782974243164,
+        55.2221794128418
+      ],
+      "home_centroid": [
+        25.177507400512695,
+        55.2236442565918
+      ],
+      "school_centroid": [
+        25.174549102783203,
+        55.2388801574707
+      ],
+      "num_assembly_points": 1
+    },
+    {
+      "zone_id": 6,
+      "assembly_nodes": [
+        "stop_8"
+      ],
+      "schools": [
+        "school_105",
+        "school_104",
+        "school_106",
+        "school_102",
+        "school_103",
+        "school_101"
+      ],
+      "student_count": 89,
+      "capacity": 50,
+      "capacity_utilization": 1.78,
+      "school_distribution": {
+        "school_105": 13,
+        "school_103": 19,
+        "school_102": 16,
+        "school_101": 12,
+        "school_104": 17,
+        "school_106": 12
+      },
+      "zone_centroid": [
+        25.176000595092773,
+        55.231998443603516
+      ],
+      "home_centroid": [
+        25.175804138183594,
+        55.232337951660156
+      ],
+      "school_centroid": [
+        25.175168991088867,
+        55.23951721191406
+      ],
+      "num_assembly_points": 1
+    },
+    {
+      "zone_id": 7,
+      "assembly_nodes": [
+        "stop_9"
+      ],
+      "schools": [
+        "school_105",
+        "school_104",
+        "school_106",
+        "school_102",
+        "school_103",
+        "school_101"
+      ],
+      "student_count": 59,
+      "capacity": 50,
+      "capacity_utilization": 1.18,
+      "school_distribution": {
+        "school_105": 10,
+        "school_101": 8,
+        "school_103": 11,
+        "school_104": 7,
+        "school_106": 11,
+        "school_102": 12
+      },
+      "zone_centroid": [
+        25.172500610351562,
+        55.24150085449219
+      ],
+      "home_centroid": [
+        25.17211151123047,
+        55.240970611572266
+      ],
+      "school_centroid": [
+        25.17506980895996,
+        55.23972702026367
+      ],
+      "num_assembly_points": 1
+    },
+    {
+      "zone_id": 8,
+      "assembly_nodes": [
+        "stop_20"
+      ],
+      "schools": [
+        "school_105",
+        "school_104",
+        "school_106",
+        "school_102",
+        "school_103",
+        "school_101"
+      ],
+      "student_count": 42,
+      "capacity": 50,
+      "capacity_utilization": 0.84,
+      "school_distribution": {
+        "school_101": 5,
+        "school_102": 7,
+        "school_103": 6,
+        "school_104": 12,
+        "school_105": 7,
+        "school_106": 5
+      },
+      "zone_centroid": [
+        25.18471336364746,
+        55.24624252319336
+      ],
+      "home_centroid": [
+        25.184616088867188,
+        55.245941162109375
+      ],
+      "school_centroid": [
+        25.174720764160156,
+        55.239234924316406
+      ],
+      "num_assembly_points": 1
+    },
+    {
+      "zone_id": 9,
+      "assembly_nodes": [
+        "stop_3",
+        "stop_14",
+        "stop_13"
+      ],
+      "schools": [
+        "school_105",
+        "school_104",
+        "school_106",
+        "school_102",
+        "school_103",
+        "school_101"
+      ],
+      "student_count": 124,
+      "capacity": 50,
+      "capacity_utilization": 2.48,
+      "school_distribution": {
+        "school_106": 19,
+        "school_102": 25,
+        "school_103": 18,
+        "school_101": 25,
+        "school_105": 22,
+        "school_104": 15
+      },
+      "zone_centroid": [
+        25.170095443725586,
+        55.24123001098633
+      ],
+      "home_centroid": [
+        25.17441177368164,
+        55.24047088623047
+      ],
+      "school_centroid": [
+        25.17514991760254,
+        55.239288330078125
+      ],
+      "num_assembly_points": 3
+    },
+    {
+      "zone_id": 10,
+      "assembly_nodes": [
+        "stop_10",
+        "stop_18"
+      ],
+      "schools": [
+        "school_105",
+        "school_104",
+        "school_106",
+        "school_102",
+        "school_103",
+        "school_101"
+      ],
+      "student_count": 32,
+      "capacity": 50,
+      "capacity_utilization": 0.64,
+      "school_distribution": {
+        "school_106": 7,
+        "school_102": 6,
+        "school_101": 2,
+        "school_104": 5,
+        "school_105": 4,
+        "school_103": 8
+      },
+      "zone_centroid": [
+        25.17232894897461,
+        55.23716354370117
+      ],
+      "home_centroid": [
+        25.172977447509766,
+        55.2365608215332
+      ],
+      "school_centroid": [
+        25.174972534179688,
+        55.24018859863281
+      ],
+      "num_assembly_points": 2
+    },
+    {
+      "zone_id": 11,
+      "assembly_nodes": [
+        "stop_5",
+        "stop_16"
+      ],
+      "schools": [
+        "school_105",
+        "school_104",
+        "school_106",
+        "school_102",
+        "school_103",
+        "school_101"
+      ],
+      "student_count": 75,
+      "capacity": 50,
+      "capacity_utilization": 1.5,
+      "school_distribution": {
+        "school_103": 19,
+        "school_102": 18,
+        "school_101": 13,
+        "school_105": 11,
+        "school_104": 5,
+        "school_106": 9
+      },
+      "zone_centroid": [
+        25.182933807373047,
+        55.245643615722656
+      ],
+      "home_centroid": [
+        25.182891845703125,
+        55.24318313598633
+      ],
+      "school_centroid": [
+        25.17576789855957,
+        55.23955154418945
+      ],
+      "num_assembly_points": 2
+    },
+    {
+      "zone_id": 14,
+      "assembly_nodes": [
+        "stop_1"
+      ],
+      "schools": [
+        "school_105",
+        "school_104",
+        "school_106",
+        "school_102",
+        "school_103",
+        "school_101"
+      ],
+      "student_count": 45,
+      "capacity": 50,
+      "capacity_utilization": 0.9,
+      "school_distribution": {
+        "school_105": 9,
+        "school_103": 6,
+        "school_106": 7,
+        "school_104": 11,
+        "school_102": 6,
+        "school_101": 6
+      },
+      "zone_centroid": [
+        25.183000564575195,
+        55.23550033569336
+      ],
+      "home_centroid": [
+        25.1811580657959,
+        55.235504150390625
+      ],
+      "school_centroid": [
+        25.174610137939453,
+        55.239376068115234
+      ],
+      "num_assembly_points": 1
+    },
+    {
+      "zone_id": 15,
+      "assembly_nodes": [
+        "stop_22",
+        "stop_7"
+      ],
+      "schools": [
+        "school_105",
+        "school_104",
+        "school_106",
+        "school_102",
+        "school_103",
+        "school_101"
+      ],
+      "student_count": 68,
+      "capacity": 50,
+      "capacity_utilization": 1.36,
+      "school_distribution": {
+        "school_105": 14,
+        "school_101": 15,
+        "school_102": 15,
+        "school_103": 5,
+        "school_104": 12,
+        "school_106": 7
+      },
+      "zone_centroid": [
+        25.177772521972656,
+        55.2453498840332
+      ],
+      "home_centroid": [
+        25.176000595092773,
+        55.24571990966797
+      ],
+      "school_centroid": [
+        25.174999237060547,
+        55.23879623413086
+      ],
+      "num_assembly_points": 2
+    },
+    {
+      "zone_id": 16,
+      "assembly_nodes": [
+        "stop_21",
+        "stop_6"
+      ],
+      "schools": [
+        "school_105",
+        "school_104",
+        "school_106",
+        "school_102",
+        "school_103",
+        "school_101"
+      ],
+      "student_count": 41,
+      "capacity": 50,
+      "capacity_utilization": 0.82,
+      "school_distribution": {
+        "school_102": 8,
+        "school_101": 9,
+        "school_104": 3,
+        "school_106": 9,
+        "school_103": 5,
+        "school_105": 7
+      },
+      "zone_centroid": [
+        25.165000915527344,
+        55.24351119995117
+      ],
+      "home_centroid": [
+        25.164613723754883,
+        55.2402458190918
+      ],
+      "school_centroid": [
+        25.174970626831055,
+        55.23948287963867
+      ],
+      "num_assembly_points": 2
+    },
+    {
+      "zone_id": 17,
+      "assembly_nodes": [
+        "stop_23",
+        "stop_15"
+      ],
+      "schools": [
+        "school_105",
+        "school_104",
+        "school_106",
+        "school_102",
+        "school_103",
+        "school_101"
+      ],
+      "student_count": 83,
+      "capacity": 50,
+      "capacity_utilization": 1.66,
+      "school_distribution": {
+        "school_104": 12,
+        "school_106": 14,
+        "school_105": 10,
+        "school_101": 15,
+        "school_103": 19,
+        "school_102": 13
+      },
+      "zone_centroid": [
+        25.169483184814453,
+        55.242103576660156
+      ],
+      "home_centroid": [
+        25.16961097717285,
+        55.24236297607422
+      ],
+      "school_centroid": [
+        25.175277709960938,
+        55.239593505859375
+      ],
+      "num_assembly_points": 2
+    },
+    {
+      "zone_id": 18,
+      "assembly_nodes": [
+        "stop_12"
+      ],
+      "schools": [
+        "school_105",
+        "school_104",
+        "school_106",
+        "school_102",
+        "school_103",
+        "school_101"
+      ],
+      "student_count": 31,
+      "capacity": 50,
+      "capacity_utilization": 0.62,
+      "school_distribution": {
+        "school_101": 7,
+        "school_102": 3,
+        "school_104": 7,
+        "school_103": 5,
+        "school_106": 4,
+        "school_105": 5
+      },
+      "zone_centroid": [
+        25.173599243164062,
+        55.25053024291992
+      ],
+      "home_centroid": [
+        25.173114776611328,
+        55.250404357910156
+      ],
+      "school_centroid": [
+        25.174985885620117,
+        55.23908615112305
+      ],
+      "num_assembly_points": 1
+    }
+  ],
+  "summary": {
+    "total_zones": 15,
+    "total_students": 1000,
+    "avg_students_per_zone": 66.66666666666667,
+    "avg_capacity_utilization": 1.3333333333333333,
+    "zones_over_capacity": 9
+  },
+  "metrics": {
+    "total_zones": 15,
+    "total_students": 1000,
+    "avg_students_per_zone": 66.66666666666667,
+    "std_students_per_zone": 32.90727714182516,
+    "min_students_per_zone": 11,
+    "max_students_per_zone": 125,
+    "avg_walking_distance_km": 0.26812162323622035,
+    "max_walking_distance_km": 1.2947174310684204,
+    "total_walking_distance_km": 268.12162323622033,
+    "std_walking_distance_km": 0.13177971700536437,
+    "avg_zone_compactness_km": 0.5334127505620321,
+    "silhouette_score": -0.09927848726511002,
+    "avg_intra_cluster_distance": 2.1645596101880074,
+    "avg_inter_cluster_distance": 0.7303939710060755,
+    "avg_capacity_utilization": 1.3333333333333335,
+    "min_capacity_utilization": 0.22,
+    "max_capacity_utilization": 2.5,
+    "std_capacity_utilization": 0.6581455428365033,
+    "zones_over_capacity": 9,
+    "pct_zones_over_capacity": 60.0,
+    "load_balance_cv": 0.4936091571273774,
+    "total_capacity_wasted": 98,
+    "avg_schools_per_zone": 5.933333333333334,
+    "max_schools_per_zone": 6,
+    "min_schools_per_zone": 5,
+    "std_schools_per_zone": 0.24944382578492938,
+    "zones_with_multiple_schools": 15,
+    "avg_school_diversity_penalty": 1.3280855394744625e-05
+  }
+}

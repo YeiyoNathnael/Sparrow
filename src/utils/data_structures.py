@@ -106,6 +106,7 @@ class BusZone:
     zone_id: int
     assembly_clusters: List[AssemblyPointCluster] = field(default_factory=list)
     capacity: int = 20  # Default bus capacity
+    buses_needed: int = 1  # Number of buses required for this zone
     
     @property
     def total_students(self) -> int:

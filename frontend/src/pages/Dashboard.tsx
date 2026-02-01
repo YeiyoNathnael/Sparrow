@@ -95,28 +95,77 @@ export default function Dashboard() {
   ]);
 
   const [loading, setLoading] = useState(true);
+  const [avgDistance, setAvgDistance] = useState("0");
+  const [avgStudentsPerRoute, setAvgStudentsPerRoute] = useState(0);
+  const [efficiencyScore, setEfficiencyScore] = useState("0");
+  const [highCongestion, setHighCongestion] = useState(0);
+  const [mediumCongestion, setMediumCongestion] = useState(0);
+  const [lowCongestion, setLowCongestion] = useState(0);
+  const [totalDistance, setTotalDistance] = useState(0);
+  const [routesCount, setRoutesCount] = useState(0);
 
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
         setLoading(true);
-        // Fetch schools and students from API
-        const [schoolsRes, studentsRes] = await Promise.all([
+        // Fetch schools, students, and routes from API
+        const [schoolsRes, studentsRes, routesRes] = await Promise.all([
           fetch(`${API_URL}/schools`),
           fetch(`${API_URL}/students`),
+          fetch(`${API_URL}/routes`),
         ]);
 
-        if (!schoolsRes.ok || !studentsRes.ok) throw new Error("Failed to fetch data");
+        if (!schoolsRes.ok || !studentsRes.ok || !routesRes.ok) throw new Error("Failed to fetch data");
 
         const schools = await schoolsRes.json();
         const students = await studentsRes.json();
+        const routesData = await routesRes.json();
+        const routes = routesData.routes || [];
 
         // Calculate metrics from real data
         const uniqueZones = new Set(schools.map((s: any) => s.cluster_zone || "Unknown")).size;
         const totalStudents = students.length;
-        const avgCapacity = schools.length > 0 
-          ? Math.round((totalStudents / (schools.length * 50)) * 100) 
-          : 0;
+        
+        // Calculate capacity based on assembly points (number of buses)
+        const totalAssemblyPoints = routes.reduce((sum: number, route: any) => sum + (route.num_pickups || 0), 0);
+        const busCapacity = 50;
+        const avgStudentsPerAssembly = totalAssemblyPoints > 0 ? totalStudents / totalAssemblyPoints : 0;
+        const avgCapacityPercent = totalAssemblyPoints > 0 ? Math.round((avgStudentsPerAssembly / busCapacity) * 100) : 0;
+        const capacityStatus = avgCapacityPercent <= 100 ? "Optimal" : `Over by ${avgCapacityPercent - 100}%`;
+        const capacityColor = avgCapacityPercent <= 100 ? "info" : "warning";
+        const capacityTrend = avgCapacityPercent <= 100 ? "up" : "warning";
+
+        // Calculate route efficiency metrics
+        const totalDistance = routes.reduce((sum: number, route: any) => sum + (route.distance_km || 0), 0);
+        const avgDistance = routes.length > 0 ? (totalDistance / routes.length).toFixed(1) : "0";
+        const avgStudentsPerRoute = routes.length > 0 ? Math.round(totalStudents / routes.length) : 0;
+        const efficiencyScore = avgStudentsPerRoute > 0 ? ((totalDistance / totalStudents) * 10).toFixed(2) : "0";
+
+        // Calculate school congestion (count routes per school)
+        const schoolRouteCount: { [key: string]: number } = {};
+        routes.forEach((route: any) => {
+          const numDropoffs = route.num_dropoffs || 0;
+          // Assuming each route visits different schools, count them
+          for (let i = 0; i < numDropoffs; i++) {
+            const schoolKey = `school_${i}`;
+            schoolRouteCount[schoolKey] = (schoolRouteCount[schoolKey] || 0) + 1;
+          }
+        });
+        
+        const routeCounts = Object.values(schoolRouteCount);
+        const highCongestion = routeCounts.filter((count: number) => count >= 4).length;
+        const mediumCongestion = routeCounts.filter((count: number) => count >= 2 && count < 4).length;
+        const lowCongestion = routeCounts.filter((count: number) => count < 2).length;
+
+        // Set efficiency metrics
+        setAvgDistance(avgDistance);
+        setAvgStudentsPerRoute(avgStudentsPerRoute);
+        setEfficiencyScore(efficiencyScore);
+        setHighCongestion(highCongestion);
+        setMediumCongestion(mediumCongestion);
+        setLowCongestion(lowCongestion);
+        setTotalDistance(totalDistance);
+        setRoutesCount(routes.length);
 
         setMetrics([
           { 
@@ -128,9 +177,9 @@ export default function Dashboard() {
             color: "accent"
           },
           { 
-            label: "Buses Optimized", 
-            value: String(schools.length), 
-            change: "School routes",
+            label: "Active Routes", 
+            value: String(routes.length), 
+            change: "Optimized routes",
             trend: "up",
             icon: Bus,
             color: "primary"
@@ -145,9 +194,9 @@ export default function Dashboard() {
           },
           { 
             label: "Avg Capacity", 
-            value: `${avgCapacity}%`, 
-            change: "Optimal range",
-            trend: "stable",
+            value: `${avgCapacityPercent}%`, 
+            change: capacityStatus,
+            trend: capacityTrend,
             icon: Leaf,
             color: "info"
           },
@@ -181,7 +230,7 @@ export default function Dashboard() {
         {metrics.map((metric, index) => (
           <Card 
             key={metric.label} 
-            className="metric-card group"
+            className={`metric-card group ${metric.trend === 'warning' ? 'border-warning/50' : ''}`}
             style={{ animationDelay: `${index * 100}ms` }}
           >
             <CardContent className="p-6">
@@ -191,11 +240,20 @@ export default function Dashboard() {
                   <p className="text-3xl font-bold text-foreground mt-2">{metric.value}</p>
                   <div className="flex items-center gap-1 mt-2">
                     {metric.trend === "up" && <TrendingUp className="h-3 w-3 text-success" />}
-                    <span className="text-xs text-muted-foreground">{metric.change}</span>
+                    {metric.trend === "warning" && <AlertCircle className="h-3 w-3 text-warning" />}
+                    <span className={`text-xs ${metric.trend === 'warning' ? 'text-warning' : 'text-muted-foreground'}`}>
+                      {metric.change}
+                    </span>
                   </div>
                 </div>
-                <div className={`p-3 rounded-xl bg-${metric.color}/10 group-hover:bg-${metric.color}/20 transition-colors`}>
-                  <metric.icon className={`h-6 w-6 text-${metric.color}`} />
+                <div className={`p-3 rounded-xl transition-colors ${
+                  metric.color === 'warning' 
+                    ? 'bg-warning/10 group-hover:bg-warning/20' 
+                    : `bg-${metric.color}/10 group-hover:bg-${metric.color}/20`
+                }`}>
+                  <metric.icon className={`h-6 w-6 ${
+                    metric.color === 'warning' ? 'text-warning' : `text-${metric.color}`
+                  }`} />
                 </div>
               </div>
             </CardContent>
@@ -203,101 +261,102 @@ export default function Dashboard() {
         ))}
       </div>
 
-      {/* System Health & Notifications Row */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* System Health Panel */}
-        <Card className="glass lg:col-span-2">
+      {/* Operational Metrics Row */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Route Efficiency Panel */}
+        <Card className="glass">
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center gap-2 text-lg">
-              <Activity className="h-5 w-5 text-accent" />
-              System Health
+              <Zap className="h-5 w-5 text-accent" />
+              Route Efficiency
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            {/* PyTorch Model Status */}
-            <div className="glass-subtle rounded-lg p-4">
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-success/10">
-                    <Cpu className="h-5 w-5 text-success" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">PyTorch Model</p>
-                    <p className="text-xs text-muted-foreground font-mono">K-Means Clustering v2.4</p>
-                  </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="glass-subtle rounded-lg p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <MapPin className="h-4 w-4 text-primary" />
+                  <p className="text-xs text-muted-foreground">Avg Distance</p>
                 </div>
-                <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-success/10 border border-success/20">
-                  <CheckCircle className="h-3.5 w-3.5 text-success" />
-                  <span className="text-xs font-medium text-success">Converged</span>
-                </div>
+                <p className="text-2xl font-bold text-foreground font-mono">{avgDistance} km</p>
+                <p className="text-xs text-muted-foreground mt-1">Per route</p>
               </div>
-              <div className="grid grid-cols-3 gap-4 pt-3 border-t border-border/50">
-                <div>
-                  <p className="text-xs text-muted-foreground">Iterations</p>
-                  <p className="text-lg font-semibold text-foreground font-mono">847</p>
+              
+              <div className="glass-subtle rounded-lg p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <Users className="h-4 w-4 text-success" />
+                  <p className="text-xs text-muted-foreground">Avg Students</p>
                 </div>
-                <div>
-                  <p className="text-xs text-muted-foreground">Loss</p>
-                  <p className="text-lg font-semibold text-success font-mono">0.0024</p>
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground">Accuracy</p>
-                  <p className="text-lg font-semibold text-foreground font-mono">99.2%</p>
-                </div>
+                <p className="text-2xl font-bold text-foreground font-mono">{avgStudentsPerRoute}</p>
+                <p className="text-xs text-muted-foreground mt-1">Per route</p>
               </div>
             </div>
-
-            {/* Cluster Quality */}
+            
             <div className="glass-subtle rounded-lg p-4">
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-accent/10">
-                    <Zap className="h-5 w-5 text-accent" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">Cluster Quality</p>
-                    <p className="text-xs text-muted-foreground">Silhouette Score Analysis</p>
-                  </div>
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center gap-2">
+                  <Activity className="h-4 w-4 text-accent" />
+                  <p className="text-xs text-muted-foreground">Efficiency Score</p>
                 </div>
-                <span className="text-2xl font-bold text-accent font-mono">0.65</span>
+                <span className="text-xl font-bold text-accent font-mono">{efficiencyScore}</span>
               </div>
-              <div className="w-full h-2 rounded-full bg-secondary overflow-hidden">
-                <div 
-                  className="h-full rounded-full bg-gradient-to-r from-accent to-accent/60 transition-all duration-1000"
-                  style={{ width: "65%" }}
-                />
-              </div>
-              <p className="text-xs text-muted-foreground mt-2">Above threshold (0.50) — Good clustering separation</p>
+              <p className="text-xs text-muted-foreground">km per student × 10 (lower is better)</p>
             </div>
           </CardContent>
         </Card>
 
-        {/* Notification Feed */}
+        {/* School Congestion Panel */}
         <Card className="glass">
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center gap-2 text-lg">
-              <AlertCircle className="h-5 w-5 text-primary" />
-              Activity Feed
+              <AlertCircle className="h-5 w-5 text-warning" />
+              School Congestion
             </CardTitle>
           </CardHeader>
-          <CardContent>
-            <div className="space-y-3">
-              {notifications.map((notification) => (
-                <div 
-                  key={notification.id}
-                  className="flex items-start gap-3 p-3 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors"
-                >
-                  <div className={`mt-0.5 h-2 w-2 rounded-full flex-shrink-0 ${
-                    notification.status === 'success' ? 'bg-success' :
-                    notification.status === 'warning' ? 'bg-warning' : 'bg-info'
-                  }`} />
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium text-foreground truncate">{notification.zone}</p>
-                    <p className="text-xs text-muted-foreground">{notification.message}</p>
-                    <p className="text-[10px] text-muted-foreground/60 mt-1">{notification.time}</p>
+          <CardContent className="space-y-4">
+            <div className="glass-subtle rounded-lg p-4">
+              <p className="text-xs text-muted-foreground mb-3">Routes per school distribution</p>
+              <div className="grid grid-cols-3 gap-4">
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-1 mb-1">
+                    <div className="w-2 h-2 rounded-full bg-error"></div>
+                    <p className="text-xs text-muted-foreground">High</p>
                   </div>
+                  <p className="text-2xl font-bold text-error font-mono">{highCongestion}</p>
+                  <p className="text-[10px] text-muted-foreground">4+ routes</p>
                 </div>
-              ))}
+                
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-1 mb-1">
+                    <div className="w-2 h-2 rounded-full bg-warning"></div>
+                    <p className="text-xs text-muted-foreground">Medium</p>
+                  </div>
+                  <p className="text-2xl font-bold text-warning font-mono">{mediumCongestion}</p>
+                  <p className="text-[10px] text-muted-foreground">2-3 routes</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-1 mb-1">
+                    <div className="w-2 h-2 rounded-full bg-success"></div>
+                    <p className="text-xs text-muted-foreground">Low</p>
+                  </div>
+                  <p className="text-2xl font-bold text-success font-mono">{lowCongestion}</p>
+                  <p className="text-[10px] text-muted-foreground">1 route</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="glass-subtle rounded-lg p-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-xs text-muted-foreground">Total Distance</p>
+                  <p className="text-xl font-bold text-foreground font-mono">{totalDistance.toFixed(1)} km</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-xs text-muted-foreground">All Routes</p>
+                  <p className="text-xl font-bold text-primary font-mono">{routesCount}</p>
+                </div>
+              </div>
             </div>
           </CardContent>
         </Card>

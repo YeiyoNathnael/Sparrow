@@ -4,7 +4,6 @@ import {
   Globe, 
   SlidersHorizontal, 
   FileText, 
-  Settings,
   ChevronLeft,
   ChevronRight
 } from "lucide-react";
@@ -17,7 +16,6 @@ const navItems = [
   { path: "/map", label: "Live Map", icon: Globe },
   { path: "/optimize", label: "Optimization Studio", icon: SlidersHorizontal },
   { path: "/operations", label: "Route Manifest", icon: FileText },
-  { path: "/settings", label: "Settings", icon: Settings },
 ];
 
 export function Sidebar() {
