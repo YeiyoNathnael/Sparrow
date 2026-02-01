@@ -13,8 +13,7 @@ import {
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useState, useEffect } from "react";
-
-const API_URL = "http://localhost:8000/api";
+import { API_URL } from "@/config/api";
 
 const metrics = [
   { 

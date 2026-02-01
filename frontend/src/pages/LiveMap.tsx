@@ -24,7 +24,7 @@ L.Icon.Default.mergeOptions({
   shadowUrl: markerShadow,
 });
 
-const API_URL = "http://localhost:8000/api";
+import { API_URL } from "@/config/api";
 const AL_BARSHA_CENTER: [number, number] = [25.095, 55.22]; // Centered on Al Barsha area
 
 // Create icon with emoji and number

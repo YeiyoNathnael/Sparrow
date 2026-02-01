@@ -31,8 +31,7 @@ import { useState, useRef, useEffect } from "react";
 import { exportToCSV, exportToJSON, printContent, RouteData } from "@/services/exportService";
 import { FilterDialog } from "@/components/dialogs";
 import { useRouteFilters } from "@/hooks/useAppState";
-
-const API_URL = "http://localhost:8000/api";
+import { API_URL } from "@/config/api";
 
 const statusConfig = {
   active: { label: "Active", variant: "default" as const, className: "bg-success/10 text-success border-success/20" },
