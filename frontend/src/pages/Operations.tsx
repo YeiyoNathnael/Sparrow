@@ -108,7 +108,7 @@ export default function Operations() {
 
   const handleExportPDF = () => {
     if (tableRef.current) {
-      printContent(tableRef.current, 'Route Manifests - RTA NEXUS');
+      printContent(tableRef.current, 'Route Manifests - Sparrow');
     }
   };
 

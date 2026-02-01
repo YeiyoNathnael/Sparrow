@@ -235,7 +235,7 @@ export function UserProfileMenu() {
           </div>
           <div className="hidden md:flex flex-col items-start">
             <span className="text-sm font-medium">Admin</span>
-            <span className="text-[10px] text-muted-foreground">RTA Dubai</span>
+            <span className="text-[10px] text-muted-foreground">Sparrow</span>
           </div>
           <ChevronDown className="h-4 w-4 ml-1" />
         </Button>

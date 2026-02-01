@@ -32,10 +32,10 @@ export function Sidebar() {
       {/* Logo Section */}
       <div className="h-16 flex items-center px-4 border-b border-sidebar-border">
         <div className="flex items-center gap-3 overflow-hidden">
-          <img src={rtaLogo} alt="RTA Logo" className="h-10 w-auto flex-shrink-0" />
+          <img src={rtaLogo} alt="Sparrow Logo" className="h-10 w-auto flex-shrink-0" />
           {!collapsed && (
             <div className="flex flex-col">
-              <span className="text-lg font-bold text-foreground tracking-tight">RTA Nexus</span>
+              <span className="text-lg font-bold text-foreground tracking-tight">Sparrow</span>
               <span className="text-[10px] text-muted-foreground uppercase tracking-widest">Mission Control</span>
             </div>
           )}
