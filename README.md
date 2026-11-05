@@ -1,169 +1,150 @@
-# Bus Pooling Clustering System
+# Sparrow
 
-A PyTorch-based clustering system for optimizing school bus routes through intelligent student grouping. The system clusters students attending different schools into shared bus zones based on residential proximity and destination similarity.
+Sparrow plans school bus routes for students attending different schools in the same area. It groups students into shared bus zones, orders each bus's stops with a neural combinatorial optimization model, and presents the routes in a map dashboard.
 
-## Overview
-
-This system solves the multi-school bus pooling problem by:
-1. **Assigning students to assembly points** - Groups students to nearest pickup locations based on home addresses
-2. **Clustering assembly points into bus zones** - Creates bus routes considering both home proximity (60%) and school proximity (40%)
-3. **PyTorch optimization** - Refines clusters using gradient-based optimization with capacity constraints
+The project was built by team The Embassy for the Bounty Challenge hackathon hosted by the Google Developers Club at the University of Birmingham Dubai.
 
 ## Features
 
-- ✅ **Haversine distance computation** for accurate geo-spatial calculations
-- ✅ **Capacity-constrained k-means** clustering with configurable bus capacity
-- ✅ **Multi-school support** - Buses can serve 2-3 schools if they're within threshold distance
-- ✅ **Differentiable soft clustering** using Gumbel-Softmax for gradient-based optimization
-- ✅ **Comprehensive metrics** - Silhouette score, capacity utilization, walking distances, cluster quality
-- ✅ **Flexible output formats** - JSON, route optimizer input, GeoJSON for visualization
+- Assigns students to their nearest assembly points
+- Groups assembly points into capacity-limited bus zones, with up to three schools per zone
+- Refines zones with differentiable soft clustering in PyTorch
+- Orders stops with the POMO model from RL4CO
+- Serves routes, schools, students and metrics through a REST API
+- Shows routes on an interactive map with a dashboard and optimization controls
+- Exports results as JSON and GeoJSON
 
-## Installation
+## Pipeline
+
+```text
+Student, school and assembly point CSVs
+                 |
+   Stage 1: Student assignment
+                 |
+   Stage 2: Zone clustering
+                 |
+   Stage 3: PyTorch refinement
+                 |
+   Stage 4: Route optimization
+                 |
+         SQLite and REST API
+                 |
+          React dashboard
+```
+
+### Stage 1: Student assignment
+
+Each student is assigned to the nearest assembly point using batched Haversine distances computed in PyTorch.
+
+### Stage 2: Zone clustering
+
+Assembly points are grouped using capacity-constrained k-means with k-means++ initialization. The distance metric weights home proximity at 0.6 and school proximity at 0.4.
+
+### Stage 3: PyTorch refinement
+
+A differentiable clustering model uses Gumbel-Softmax assignments and the Adam optimizer. Its loss function combines distance, capacity, balance and compactness terms.
+
+### Stage 4: Route optimization
+
+Each route is solved in two phases, pickups followed by drop-offs. Coordinates are normalized and passed to an RL4CO attention model that uses POMO decoding, and the resulting tour is mapped back to the stop sequence.
+
+## Getting started
+
+### Requirements
+
+- Python 3.11
+- Node.js 20 or later
+
+### Run the pipeline
 
 ```bash
 pip install -r requirements.txt
+python run_pipeline.py
 ```
 
-## Quick Start
+| Option | Description |
+|---|---|
+| `--cluster-only` | Runs clustering only |
+| `--optimize-only` | Runs route optimization only |
+| `--preset <name>` | Uses a preset dataset from `config/datasets.yaml` |
 
-```python
-from src.clustering_pipeline import BusPoolingClusteringPipeline
-from src.utils.data_structures import Student, AssemblyPoint
-
-# Define students
-students = [
-    Student(
-        student_id="student_001",
-        home_location=(40.7128, -74.0060),  # (lat, lon)
-        school_id="school_A",
-        school_location=(40.7589, -73.9851)
-    ),
-    # ... more students
-]
-
-# Define assembly points (predefined pickup locations)
-assembly_points = [
-    AssemblyPoint(
-        assembly_id="assembly_01",
-        location=(40.7150, -74.0070)
-    ),
-    # ... more assembly points
-]
-
-# Run clustering pipeline
-pipeline = BusPoolingClusteringPipeline(
-    bus_capacity=20,
-    max_schools_per_zone=3,
-    home_weight=0.6,
-    school_weight=0.4
-)
-
-output = pipeline.run(students, assembly_points, verbose=True)
-
-# Save results
-pipeline.output_formatter.to_json(output, filepath='results.json')
-```
-
-## Configuration Parameters
-
-| Parameter | Default | Description |
-|-----------|---------|-------------|
-| `bus_capacity` | 20 | Maximum students per bus |
-| `max_schools_per_zone` | 3 | Max different schools per bus |
-| `school_proximity_threshold` | 5.0 km | Max distance between schools in same zone |
-| `home_weight` | 0.6 | Weight for residential proximity |
-| `school_weight` | 0.4 | Weight for school destination proximity |
-| `max_walking_distance` | 2.0 km | Max walking distance to assembly point |
-| `use_pytorch_optimization` | True | Enable gradient-based refinement |
-| `optimization_epochs` | 100 | Number of optimization iterations |
-
-## Project Structure
-
-```
-jack-sparrow/
-├── src/
-│   ├── models/
-│   │   ├── student_assignment.py    # Stage 1: Student → Assembly
-│   │   ├── zone_clustering.py       # Stage 2: Assembly → Zones
-│   │   ├── pytorch_optimizer.py     # Stage 3: PyTorch refinement
-│   │   └── output.py                # Output formatting
-│   ├── utils/
-│   │   ├── distance.py              # Haversine distance calculations
-│   │   ├── data_structures.py       # Core data classes
-│   │   └── metrics.py               # Clustering quality metrics
-│   └── clustering_pipeline.py       # Main entry point
-├── requirements.txt
-└── README.md
-```
-
-## Output Format
-
-The system produces structured output with zones containing:
-
-```json
-{
-  "zones": [
-    {
-      "zone_id": 0,
-      "assembly_nodes": ["assembly_01", "assembly_03"],
-      "schools": ["school_A", "school_B"],
-      "student_count": 18,
-      "capacity": 20,
-      "capacity_utilization": 0.9,
-      "school_distribution": {"school_A": 10, "school_B": 8},
-      "zone_centroid": [40.7128, -74.0060]
-    }
-  ],
-  "metrics": {
-    "silhouette_score": 0.65,
-    "avg_walking_distance_km": 0.42,
-    "avg_capacity_utilization": 0.85
-  }
-}
-```
-
-## Running the Example
+### Run the backend
 
 ```bash
-python src/clustering_pipeline.py
+pip install -r backend/requirements.txt
+cd backend
+uvicorn main:app --port 8000
 ```
 
-This generates synthetic data (100 students, 15 assembly points, 5 schools) and demonstrates the full pipeline.
+### Run the frontend
 
-## Algorithm Details
+```bash
+cd frontend
+cp .env.example .env
+npm install
+npm run dev
+```
 
-### Stage 1: Student Assignment
-- Uses batch Haversine distance computation with PyTorch
-- Assigns each student to nearest assembly point
-- Time complexity: O(N × M) where N=students, M=assembly points
+The dashboard runs at `http://localhost:8080` and connects to the API at `VITE_API_URL`.
 
-### Stage 2: Zone Clustering
-- K-means++ initialization for better convergence
-- Capacity-constrained assignment using greedy algorithm
-- Combined distance metric: 0.6×home_distance + 0.4×school_distance
-- Time complexity: O(I × K × M) where I=iterations, K=zones
+## API
 
-### Stage 3: PyTorch Optimization
-- Differentiable soft clustering with Gumbel-Softmax
-- Multi-objective loss: distance + capacity penalty + balance + compactness
-- Adam optimizer with learnable temperature parameter
-- Time complexity: O(E × K × M) where E=epochs
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/health` | Service health |
+| `GET` | `/api/routes` | All routes. Accepts `peak_hours=true` |
+| `GET` | `/api/routes/{route_id}` | A single route |
+| `GET` | `/api/schools` | All schools |
+| `GET` | `/api/students` | All students |
+| `GET` | `/api/dashboard/metrics` | Dashboard metrics |
 
-## Metrics Computed
+## Configuration
 
-- **Distance metrics**: Walking distances, zone compactness
-- **Cluster quality**: Silhouette score, intra/inter-cluster distances  
-- **Capacity metrics**: Utilization, balance, violations
-- **School distribution**: Schools per zone, diversity penalty
+Datasets and their map centers are set in `config/datasets.yaml`. The expected CSV formats are described in [`data/README.md`](data/README.md).
 
-## Next Steps
+| Parameter | Default | Description |
+|---|---|---|
+| `bus_capacity` | 20 | Maximum students per bus |
+| `max_schools_per_zone` | 3 | Maximum schools served by one bus |
+| `school_proximity_threshold` | 5.0 km | Maximum distance between schools in a zone |
+| `home_weight` | 0.6 | Weight of residential proximity |
+| `school_weight` | 0.4 | Weight of school proximity |
+| `max_walking_distance` | 2.0 km | Maximum walk to an assembly point |
+| `use_pytorch_optimization` | True | Enables the refinement stage |
+| `optimization_epochs` | 100 | Refinement iterations |
 
-This clustering module outputs assembly nodes and zones for downstream route optimization. The next module should:
-1. Take the zone/assembly assignments
-2. Optimize actual route sequences (TSP/VRP)
-3. Consider time windows and traffic patterns
-4. Generate turn-by-turn directions
+## Metrics
 
-## License
+The pipeline reports silhouette score, intra-cluster and inter-cluster distances, walking distances, capacity utilization, and schools per zone.
 
-MIT
+## Project layout
+
+```text
+backend/                 FastAPI service and SQLite database
+config/                  Dataset configuration
+data/                    Example datasets and CSV format reference
+docs/                    Backend and frontend documentation
+frontend/                React dashboard
+src/
+  clustering_pipeline.py Pipeline entry point
+  models/
+    student_assignment.py
+    zone_clustering.py
+    pytorch_optimizer.py
+    route_optimizer.py
+    output.py
+  utils/                 Distance functions, data structures and metrics
+run_pipeline.py          Runs the full pipeline
+ARCHITECTURE.md          System architecture
+USAGE.md                 Usage guide
+```
+
+## Built with
+
+- Machine learning: PyTorch, RL4CO, PyTorch Geometric
+- Backend: Python, FastAPI, SQLite
+- Frontend: React, TypeScript, Vite, Tailwind CSS, shadcn/ui, Leaflet, Recharts
+
+## Authors
+
+- Nathnael Workneh Yeiyo
